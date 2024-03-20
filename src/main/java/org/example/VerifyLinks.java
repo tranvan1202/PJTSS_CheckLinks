@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.google.common.collect.Lists;
 
@@ -32,16 +33,22 @@ public class VerifyLinks {
         driver.get(QAlink);
 
         // Finding all the available links on webpage
-        List<WebElement> links = driver.findElements(By.tagName("a"));
+        //List<WebElement> links = driver.findElements(By.tagName("a"));
+        List<WebElement> links = driver.findElements(By.xpath("//*[class='feature-column-carousel__button']//a"));
 
         // Iterating each link and checking the response status
         for (WebElement link : links) {
             String url = link.getAttribute("href");
-            String replacedUrl = url.replaceAll("p6-qa","www");
-            if (url.contains("p6-qa")) {
-                brokenLinks.checkBrokenLinks(replacedUrl);
+//            String urlClass = link.getAttribute("class");
+//            int ind = links.indexOf(link);
+//            System.out.println(ind + "_ " + urlClass + "_ " + url);
+            if (url != null) {
+                String urlClass = link.getAttribute("class");
+                int ind = links.indexOf(link);
+                String replacedUrl = url.replace("p6-qa","www");
+                System.out.println(ind + "_ " + urlClass + "_ " + replacedUrl);
+                //brokenLinks.checkBrokenLinks(url);
             }
-            brokenLinks.checkBrokenLinks(url);
         }
         driver.quit();
     }

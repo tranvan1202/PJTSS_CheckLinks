@@ -1,0 +1,86 @@
+package org.example;
+
+import com.google.common.collect.Lists;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsToBe;
+
+
+public class Main {
+    static BrokenLinks brokenLinks = new BrokenLinks();
+    public static void main(String[] args) throws InterruptedException {
+        String QAlink = "https://p6-qa.samsung.com/ph/offer/online/2024/galaxy-week/";
+        System.setProperty("webdriver.chrome.driver", "D:\\Auto\\Setup\\chromedriver-win64\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to BStackDemo Website
+        driver.get(QAlink);
+
+        String locatorLoginForm = "login-box";
+        Boolean isLoginFormAppear = driver.findElements(By.id(locatorLoginForm)).size() > 0;
+        if (isLoginFormAppear) {
+            //Giữ cửa sổ hiện tại
+            String originalWindowTab = driver.getWindowHandle();
+            driver.manage().window().maximize();
+//
+//            JavascriptExecutor js1 = (JavascriptExecutor) driver;
+//            js1.executeScript("window.open()");
+//            ArrayList<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+//            driver.switchTo().window(browserTabs.get(1));
+            driver.get("https://wds.samsung.com/wds/sso/login/forwardLogin.do");
+
+            //Find the Login button
+            WebElement element = driver.findElement(By.xpath("//*[@id=\"loginContent\"]/div/div[1]/fieldset[1]/div/ul/table/tbody/tr/td[2]/a"));
+            JavascriptExecutor executor = (JavascriptExecutor)driver;
+            executor.executeScript("arguments[0].click();", element);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+            String locatorQAAuthenLink = "/html/body/div/div[2]/div/div[1]/div[1]/div/dl[4]/dd[1]";
+            //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locatorQAAuthenLink)));
+
+            Set<String> windowIds = driver.getWindowHandles();
+            for (String windowId : windowIds) {
+                driver.switchTo().window(windowId);
+                if (driver.getTitle().equals("Sign In")) {
+                    //Nhập username
+                    WebElement username = driver.findElement(By.id("userNameInput"));
+                    username.sendKeys("van.binhtran@samsung.com");
+                    username.sendKeys(Keys.TAB);
+                    wait.until((ExpectedConditions.invisibilityOf(username)));
+                    driver.switchTo().window(originalWindowTab);
+                }
+            }
+            Thread.sleep(1000);
+            WebElement otpInput = driver.findElement(By.id("otpCode"));
+            otpInput.sendKeys("");
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locatorQAAuthenLink)));
+
+            //Click nút QA
+            driver.findElement(By.xpath(locatorQAAuthenLink)).click();
+            Thread.sleep(2000);
+
+            //Đóng tab hiện tại
+            //driver.close();
+            //Chuyển sang tab đã giữ
+            driver.switchTo().window(originalWindowTab);
+            //driver.navigate().refresh();
+            driver.get(QAlink);
+        }
+
+        // Finding all the available links on webpage
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+
+        // Iterating each link and checking the response status
+        for (WebElement link : links) {
+            String url = link.getAttribute("href");
+            brokenLinks.verifyLink(url);
+        }
+        driver.quit();
+    }
+}

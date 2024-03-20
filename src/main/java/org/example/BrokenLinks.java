@@ -4,8 +4,7 @@ import java.net.URL;
 
 public class BrokenLinks {
 
-    public static void verifyLink(String url) {
-        url.replace("p6-qa","www");
+    public static void checkBrokenLinks(String url) {
         try {
             URL link = new URL(url);
             HttpURLConnection httpURLConnection = (HttpURLConnection) link.openConnection();

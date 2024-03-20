@@ -1,1 +1,1 @@
-# auto_checklinks
+# PJTSS_CheckLinks

@@ -34,14 +34,14 @@ public class VerifyLinks {
 
         // Finding all the available links on webpage
         //List<WebElement> links = driver.findElements(By.tagName("a"));
-        List<WebElement> links = driver.findElements(By.xpath("//*[class='feature-column-carousel__button']//a"));
+        //Lấy content
+        List<WebElement> contents = driver.findElements(By.xpath("//div[contains(concat('', @class, ''), 'feature-column-carousel__text-wrap')]/div/h3"));
+        //Lấy các nút Buy Now
+        List<WebElement> links = driver.findElements(By.xpath("//div[contains(concat('', @class, ''), 'feature-column-carousel__button')]/a"));
 
         // Iterating each link and checking the response status
         for (WebElement link : links) {
             String url = link.getAttribute("href");
-//            String urlClass = link.getAttribute("class");
-//            int ind = links.indexOf(link);
-//            System.out.println(ind + "_ " + urlClass + "_ " + url);
             if (url != null) {
                 String urlClass = link.getAttribute("class");
                 int ind = links.indexOf(link);

@@ -18,7 +18,7 @@ public class Main {
         MetaInformation metaInformation = new MetaInformation();
 
         loginQA.login(driver,arrayURLs);
-        metaInformation.getMetaInformation(driver);
+        metaInformation.getMetaInformation(driver,arrayURLs);
 
 
 //        VerifyLinks verifyLinks = new VerifyLinks();

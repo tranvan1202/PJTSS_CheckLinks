@@ -21,7 +21,7 @@ public class SignInPage {
     private static WebElement loginButton;
 
     @FindBy(id = "userNameInput")
-    private static WebElement emailInput;
+    private static WebElement userNameInput;
 
     @FindBy(id = "otpCode")
     private static WebElement otpCode;
@@ -72,6 +72,7 @@ public class SignInPage {
             if (driver.getTitle().equals("Sign In")) {
                 //Nhập username
                 enterEmail(username);
+                wait.until((ExpectedConditions.invisibilityOf(userNameInput)));
                 driver.switchTo().window(winHandleBefore);
             }
         }
@@ -96,7 +97,7 @@ public class SignInPage {
     }
 
     public static void enterEmail(String email) {
-        WebElement emailTxtBox = emailInput;
+        WebElement emailTxtBox = userNameInput;
         if (emailTxtBox.isDisplayed()) {
             emailTxtBox.sendKeys(email);
             emailTxtBox.sendKeys(Keys.TAB);

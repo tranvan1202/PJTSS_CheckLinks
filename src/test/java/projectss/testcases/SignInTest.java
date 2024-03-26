@@ -7,10 +7,8 @@ import org.testng.annotations.Test;
 import projectss.pages.SignInPage;
 
 public class SignInTest extends projectss.base.BaseSetup {
-
     private WebDriver driver;
     public SignInPage signInPage;
-
     @BeforeClass
     public void setUp() {
         driver = getDriver();

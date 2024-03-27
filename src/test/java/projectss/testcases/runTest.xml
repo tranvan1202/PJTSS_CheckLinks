@@ -6,11 +6,6 @@
 
     <test name="sample test">
         <classes>
-<!--            <class name="projectss.testcases.SignInTest">-->
-<!--                <methods>-->
-<!--                    <include name="signIn" />-->
-<!--                </methods>-->
-<!--            </class>-->
             <class name="projectss.testcases.MetaTest">
                 <methods>
                     <include name="signIn" />

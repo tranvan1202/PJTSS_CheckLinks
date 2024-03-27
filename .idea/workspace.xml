@@ -5,9 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 7">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DemoTestFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/Default Suite/PJTSS_CheckLinks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/Default Suite/PJTSS_CheckLinks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/Default Suite/testng-failed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/bullet_point.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/collapseall.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/failed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-projectss.testcases.MetaTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/navigator-bullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/PJTSS_CheckLinks.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/classes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/groups.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/methods-alphabetical.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/methods-not-run.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/methods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/reporter-output.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/testng.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/Default Suite/toc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/passed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/skipped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/testng-reports.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/testng-reports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/testng-reports1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/testng-reports2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output/testng.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/runTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/runTest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +96,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BaseSetup.testMethod" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Broken-Link" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="projectss.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="projectss.base" />
+      <option name="MAIN_CLASS_NAME" value="projectss.base.BaseSetup" />
+      <option name="METHOD_NAME" value="testMethod" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MetaTest.signIn" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Broken-Link" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="projectss.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="projectss.testcases" />
+      <option name="MAIN_CLASS_NAME" value="projectss.testcases.MetaTest" />
+      <option name="METHOD_NAME" value="signIn" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.BaseSetup.testMethod" />
+      <item itemvalue="TestNG.MetaTest.signIn" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.BaseSetup.testMethod" />
+        <item itemvalue="TestNG.MetaTest.signIn" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -130,6 +218,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>24</line>
           <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/DemoTestFactory.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/DemoTestFactory.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />

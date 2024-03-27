@@ -110,4 +110,13 @@ public class SignInPage {
             submitQA.click();
         }
     }
+
+    public ProductDetailPage accessPDP(ArrayList<String> arrayURLs) {
+        for (int i = 0; i < arrayURLs.size(); i++) {
+            System.out.println("---------------------------------------------------------");
+            System.out.println((i+1) + ". " + "URL: " + arrayURLs.get(i));
+            driver.navigate().to(arrayURLs.get(i));
+        }
+        return new ProductDetailPage();
+    }
 }

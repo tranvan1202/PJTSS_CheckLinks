@@ -9,7 +9,6 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-import static org.testng.Assert.assertNotEquals;
 
 public class MetaPage {
     private static WebDriver driver;
@@ -26,6 +25,7 @@ public class MetaPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
     public static class MetaPageInfo {
         static String titleContent = driver.getTitle();
         static String metaTitle = eMetaTitle.getAttribute("content");

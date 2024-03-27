@@ -8,14 +8,13 @@ import projectss.base.BaseSetup;
 import projectss.pages.MetaPage;
 import projectss.pages.SignInPage;
 
-import static org.testng.Assert.assertNotEquals;
-import static projectss.pages.MetaPage.MetaPageInfo.metaNameTwitterDescription;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class MetaTest extends BaseSetup {
     private WebDriver driver;
     public SignInPage signInPage;
     public MetaPage metaPage;
-    public MetaPage.MetaPageInfo
+
     @BeforeClass
     public void setUp() {
         // Đã khởi tạo browser hết rồi kể cả wait, phóng to màn hình,...
@@ -28,17 +27,22 @@ public class MetaTest extends BaseSetup {
         System.out.println(driver);
         signInPage = new SignInPage(driver);
 
-        signInPage.signin("van.binhtran@samsung.com");
+        SignInPage.signin("van.binhtran@samsung.com");
         Assert.assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
     }
     //Phần xử lý get Meta
     @Test(priority = 2)
     public void getMeta() throws Exception {
         metaPage = new MetaPage(driver);
-        metaPage.getMetaInfo();
-        assertNotEquals("", metaPage.getMetaInfo());
-        assertNotEquals("", metaNameTwitterDescription);
-        assertNotEquals("", metaNameTwitterCard);
+        System.out.println("Title Page: " + MetaPage.MetaPageInfo.getTitleContent());
+        System.out.println("metaTitle: " + MetaPage.MetaPageInfo.getMetaTitle());
+        System.out.println("metaNameTwitterDescription: " + MetaPage.MetaPageInfo.getMetaNameTwitterDescription());
+        System.out.println("metaNameTwitterCard: " + MetaPage.MetaPageInfo.getMetaNameTwitterCard());
+
+        assertNotNull(MetaPage.MetaPageInfo.getTitleContent());
+        assertNotNull(MetaPage.MetaPageInfo.getMetaTitle());
+        assertNotNull(MetaPage.MetaPageInfo.getMetaNameTwitterDescription());
+        assertNotNull(MetaPage.MetaPageInfo.getMetaNameTwitterCard());
 
     }
 

@@ -8,13 +8,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Set;
 
 import static org.testng.Assert.assertNotEquals;
 
 public class MetaPage {
-    private WebDriver driver;
+    private static WebDriver driver;
     @FindBy(xpath = "//meta[@name='title']")
     private static WebElement eMetaTitle;
     @FindBy(xpath = "//link[@rel='canonical']")
@@ -29,48 +27,146 @@ public class MetaPage {
         PageFactory.initElements(driver, this);
     }
     public static class MetaPageInfo {
-        static String titleContent,metaTitle,linkCan,
-                metaNameKeywords,metaNameDescription,metaNameDate,metaNameSiteCode,
-                metaNameTwitterCard,metaNameTwitterSite,metaNameTwitterCreator,metaNameTwitterURL,metaNameTwitterTitle,metaNameTwitterDescription,metaNameTwitterImage,
-                metaPropertyOgURL,metaPropertyOgImage,metaPropertyOgType,metaPropertyOgSiteName,metaPropertyOgLocale,metaPropertyOgTitle,metaPropertyOgDescription, metaPropertyOgCountryName,
-                metaPropertyName,metaPropertyImage,metaPropertyUrl,metaPropertyDescription,metaPropertyKeywords;
+        static String titleContent = driver.getTitle();
+        static String metaTitle = eMetaTitle.getAttribute("content");
+        static String linkCan = eLinkCan.getAttribute("href");
 
+        static String metaNameKeywords = eMetaNameKeywords.getAttribute("content");
+        static String metaNameDescription = eMetaNameDescription.getAttribute("content");
+        static String metaNameDate = driver.findElement(By.xpath("//meta[@name='date']")).getAttribute("content");
+        static String metaNameSiteCode = driver.findElement(By.xpath("//meta[@name='sitecode']")).getAttribute("content");
+
+        static String metaNameTwitterCard = driver.findElement(By.xpath("//meta[@name='twitter:card']")).getAttribute("content");
+        static String metaNameTwitterSite = driver.findElement(By.xpath("//meta[@name='twitter:site']")).getAttribute("content");
+        static String metaNameTwitterCreator = driver.findElement(By.xpath("//meta[@name='twitter:creator']")).getAttribute("content");
+        static String metaNameTwitterURL = driver.findElement(By.xpath("//meta[@name='twitter:url']")).getAttribute("content");
+        static String metaNameTwitterTitle = driver.findElement(By.xpath("//meta[@name='twitter:title']")).getAttribute("content");
+        static String metaNameTwitterDescription = driver.findElement(By.xpath("//meta[@name='twitter:description']")).getAttribute("content");
+        static String metaNameTwitterImage = driver.findElement(By.xpath("//meta[@name='twitter:image']")).getAttribute("content");
+
+        static String metaPropertyOgURL = driver.findElement(By.xpath("//meta[@property='og:url']")).getAttribute("content");
+        static String metaPropertyOgImage = driver.findElement(By.xpath("//meta[@property='og:image']")).getAttribute("content");
+        static String metaPropertyOgType = driver.findElement(By.xpath("//meta[@property='og:type']")).getAttribute("content");
+        static String metaPropertyOgSiteName = driver.findElement(By.xpath("//meta[@property='og:site_name']")).getAttribute("content");
+        static String metaPropertyOgLocale = driver.findElement(By.xpath("//meta[@property='og:locale']")).getAttribute("content");
+        static String metaPropertyOgTitle = driver.findElement(By.xpath("//meta[@property='og:title']")).getAttribute("content");
+        static String metaPropertyOgDescription = driver.findElement(By.xpath("//meta[@property='og:description']")).getAttribute("content");
+        static String metaPropertyOgCountryName = driver.findElement(By.xpath("//meta[@property='og:country-name']")).getAttribute("content");
+
+        static String metaPropertyName = driver.findElement(By.xpath("//meta[@property='name']")).getAttribute("content");
+        static String metaPropertyImage = driver.findElement(By.xpath("//meta[@property='image']")).getAttribute("content");
+        static String metaPropertyUrl = driver.findElement(By.xpath("//meta[@property='url']")).getAttribute("content");
+        static String metaPropertyDescription = driver.findElement(By.xpath("//meta[@property='description']")).getAttribute("content");
+        static String metaPropertyKeywords = driver.findElement(By.xpath("//meta[@property='keywords']")).getAttribute("content");
+
+        public static String getTitleContent() {
+            return titleContent;
+        }
+
+        public static String getMetaTitle() {
+            return metaTitle;
+        }
+
+        public static String getLinkCan() {
+            return linkCan;
+        }
+
+        public static String getMetaNameKeywords() {
+            return metaNameKeywords;
+        }
+
+        public static String getMetaNameDescription() {
+            return metaNameDescription;
+        }
+
+        public static String getMetaNameDate() {
+            return metaNameDate;
+        }
+
+        public static String getMetaNameSiteCode() {
+            return metaNameSiteCode;
+        }
+
+        public static String getMetaNameTwitterCard() {
+            return metaNameTwitterCard;
+        }
+
+        public static String getMetaNameTwitterSite() {
+            return metaNameTwitterSite;
+        }
+
+        public static String getMetaNameTwitterCreator() {
+            return metaNameTwitterCreator;
+        }
+
+        public static String getMetaNameTwitterURL() {
+            return metaNameTwitterURL;
+        }
+
+        public static String getMetaNameTwitterTitle() {
+            return metaNameTwitterTitle;
+        }
+
+        public static String getMetaNameTwitterDescription() {
+            return metaNameTwitterDescription;
+        }
+
+        public static String getMetaNameTwitterImage() {
+            return metaNameTwitterImage;
+        }
+
+        public static String getMetaPropertyOgURL() {
+            return metaPropertyOgURL;
+        }
+
+        public static String getMetaPropertyOgImage() {
+            return metaPropertyOgImage;
+        }
+
+        public static String getMetaPropertyOgType() {
+            return metaPropertyOgType;
+        }
+
+        public static String getMetaPropertyOgSiteName() {
+            return metaPropertyOgSiteName;
+        }
+
+        public static String getMetaPropertyOgLocale() {
+            return metaPropertyOgLocale;
+        }
+
+        public static String getMetaPropertyOgTitle() {
+            return metaPropertyOgTitle;
+        }
+
+        public static String getMetaPropertyOgDescription() {
+            return metaPropertyOgDescription;
+        }
+
+        public static String getMetaPropertyOgCountryName() {
+            return metaPropertyOgCountryName;
+        }
+
+        public static String getMetaPropertyName() {
+            return metaPropertyName;
+        }
+
+        public static String getMetaPropertyImage() {
+            return metaPropertyImage;
+        }
+
+        public static String getMetaPropertyUrl() {
+            return metaPropertyUrl;
+        }
+
+        public static String getMetaPropertyDescription() {
+            return metaPropertyDescription;
+        }
+
+        public static String getMetaPropertyKeywords() {
+            return metaPropertyKeywords;
+        }
     }
-    public void getMetaInfo() {
-        //Get Document object after parsing the html from given url.
-        MetaPageInfo.titleContent = driver.getTitle();
-        MetaPageInfo.metaTitle = eMetaTitle.getAttribute("content");
-        MetaPageInfo.linkCan = eLinkCan.getAttribute("href");
-
-        MetaPageInfo.metaNameKeywords = eMetaNameKeywords.getAttribute("content");
-        MetaPageInfo.metaNameDescription = eMetaNameDescription.getAttribute("content");
-        MetaPageInfo.metaNameDate = driver.findElement(By.xpath("//meta[@name='date']")).getAttribute("content");
-        MetaPageInfo.metaNameSiteCode = driver.findElement(By.xpath("//meta[@name='sitecode']")).getAttribute("content");
-
-        MetaPageInfo.metaNameTwitterCard = driver.findElement(By.xpath("//meta[@name='twitter:card']")).getAttribute("content");
-        MetaPageInfo.metaNameTwitterSite = driver.findElement(By.xpath("//meta[@name='twitter:site']")).getAttribute("content");
-        MetaPageInfo.metaNameTwitterCreator = driver.findElement(By.xpath("//meta[@name='twitter:creator']")).getAttribute("content");
-        MetaPageInfo.metaNameTwitterURL = driver.findElement(By.xpath("//meta[@name='twitter:url']")).getAttribute("content");
-        MetaPageInfo.metaNameTwitterTitle = driver.findElement(By.xpath("//meta[@name='twitter:title']")).getAttribute("content");
-        MetaPageInfo.metaNameTwitterDescription = driver.findElement(By.xpath("//meta[@name='twitter:description']")).getAttribute("content");
-        MetaPageInfo.metaNameTwitterImage = driver.findElement(By.xpath("//meta[@name='twitter:image']")).getAttribute("content");
-
-        MetaPageInfo.metaPropertyOgURL = driver.findElement(By.xpath("//meta[@property='og:url']")).getAttribute("content");
-        MetaPageInfo.metaPropertyOgImage = driver.findElement(By.xpath("//meta[@property='og:image']")).getAttribute("content");
-        MetaPageInfo.metaPropertyOgType = driver.findElement(By.xpath("//meta[@property='og:type']")).getAttribute("content");
-        MetaPageInfo.metaPropertyOgSiteName = driver.findElement(By.xpath("//meta[@property='og:site_name']")).getAttribute("content");
-        MetaPageInfo.metaPropertyOgLocale = driver.findElement(By.xpath("//meta[@property='og:locale']")).getAttribute("content");
-        MetaPageInfo.metaPropertyOgTitle = driver.findElement(By.xpath("//meta[@property='og:title']")).getAttribute("content");
-        MetaPageInfo.metaPropertyOgDescription = driver.findElement(By.xpath("//meta[@property='og:description']")).getAttribute("content");
-        MetaPageInfo.metaPropertyOgCountryName = driver.findElement(By.xpath("//meta[@property='og:country-name']")).getAttribute("content");
-
-        MetaPageInfo.metaPropertyName = driver.findElement(By.xpath("//meta[@property='name']")).getAttribute("content");
-        MetaPageInfo.metaPropertyImage = driver.findElement(By.xpath("//meta[@property='image']")).getAttribute("content");
-        MetaPageInfo.metaPropertyUrl = driver.findElement(By.xpath("//meta[@property='url']")).getAttribute("content");
-        MetaPageInfo.metaPropertyDescription = driver.findElement(By.xpath("//meta[@property='description']")).getAttribute("content");
-        MetaPageInfo.metaPropertyKeywords = driver.findElement(By.xpath("//meta[@property='keywords']")).getAttribute("content");
-    }
-
     //Hàm đợi trang load xong rồi thao tác
     public void waitForPageLoaded() {
         ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {

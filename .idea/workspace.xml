@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 3">
-      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" afterDir="false" />
+    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/runTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/runTest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711373088079</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated 7">
+      <option name="closed" value="true" />
+      <created>1711453968573</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711453968573</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -107,7 +115,8 @@
     <MESSAGE value="updated 2" />
     <MESSAGE value="updated 3" />
     <MESSAGE value="updated 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated 4" />
+    <MESSAGE value="updated 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated 7" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -126,6 +135,15 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="18" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java</url>
+          <line>34</line>
+          <properties class="projectss.testcases.MetaTest" method="getMeta">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

@@ -10,8 +10,6 @@ import java.util.Iterator;
 
 public class DemoTestFactory {
     private String url="";
-    WebDriver driver = new ChromeDriver();
-
 
     @Factory(dataProvider = "urls", dataProviderClass = xxx.class)
     public DemoTestFactory(String url) {
@@ -20,6 +18,7 @@ public class DemoTestFactory {
 
     @Test(dataProvider = "urls", dataProviderClass = DemoTestFactory.xxx.class)
     public void something(String url) {
+        WebDriver driver = new ChromeDriver();
         System.out.println(url);
         driver.manage().window().maximize();
         driver.navigate().to(url);

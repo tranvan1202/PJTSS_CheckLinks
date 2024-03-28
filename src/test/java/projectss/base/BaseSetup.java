@@ -4,8 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
+import org.testng.ITestContext;
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 public class BaseSetup {
@@ -41,15 +44,27 @@ public class BaseSetup {
     }
 
     // Chạy hàm initializeTestBaseSetup trước hết khi class này được gọi
-    @Parameters({ "browserType", "appURL" })
+    @Parameters({ "browserType", "loginURL" })
     @BeforeClass
-    public void initializeTestBaseSetup(String browserType, String appURL) {
+    public void initializeTestBaseSetup(String browserType, String loginURL) {
         try {
             // Khởi tạo driver và browser
-            setDriver(browserType, appURL);
+            setDriver(browserType, loginURL);
         } catch (Exception e) {
             System.out.println("Error..." + e.getStackTrace());
         }
+    }
+
+    @DataProvider(name="qaURLs")
+    public Object[][] getQALinks(ITestContext context) {
+        String parameter = context.getCurrentXmlTest().getParameter("qaURLs");
+        String[] names = parameter.split(",");
+        Object[][] returnValues = new Object[names.length][1];
+        int index = 0;
+        for (Object[] each : returnValues) {
+            each[0] = names[index++].trim();
+        }
+        return returnValues;
     }
 
     @AfterClass

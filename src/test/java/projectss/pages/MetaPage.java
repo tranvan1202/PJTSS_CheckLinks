@@ -11,15 +11,15 @@ import java.time.Duration;
 
 
 public class MetaPage {
-    private static WebDriver driver;
+    public static WebDriver driver;
     @FindBy(xpath = "//meta[@name='title']")
-    private static WebElement eMetaTitle;
+    public static WebElement eMetaTitle;
     @FindBy(xpath = "//link[@rel='canonical']")
-    private static WebElement eLinkCan;
+    public static WebElement eLinkCan;
     @FindBy(xpath = "//meta[@name='keywords']")
-    private static WebElement eMetaNameKeywords;
+    public static WebElement eMetaNameKeywords;
     @FindBy(xpath = "//meta[@name='description']")
-    private static WebElement eMetaNameDescription;
+    public static WebElement eMetaNameDescription;
 
     public MetaPage(WebDriver driver) {
         this.driver = driver;

@@ -76,22 +76,6 @@ public class MetaPage {
         PageFactory.initElements(driver, this);
     }
 
-    //Hàm đợi trang load xong rồi thao tác
-    public void waitForPageLoaded() {
-        ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
-            }
-        };
-        try {
-            Thread.sleep(1000);
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-            wait.until(expectation);
-        } catch (Throwable error) {
-            Assert.fail("Timeout waiting for Page Load Request to complete.");
-        }
-    }
-
     public static class MetaInfo {
         //public static String sPageTitle = driver.getTitle();
 //        public static String sMetaTitle = metaTitle.getAttribute("content");

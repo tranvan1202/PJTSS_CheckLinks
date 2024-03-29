@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import projectss.base.BaseSetup;
+
+import java.util.Properties;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -14,6 +17,7 @@ import java.util.Set;
 
 public class SignInPage {
     private static WebDriver driver;
+    public static Properties prop;
     @FindBy(xpath = "//meta[@name='mswebdialog-title']")
     private static WebElement elementHeaderPageText;
 
@@ -58,7 +62,7 @@ public class SignInPage {
         return pageText.contains(expectedPageText);
     }
 
-    public static void signin(String username) throws InterruptedException {
+    public static void signin() throws InterruptedException {
         String winHandleBefore = driver.getWindowHandle();
 
         //Find the Login button
@@ -71,7 +75,7 @@ public class SignInPage {
             driver.switchTo().window(windowId);
             if (driver.getTitle().equals("Sign In")) {
                 //Nhập username
-                enterEmail(username);
+                enterEmail(BaseSetup.prop.getProperty("username"));
                 wait.until((ExpectedConditions.invisibilityOf(userNameInput)));
                 driver.switchTo().window(winHandleBefore);
             }

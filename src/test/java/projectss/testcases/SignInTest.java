@@ -19,7 +19,7 @@ public class SignInTest extends projectss.base.BaseSetup {
         System.out.println(driver);
         //signInPage = new SignInPage(driver);
         signInPage = new SignInPage(driver);
-        signInPage.signin("van.binhtran@samsung.com");
+        signInPage.signin();
         Assert.assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
     }
 

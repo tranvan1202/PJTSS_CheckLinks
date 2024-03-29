@@ -8,12 +8,29 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.ITestContext;
 
-import java.util.Arrays;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class BaseSetup {
     private WebDriver driver;
+    public static Properties prop;
     static String driverPath = "resources\\drivers\\";
+
+    public BaseSetup() {
+        try {
+            prop = new Properties();
+            FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/test/java/projectss"
+                    + "/config/config.properties");
+            prop.load(ip);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public WebDriver getDriver() {
         return driver;

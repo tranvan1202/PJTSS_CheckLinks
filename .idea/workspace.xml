@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 9">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/htmlUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DemoTestFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +32,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "tranvan1202"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tranvan1202&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -195,11 +204,6 @@
           <line>24</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="18" />
@@ -208,6 +212,15 @@
           <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
           <option name="timeStamp" value="59" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java</url>
+          <line>21</line>
+          <properties class="projectss.base.BaseSetup" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

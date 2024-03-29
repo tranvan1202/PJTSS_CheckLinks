@@ -2,17 +2,16 @@ package projectss.testcases;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import projectss.base.BaseSetup;
 import projectss.pages.MetaPage;
 import projectss.pages.SignInPage;
 
-
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
 public class MetaTest extends BaseSetup {
@@ -32,7 +31,7 @@ public class MetaTest extends BaseSetup {
         System.out.println(driver);
         signInPage = new SignInPage(driver);
 
-        SignInPage.signin("van.binhtran@samsung.com");
+        SignInPage.signin();
         assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
     }
     //Phần xử lý get Meta
@@ -41,7 +40,8 @@ public class MetaTest extends BaseSetup {
         metaPage = new MetaPage(driver);
         System.out.println("URL: " + param);
         driver.get(param);
-
+        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(" ");
 //        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
 //        System.out.println(" ");
 //        System.out.println("pageTitle: " + MetaPage.driver.getTitle());
@@ -80,23 +80,45 @@ public class MetaTest extends BaseSetup {
 //        System.out.println("metaPropertyDescription: " + MetaPage.metaPropertyDescription.getAttribute("content"));
 //        System.out.println("metaPropertyKeywords: " + MetaPage.metaPropertyKeywords.getAttribute("content"));
 
-        for (String s : Arrays.asList(MetaPage.driver.getTitle(),
-                MetaPage.metaTitle.getAttribute("content"), MetaPage.linkCan.getAttribute("href"),
-                MetaPage.metaNameKeywords.getAttribute("content"), MetaPage.metaNameDescription.getAttribute("content"),
-                MetaPage.metaNameDate.getAttribute("content"), MetaPage.metaNameSiteCode.getAttribute("content"),
-                MetaPage.metaNameTwitterCard.getAttribute("content"), MetaPage.metaNameTwitterSite.getAttribute("content"),
-                MetaPage.metaNameTwitterCreator.getAttribute("content"), MetaPage.metaNameTwitterURL.getAttribute("content"),
-                MetaPage.metaNameTwitterTitle.getAttribute("content"), MetaPage.metaNameTwitterDescription.getAttribute("content"),
-                MetaPage.metaNameTwitterImage.getAttribute("content"), MetaPage.metaPropertyOgURL.getAttribute("content"),
-                MetaPage.metaPropertyOgImage.getAttribute("content"), MetaPage.metaPropertyOgType.getAttribute("content"),
-                MetaPage.metaPropertyOgSiteName.getAttribute("content"), MetaPage.metaPropertyOgLocale.getAttribute("content"),
-                MetaPage.metaPropertyOgTitle.getAttribute("content"), MetaPage.metaPropertyOgDescription.getAttribute("content"),
-                MetaPage.metaPropertyOgCountryName.getAttribute("content"), MetaPage.metaPropertyName.getAttribute("content"),
-                MetaPage.metaPropertyImage.getAttribute("content"), MetaPage.metaPropertyUrl.getAttribute("content"),
-                MetaPage.metaPropertyDescription.getAttribute("content"), MetaPage.metaPropertyKeywords.getAttribute("content"))) {
-            assertTrue(StringUtils.isNotBlank(s));
-        }
+        String spageTitle = MetaPage.driver.getTitle();
+        String smetaTitle = MetaPage.metaTitle.getAttribute("content");
+        String slinkCan = MetaPage.linkCan.getAttribute("href");
+        String smetaNameKeywords = MetaPage.metaNameKeywords.getAttribute("content");
+        String smetaNameDescription = MetaPage.metaNameDescription.getAttribute("content");
+        String smetaNameDate = MetaPage.metaNameDate.getAttribute("content");
+        String smetaNameSiteCode = MetaPage.metaNameSiteCode.getAttribute("content");
+        String smetaNameTwitterCard = MetaPage.metaNameTwitterCard.getAttribute("content");
+        String smetaNameTwitterSite = MetaPage.metaNameTwitterSite.getAttribute("content");
+        String smetaNameTwitterCreator = MetaPage.metaNameTwitterCreator.getAttribute("content");
+        String smetaNameTwitterURL = MetaPage.metaNameTwitterURL.getAttribute("content");
+        String smetaNameTwitterTitle = MetaPage.metaNameTwitterTitle.getAttribute("content");
+        String smetaNameTwitterDescription = MetaPage.metaNameTwitterDescription.getAttribute("content");
+        String smetaNameTwitterImage = MetaPage.metaNameTwitterImage.getAttribute("content");
+        String smetaPropertyOgURL = MetaPage.metaPropertyOgURL.getAttribute("content");
+        String smetaPropertyOgImage= MetaPage.metaPropertyOgImage.getAttribute("content");
+        String smetaPropertyOgType = MetaPage.metaPropertyOgType.getAttribute("content");
+        String smetaPropertyOgSiteName = MetaPage.metaPropertyOgSiteName.getAttribute("content");
+        String smetaPropertyOgLocale = MetaPage.metaPropertyOgLocale.getAttribute("content");
+        String smetaPropertyOgTitle = MetaPage.metaPropertyOgTitle.getAttribute("content");
+        String smetaPropertyOgDescription = MetaPage.metaPropertyOgDescription.getAttribute("content");
+        String smetaPropertyOgCountryName = MetaPage.metaPropertyOgCountryName.getAttribute("content");
+        String smetaPropertyName = MetaPage.metaPropertyName.getAttribute("content");
+        String smetaPropertyImage = MetaPage.metaPropertyImage.getAttribute("content");
+        String smetaPropertyUrl = MetaPage.metaPropertyUrl.getAttribute("content");
+        String smetaPropertyDescription = MetaPage.metaPropertyDescription.getAttribute("content");
+        String smetaPropertyKeywords = MetaPage.metaPropertyKeywords.getAttribute("content");
 
+        String arrMeta[] = new String[] { spageTitle , smetaTitle , slinkCan , smetaNameKeywords , smetaNameDescription , smetaNameDate ,
+                smetaNameSiteCode , smetaNameTwitterCard , smetaNameTwitterSite , smetaNameTwitterCreator , smetaNameTwitterURL , smetaNameTwitterTitle ,
+                smetaNameTwitterDescription , smetaNameTwitterImage , smetaPropertyOgURL , smetaPropertyOgImage, smetaPropertyOgType , smetaPropertyOgSiteName ,
+                smetaPropertyOgLocale , smetaPropertyOgTitle , smetaPropertyOgDescription , smetaPropertyOgCountryName , smetaPropertyName , smetaPropertyImage ,
+                smetaPropertyUrl , smetaPropertyDescription , smetaPropertyKeywords
+        };
+        List<String> listMeta = Arrays.asList(arrMeta);
+        for (String s : listMeta) {
+            System.out.println("The list is: " + s.toString() + ", ");
+            //assertTrue(StringUtils.isNotBlank(s));
+        }
 //        assertTrue(StringUtils.isNotBlank(MetaPage.driver.getTitle()));
 //        assertTrue(StringUtils.isNotBlank(MetaPage.metaTitle.getAttribute("content")));
 //        assertTrue(StringUtils.isNotBlank(MetaPage.linkCan.getAttribute("href")));

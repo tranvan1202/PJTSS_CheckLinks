@@ -119,37 +119,6 @@ public class MetaTest extends BaseSetup {
             System.out.println("The list is: " + s.toString() + ", ");
             //assertTrue(StringUtils.isNotBlank(s));
         }
-//        assertTrue(StringUtils.isNotBlank(MetaPage.driver.getTitle()));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaTitle.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.linkCan.getAttribute("href")));
-//        /////////////////////////////////////////////////////////////////////////////////
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameKeywords.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameDescription.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameDate.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameSiteCode.getAttribute("content")));
-//        /////////////////////////////////////////////////////////////////////////////////
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameTwitterCard.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameTwitterSite.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameTwitterCreator.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameTwitterURL.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameTwitterTitle.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameTwitterDescription.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaNameTwitterImage.getAttribute("content")));
-//        /////////////////////////////////////////////////////////////////////////////////
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyOgURL.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyOgImage.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyOgType.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyOgSiteName.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyOgLocale.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyOgTitle.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyOgDescription.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyOgCountryName.getAttribute("content")));
-//        /////////////////////////////////////////////////////////////////////////////////
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyName.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyImage.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyUrl.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyDescription.getAttribute("content")));
-//        assertTrue(StringUtils.isNotBlank(MetaPage.metaPropertyKeywords.getAttribute("content")));
     }
 //    @Test(priority = 3, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
 //    public void verifyMetaTwitter(String param) throws Exception {

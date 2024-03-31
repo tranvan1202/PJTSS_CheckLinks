@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 9">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/htmlUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/StaticPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/StaticPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DemoTestFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/MetaPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

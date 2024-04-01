@@ -1,5 +1,9 @@
 package org.example;
 import com.google.common.collect.Lists;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,8 +17,8 @@ public class Main {
         WebDriver driver = new ChromeDriver();
         LoginQA loginQA = new LoginQA();
         ArrayList<String> arrayURLs = new ArrayList<>();
-        arrayURLs.addAll(Arrays.asList("https://p6-qa.samsung.com/ph/offer/online/2024/galaxy-week/", "https://p6-qa.samsung.com/sg/offer/","https://p6-qa.samsung.com/vn/offer/","https://p6-qa.samsung.com/sg/tv-accessories/65-inch-disney-bezel-blue-z-65mickeyblue"));
-        MetaInformation metaInformation = new MetaInformation();
+        arrayURLs.addAll(Arrays.asList("https://p6-qa.samsung.com/ph/offer/online/2024/galaxy-week/", "https://p6-qa.samsung.com/ph/offer/online/2024/new-year-sale/"));
+        //MetaInformation metaInformation = new MetaInformation();
 
         loginQA.login(driver);
         //JavascriptExecutor js1 = (JavascriptExecutor) driver;
@@ -26,7 +30,8 @@ public class Main {
             System.out.println("---------------------------------------------------------");
             System.out.println((i+1) + ". " + "URL: " + arrayURLs.get(i));
             driver.navigate().to(arrayURLs.get(i));
-            metaInformation.getMetaInformation(driver);
+            //metaInformation.getMetaInformation(driver);
+            VerifyLinks.verifyLinks(driver);
         }
         driver.quit();
     }

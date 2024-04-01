@@ -1,5 +1,9 @@
 package org.example;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,28 +15,22 @@ import java.util.List;
 import com.google.common.collect.Lists;
 
 public class VerifyLinks {
-    public void verifyLinks(WebDriver driver) throws InterruptedException {
-        // Finding all the available links on webpage
-        //List<WebElement> links = driver.findElements(By.tagName("a"));
-        //Lấy content
-        //List<WebElement> contents = driver.findElements(By.xpath("//div[contains(concat('', @class, ''), 'feature-column-carousel__text-wrap')]/div/h3"));
-        //Lấy các nút Buy Now
-        //List<WebElement> links = driver.findElements(By.xpath("//div[contains(concat('', @class, ''), 'feature-column-carousel__button')]/a"));
-        List<WebElement> elements = driver.findElements(By.xpath("//div[contains(concat('', @class, ''), 'feature-column-carousel__content')]"));
-
-        // Iterating each link and checking the response status
-        for (WebElement element : elements) {
-            String titleContent = element.findElement(By.xpath(".//div[contains(concat('',@class, ''), 'feature-column-carousel__sub-title')]//h3")).getText();
-            String url =element.findElement(By.xpath(".//div[contains(concat('',@class, ''), 'feature-column-carousel__button')]//a")).getAttribute("href");
-            if (url != null) {
-                //String urlClass = element.getAttribute("class");
-                int ind = elements.indexOf(element);
-                String replacedUrl = url.replace("p6-qa","www");
-                System.out.println(ind + " _ " + titleContent + " _ "  + replacedUrl);
-                //checkBrokenLinks(url);
+    public static void verifyLinks(WebDriver driver) throws InterruptedException {
+        String html = driver.getPageSource();
+        Document doc = Jsoup.parse(html);
+        Elements productCards = doc.select("div.feature-column-carousel__content");
+        for(Element e : productCards) {
+            int ind = productCards.indexOf(e) + 1;
+            String h3ProductName = e.select("h3").first().text();
+            String hrefButton = e.select("a").first().attr("href");
+            if (!hrefButton.contains("www")) {
+                hrefButton.replaceFirst("/","www.samsung.com");
+                System.out.println(ind + " " + h3ProductName + " Buy now: " + hrefButton + "\n");
+            } else {
+                hrefButton.replaceFirst("//","www");
+                System.out.println(ind + " " + h3ProductName + " Buy now: " + hrefButton + "\n");
             }
         }
-        driver.quit();
     }
 
     public static void checkBrokenLinks(String url) {

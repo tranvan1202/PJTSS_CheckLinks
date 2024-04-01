@@ -4,15 +4,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import java.util.List;
-import com.google.common.collect.Lists;
 
 public class VerifyLinks {
     public static void verifyLinks(WebDriver driver) throws InterruptedException {

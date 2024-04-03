@@ -8,7 +8,6 @@ import projectss.base.BaseSetup;
 import projectss.pages.MetaPage;
 import projectss.pages.SignInPage;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,49 +35,10 @@ public class MetaTest extends BaseSetup {
     }
     //Phần xử lý get Meta
     @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
-    public void verifyMetaTitle(String param) throws Exception {
+    public void verifyExistOfMetaContent(String param) throws Exception {
         metaPage = new MetaPage(driver);
         System.out.println("URL: " + param);
         driver.get(param);
-        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(" ");
-//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-//        System.out.println(" ");
-//        System.out.println("pageTitle: " + MetaPage.driver.getTitle());
-//        System.out.println("metaTitle: " + MetaPage.metaTitle.getAttribute("content"));
-//        System.out.println("linkCan: " + MetaPage.linkCan.getAttribute("href"));
-//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-//        System.out.println(" ");
-//        System.out.println("metaNameKeywords: " + MetaPage.metaNameKeywords.getAttribute("content"));
-//        System.out.println("metaNameDescription: " + MetaPage.metaNameDescription.getAttribute("content"));
-//        System.out.println("metaNameDate: " + MetaPage.metaNameDate.getAttribute("content"));
-//        System.out.println("metaNameSiteCode : " + MetaPage.metaNameSiteCode.getAttribute("content"));
-//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-//        System.out.println(" ");
-//        System.out.println("metaNameTwitterCard: " + MetaPage.metaNameTwitterCard.getAttribute("content"));
-//        System.out.println("metaNameTwitterSite: " + MetaPage.metaNameTwitterSite.getAttribute("content"));
-//        System.out.println("metaNameTwitterCreator: " + MetaPage.metaNameTwitterCreator.getAttribute("content"));
-//        System.out.println("metaNameTwitterURL: " + MetaPage.metaNameTwitterURL.getAttribute("content"));
-//        System.out.println("metaNameTwitterTitle: " + MetaPage.metaNameTwitterTitle.getAttribute("content"));
-//        System.out.println("metaNameTwitterDescription: " + MetaPage.metaNameTwitterDescription.getAttribute("content"));
-//        System.out.println("metaNameTwitterImage: " + MetaPage.metaNameTwitterImage.getAttribute("content"));
-//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-//        System.out.println(" ");
-//        System.out.println("metaPropertyOgURL: " + MetaPage.metaPropertyOgURL.getAttribute("content"));
-//        System.out.println("metaPropertyOgImage: " + MetaPage.metaPropertyOgImage.getAttribute("content"));
-//        System.out.println("metaPropertyOgType: " + MetaPage.metaPropertyOgType.getAttribute("content"));
-//        System.out.println("metaPropertyOgSiteName: " + MetaPage.metaPropertyOgSiteName.getAttribute("content"));
-//        System.out.println("metaPropertyOgLocale: " + MetaPage.metaPropertyOgLocale.getAttribute("content"));
-//        System.out.println("metaPropertyOgTitle: " + MetaPage.metaPropertyOgTitle.getAttribute("content"));
-//        System.out.println("metaPropertyOgDescription: " + MetaPage.metaPropertyOgDescription.getAttribute("content"));
-//        System.out.println("metaPropertyOgCountryName: " + MetaPage.metaPropertyOgCountryName.getAttribute("content"));
-//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-//        System.out.println(" ");
-//        System.out.println("metaPropertyName: " + MetaPage.metaPropertyName.getAttribute("content"));
-//        System.out.println("metaPropertyImage: " + MetaPage.metaPropertyImage.getAttribute("content"));
-//        System.out.println("metaPropertyUrl: " + MetaPage.metaPropertyUrl.getAttribute("content"));
-//        System.out.println("metaPropertyDescription: " + MetaPage.metaPropertyDescription.getAttribute("content"));
-//        System.out.println("metaPropertyKeywords: " + MetaPage.metaPropertyKeywords.getAttribute("content"));
 
         String spageTitle = MetaPage.driver.getTitle();
         String smetaTitle = MetaPage.metaTitle.getAttribute("content");
@@ -108,6 +68,44 @@ public class MetaTest extends BaseSetup {
         String smetaPropertyDescription = MetaPage.metaPropertyDescription.getAttribute("content");
         String smetaPropertyKeywords = MetaPage.metaPropertyKeywords.getAttribute("content");
 
+        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(" ");
+        System.out.println("pageTitle: " + spageTitle);
+        System.out.println("metaTitle: " + smetaTitle);
+        System.out.println("linkCan: " + slinkCan);
+        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(" ");
+        System.out.println("metaNameKeywords: " + smetaNameKeywords);
+        System.out.println("metaNameDescription: " + smetaNameDescription);
+        System.out.println("metaNameDate: " + smetaNameDate);
+        System.out.println("metaNameSiteCode : " + smetaNameSiteCode);
+        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(" ");
+        System.out.println("metaNameTwitterCard: " + smetaNameTwitterCard);
+        System.out.println("metaNameTwitterSite: " + smetaNameTwitterSite);
+        System.out.println("metaNameTwitterCreator: " + smetaNameTwitterCreator);
+        System.out.println("metaNameTwitterURL: " + smetaNameTwitterURL);
+        System.out.println("metaNameTwitterTitle: " + smetaNameTwitterTitle);
+        System.out.println("metaNameTwitterDescription: " + smetaNameTwitterDescription);
+        System.out.println("metaNameTwitterImage: " + smetaNameTwitterImage);
+        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(" ");
+        System.out.println("metaPropertyOgURL: " + smetaPropertyOgURL);
+        System.out.println("metaPropertyOgImage: " + smetaPropertyOgImage);
+        System.out.println("metaPropertyOgType: " + smetaPropertyOgType);
+        System.out.println("metaPropertyOgSiteName: " + smetaPropertyOgSiteName);
+        System.out.println("metaPropertyOgLocale: " + smetaPropertyOgLocale);
+        System.out.println("metaPropertyOgTitle: " + smetaPropertyOgTitle);
+        System.out.println("metaPropertyOgDescription: " + smetaPropertyOgDescription);
+        System.out.println("metaPropertyOgCountryName: " + smetaPropertyOgCountryName);
+        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(" ");
+        System.out.println("metaPropertyName: " + smetaPropertyName);
+        System.out.println("metaPropertyImage: " + smetaPropertyImage);
+        System.out.println("metaPropertyUrl: " + smetaPropertyUrl);
+        System.out.println("metaPropertyDescription: " + smetaPropertyDescription);
+        System.out.println("metaPropertyKeywords: " + smetaPropertyKeywords);
+
         String arrMeta[] = new String[] { spageTitle , smetaTitle , slinkCan , smetaNameKeywords , smetaNameDescription , smetaNameDate ,
                 smetaNameSiteCode , smetaNameTwitterCard , smetaNameTwitterSite , smetaNameTwitterCreator , smetaNameTwitterURL , smetaNameTwitterTitle ,
                 smetaNameTwitterDescription , smetaNameTwitterImage , smetaPropertyOgURL , smetaPropertyOgImage, smetaPropertyOgType , smetaPropertyOgSiteName ,
@@ -116,16 +114,8 @@ public class MetaTest extends BaseSetup {
         };
         List<String> listMeta = Arrays.asList(arrMeta);
         for (String s : listMeta) {
-            System.out.println("The list is: " + s.toString() + ", ");
-            //assertTrue(StringUtils.isNotBlank(s));
+            //System.out.println("The list is: " + s.toString() + ", ");
+            assertTrue(StringUtils.isNotBlank(s));
         }
     }
-//    @Test(priority = 3, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
-//    public void verifyMetaTwitter(String param) throws Exception {
-//        System.out.println("URL: " + param);
-//        System.out.println("metaNameTwitterDescription: " + MetaPage.MetaPageInfo.getMetaNameTwitterDescription());
-//        System.out.println("metaNameTwitterCard: " + MetaPage.MetaPageInfo.getMetaNameTwitterCard());
-//        assertTrue(StringUtils.isNotBlank(MetaPage.MetaPageInfo.getMetaNameTwitterDescription());
-//        assertTrue(StringUtils.isNotBlank(MetaPage.MetaPageInfo.getMetaNameTwitterCard());
-//    }
 }

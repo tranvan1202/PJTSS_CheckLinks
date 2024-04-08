@@ -17,7 +17,7 @@ public class Main {
         WebDriver driver = new ChromeDriver();
         LoginQA loginQA = new LoginQA();
         ArrayList<String> arrayURLs = new ArrayList<>();
-        arrayURLs.addAll(Arrays.asList("https://p6-qa.samsung.com/ph/offer/online/2024/galaxy-week/", "https://p6-qa.samsung.com/ph/offer/online/2024/new-year-sale/"));
+        arrayURLs.addAll(Arrays.asList("https://p6-qa.samsung.com/ph/offer/online/2024/samsung-festival/"));
         //MetaInformation metaInformation = new MetaInformation();
 
         loginQA.login(driver);
@@ -31,7 +31,8 @@ public class Main {
             System.out.println((i+1) + ". " + "URL: " + arrayURLs.get(i));
             driver.navigate().to(arrayURLs.get(i));
             //metaInformation.getMetaInformation(driver);
-            VerifyLinks.verifyLinks(driver);
+            //VerifyLinks.verifyLinks(driver);
+            VerifyLinks.verifyImagePath(driver);
         }
         driver.quit();
     }

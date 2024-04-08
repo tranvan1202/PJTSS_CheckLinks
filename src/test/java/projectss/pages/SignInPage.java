@@ -56,12 +56,6 @@ public class SignInPage {
         return getSignInPageTitle().equals(expectedTitle);
     }
 
-    public boolean verifySignInPageText() {
-        String pageText = elementHeaderPageText.getAttribute("content");
-        String expectedPageText = "Connecting to STS Federation Service";
-        return pageText.contains(expectedPageText);
-    }
-
     public static void signin() throws InterruptedException {
         String winHandleBefore = driver.getWindowHandle();
 

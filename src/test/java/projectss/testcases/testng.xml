@@ -3,13 +3,15 @@
     <parameter name="browserType" value="chrome" />
     <parameter name="loginURL" value="https://wds.samsung.com/wds/sso/login/forwardLogin.do" />
 
-    <parameter name="qaURLs" value="https://www.samsung.com/sg/offer/samsung-care-plus/,https://www.samsung.com/sg/offer/" />
+    <parameter name="qaURLs" value="https://p6-qa.samsung.com/sg/business/smart-signage/interactive-display/interactive-display-wad-lh65wadwlgcxxs,
+https://p6-qa.samsung.com/sg/business/smart-signage/interactive-display/interactive-display-wad-lh75wadwlgcxxs,
+https://p6-qa.samsung.com/sg/business/smart-signage/interactive-display/interactive-display-wad-lh86wadwlgcxxs" />
 
     <test name="sample test">
         <classes>
             <class name="projectss.testcases.MetaTest">
                 <methods >
-<!--                    <include name="signIn" />-->
+                    <include name="signIn" />
                     <include name="verifyExistOfMetaContent" />
                 </methods>
             </class>

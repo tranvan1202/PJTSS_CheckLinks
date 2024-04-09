@@ -1,6 +1,7 @@
 package org.example;
 
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -11,7 +12,7 @@ import java.io.IOException;
 public class htmlUnitTest {
     public static void main(String[] args) {
         try {
-            Document doc = Jsoup.connect("https://samsung.com/ph/offer/online/2024/galaxy-week/").get();
+            Document doc = Jsoup.connect("https://www.samsung.com/uk/offer/").get();
 //            Elements productCards = doc.select("div.feature-column-carousel__content");
             Elements meta = doc.getElementsByTag("meta");
             Elements pageTitle = doc.getElementsByTag("title");
@@ -43,33 +44,21 @@ public class htmlUnitTest {
 //                }
 //            }
 
-            Elements imgPaths2 = doc.select("img");
+            Elements assetPaths = doc.getAllElements();
 
-            for (Element img:imgPaths2) {
-                int ind = imgPaths2.indexOf(img) + 1;
-
-                String attr = img.attr();
-//                String dataDesktopSrc = img.attr("data-desktop-src") ;
-//                String dataMobileSrc = img.attr("data-mobile-src") ;
-//                String dataSrc = img.attr("data-src") ;
-//                String altPC =img.attr("data-desktop-alt");
-//                String altMO = img.attr("data-mobile-alt");
-//                boolean isPCContainsSitecode = dataDesktopSrc.contains("ph");
-//                boolean isMOContainsSitecode = dataMobileSrc.contains("ph");
-//                boolean isGeneralContainsSitecode = dataSrc.contains("ph");
-//                if (!isPCContainsSitecode || !isMOContainsSitecode ) {
-//                    System.out.println(ind + " div: " +  img);
-//                    System.out.println("dataSrc: " +  dataSrc);
-//                    System.out.println("data-desktop-src: " +  dataDesktopSrc);
-//                    System.out.println("data-mobile-src" +  dataMobileSrc);
-//                    System.out.println(" pc Alt: " +  altPC);
-//                    System.out.println(" mo Alt: " +  altMO);
-//                    System.out.println("------------------------");
-//                }
-                System.out.println(ind  + " src:" + img + "________" );
-
+            Elements withAttr = new Elements();
+            for( Element element : assetPaths) {
+                for( Attribute attribute : element.attributes() )
+                {
+                    int ind = assetPaths.indexOf(element) + 1;
+                    boolean correctSiteCode = attribute.getValue().contains("/uk");
+                    if( attribute.getValue().contains("//images.samsung.com") && !correctSiteCode)
+                    {
+                        withAttr.add(element);
+                        System.out.println("ID: " + ind + " Path: " + attribute);
+                    }
+                }
             }
-
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

@@ -34,7 +34,4 @@ public class StaticPage {
         }
         driver.quit();
     }
-    public static void clickIndicatorButton() {
-
-    }
 }

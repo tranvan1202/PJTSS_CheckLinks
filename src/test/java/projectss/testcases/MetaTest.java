@@ -30,7 +30,7 @@ public class MetaTest extends BaseSetup {
         System.out.println(driver);
         signInPage = new SignInPage(driver);
 
-        SignInPage.signin();
+        SignInPage.loginThroughSession();
         assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
     }
     //Phần xử lý get Meta

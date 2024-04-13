@@ -2,6 +2,7 @@ package org.example;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -32,36 +33,27 @@ public class VerifyLinks {
         }
     }
 
-    public static void verifyImagePath(WebDriver driver) throws InterruptedException {
+    public static Elements verifyImagePath(WebDriver driver) throws InterruptedException {
         String html = driver.getPageSource();
         Document doc = Jsoup.parse(html);
-        Elements imgPaths = doc.getElementsByTag("img");
-        Elements imgPaths2 = doc.select("img");
+        Elements assetPaths = doc.getAllElements();
 
-        for(Element img : imgPaths) {
-            int ind = imgPaths.indexOf(img) + 1;
-
-
-            String dataDesktopSrc = img.attr("data-desktop-src") ;
-            String dataMobileSrc = img.attr("data-mobile-src") ;
-            String dataSrc = img.attr("data-src");
-            String src = img.attr("src");
-            String altPC =img.attr("data-desktop-alt");
-            String altMO = img.attr("data-mobile-alt");
-            boolean isDataDesktopSrcContainsSitecode = dataDesktopSrc.contains("ph");
-            boolean isDataMobileSrcContainsSitecode = dataMobileSrc.contains("ph");
-            boolean isDataSrcContainsSitecode = (dataSrc.contains("ph") && StringUtils.isEmpty(dataSrc));
-            boolean isSrcContainsSitecode = (src.contains("ph") && StringUtils.isEmpty(src));
-
-            if (!isDataDesktopSrcContainsSitecode || !isDataMobileSrcContainsSitecode) {
-                System.out.println(ind + " img: " +  img);
-//                System.out.println("dataSrc: " +  dataSrc);
-//                System.out.println("data-desktop-src: " +  dataDesktopSrc);
-//                System.out.println("data-mobile-src" +  dataMobileSrc);
-//                System.out.println(" pc Alt: " +  altPC);
-//                System.out.println(" mo Alt: " +  altMO);
+        Elements withAttr = new Elements();
+        for( Element element : assetPaths) {
+            for( Attribute attribute : element.attributes() )
+            {
+                int ind = assetPaths.indexOf(element) + 1;
+                boolean correctSiteCode = attribute.getValue().contains("/ph");
+                //p6-qa thì: //stg-images.samsung.com
+                //live stage thì: //images.samsung.com
+                if( attribute.getValue().contains("images.samsung.com") && !correctSiteCode)
+                {
+                    withAttr.add(element);
+                    System.out.println("No: " + ind + " Path: " + attribute);
+                }
             }
         }
+        return withAttr;
     }
 
     public static void checkBrokenLinks(String url) {

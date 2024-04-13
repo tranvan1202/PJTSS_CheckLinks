@@ -22,7 +22,7 @@ public class StaticPageTest extends BaseSetup {
         System.out.println(driver);
         signInPage = new SignInPage(driver);
 
-        SignInPage.signin();
+        SignInPage.loginThroughSession();
         assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
     }
     @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)

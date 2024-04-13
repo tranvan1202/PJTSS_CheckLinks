@@ -15,6 +15,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Set;
 
+import static java.lang.Thread.sleep;
+
 public class SignInPage {
     private static WebDriver driver;
     public static Properties prop;
@@ -30,6 +32,7 @@ public class SignInPage {
     @FindBy(id = "otpCode")
     private static WebElement otpCode;
 
+    private static String cookiesCurrent;
     @FindBy(xpath = "/html/body/div/div[2]/div/div[1]/div[1]/div/dl[4]/dd[1]")
     private static WebElement submitQALink;
 
@@ -50,10 +53,26 @@ public class SignInPage {
         String pageTitle = driver.getTitle();
         return pageTitle;
     }
-
     public boolean verifySignInPageTitle() {
         String expectedTitle = "Home Electronics | Home Appliances | Mobile | Computing |";
         return getSignInPageTitle().equals(expectedTitle);
+    }
+
+    public static void loginThroughSession() throws InterruptedException {
+        String winHandleBefore = driver.getWindowHandle();
+
+        // Add the cookie into current browser context (cookiesCurrent)
+        //System.out.println("Get Current Cookies: " + BaseSetup.prop.getProperty("cook"));
+        driver.manage().addCookie(new Cookie("JSESSIONID", BaseSetup.prop.getProperty("session")));
+        sleep(3);
+        driver.navigate().to("https://wds.samsung.com/wds/sso/login/ssoLoginSuccess.do");
+
+        //Click nút QA
+        clickSubmitQALink();
+        sleep(2000);
+        ArrayList<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+        driver.switchTo().window(browserTabs.get(1));
+
     }
 
     public static void signin() throws InterruptedException {
@@ -89,7 +108,7 @@ public class SignInPage {
         }
         //Click nút QA
         clickSubmitQALink();
-        Thread.sleep(2000);
+        sleep(2000);
         ArrayList<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
         driver.switchTo().window(browserTabs.get(1));
     }

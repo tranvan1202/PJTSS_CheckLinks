@@ -39,7 +39,9 @@ public class CommonPage {
         return withAttr;
     }
 
+
     public static boolean isInputLinkBroken(String url) {
+        url = convertURLFromP6(url);
         boolean success = true;
         try {
             URL link = new URL(url);
@@ -71,5 +73,11 @@ public class CommonPage {
         System.out.println(p.html());
         return exist;
     }
-
+    public static String convertURLFromP6(String url) {
+        if (url.contains("p6-qa")) {
+            url = url.replace("p6-qa","www");
+            return url;
+        }
+        return url;
+    }
 }

@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 16">
+    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 16: update login, update broken links, update asset path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/VerifyLinks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/VerifyLinks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/StaticPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/StaticPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712144796523</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated 16: update login, update broken links, update asset path">
+      <option name="closed" value="true" />
+      <created>1712990342338</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712990342338</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,7 +237,8 @@
     <MESSAGE value="updated 12" />
     <MESSAGE value="updated 13" />
     <MESSAGE value="updated 16" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated 16" />
+    <MESSAGE value="updated 16: update login, update broken links, update asset path" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated 16: update login, update broken links, update asset path" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -275,6 +278,24 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java</url>
+          <line>42</line>
+          <properties class="projectss.pages.CommonPage" method="isInputLinkBroken">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java</url>
+          <line>75</line>
+          <properties class="projectss.pages.CommonPage" method="convertURLFromP6">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -37,5 +37,6 @@ public class CommonPageTest extends BaseSetup {
     public void verifyBrokenInputLinks(String param) throws Exception {
         //commonPage = new CommonPage(driver);
         assertTrue(CommonPage.isInputLinkBroken(param));
+        //assertTrue(CommonPage.isGetLinkBroken(commonPage.getHrefFromOrginalURL(param)));
     }
 }

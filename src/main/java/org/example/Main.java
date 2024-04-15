@@ -17,23 +17,26 @@ public class Main {
         WebDriver driver = new ChromeDriver();
         LoginQA loginQA = new LoginQA();
         ArrayList<String> arrayURLs = new ArrayList<>();
-        arrayURLs.addAll(Arrays.asList("https://p6-qa.samsung.com/ph/offer/online/2024/samsung-festival/"));
+        //arrayURLs.addAll(Arrays.asList("https://images.samsung.com/is/image/samsung/assets/sg/offer/c-audit-august23/computing-MO1.png?$LazyLoad_Home_PNG$"));
         //MetaInformation metaInformation = new MetaInformation();
 
-        loginQA.login(driver);
+        //loginQA.login(driver);
         //JavascriptExecutor js1 = (JavascriptExecutor) driver;
         //js1.executeScript("window.open()");
-        ArrayList<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
-        driver.switchTo().window(browserTabs.get(1));
+        //ArrayList<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+        //driver.switchTo().window(browserTabs.get(1));
 
-        for (int i = 0; i < arrayURLs.size(); i++) {
-            System.out.println("---------------------------------------------------------");
-            System.out.println((i+1) + ". " + "URL: " + arrayURLs.get(i));
-            driver.navigate().to(arrayURLs.get(i));
-            //metaInformation.getMetaInformation(driver);
-            //VerifyLinks.verifyLinks(driver);
-            VerifyLinks.verifyImagePath(driver);
-        }
+
+//        for (int i = 0; i < arrayURLs.size(); i++) {
+//            System.out.println("---------------------------------------------------------");
+//            System.out.println((i+1) + ". " + "URL: " + arrayURLs.get(i));
+//            driver.navigate().to(arrayURLs.get(i));
+//            //metaInformation.getMetaInformation(driver);
+//            //VerifyLinks.verifyLinks(driver);
+//            VerifyLinks.verifyImagePath(driver);
+//        }
+
+        VerifyLinks.checkBrokenLinks("https://images.samsung.com/is/image/samsung/assets/sg/offer/c-audit-august23/computing-MO1.png?$LazyLoad_Home_PNG$");
         driver.quit();
     }
 }

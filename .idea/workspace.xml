@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 17: update convert p6 to www">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" afterDir="false" />
     </list>
@@ -258,11 +257,6 @@
           <line>24</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="18" />
@@ -271,42 +265,6 @@
           <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
           <option name="timeStamp" value="59" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java</url>
-          <line>29</line>
-          <properties class="projectss.testcases.CommonPageTest" method="verifyAssetPath">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java</url>
-          <line>21</line>
-          <properties class="projectss.pages.CommonPage" method="getWrongSiteCodeAssetPath">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java</url>
-          <line>66</line>
-          <properties class="projectss.pages.CommonPage" method="isInputLinkBroken">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java</url>
-          <line>118</line>
-          <properties class="projectss.pages.CommonPage" method="convertURLFromP6">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

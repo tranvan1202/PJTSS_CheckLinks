@@ -33,7 +33,7 @@ public class CommonPageTest extends BaseSetup {
         driver.get(param);
         CommonPage.getWrongSiteCodeAssetPath(driver,"/ph");
     }
-    @Test(priority = 3, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
+    @Test(priority = 3, dataProvider = "hrefLinks", dataProviderClass = BaseSetup.class)
     public void verifyBrokenInputLinks(String param) throws Exception {
         //commonPage = new CommonPage(driver);
         assertTrue(CommonPage.isInputLinkBroken(param));

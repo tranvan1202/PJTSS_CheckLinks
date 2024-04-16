@@ -73,8 +73,19 @@ public class BaseSetup {
     }
 
     @DataProvider(name="qaURLs")
-    public Object[][] getQALinks(ITestContext context) {
+    public Object[][] splitQALinks(ITestContext context) {
         String parameter = context.getCurrentXmlTest().getParameter("qaURLs");
+        String[] names = parameter.split(",");
+        Object[][] returnValues = new Object[names.length][1];
+        int index = 0;
+        for (Object[] each : returnValues) {
+            each[0] = names[index++].trim();
+        }
+        return returnValues;
+    }
+    @DataProvider(name="hrefLinks")
+    public Object[][] splitHrefLinks(ITestContext context) {
+        String parameter = context.getCurrentXmlTest().getParameter("hrefLinks");
         String[] names = parameter.split(",");
         Object[][] returnValues = new Object[names.length][1];
         int index = 0;

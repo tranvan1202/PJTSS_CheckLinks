@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 19">
+    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 19.1 (fix)">
+      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/LiveSpacePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713254659626</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="updated 19.1 (fix)">
+      <option name="closed" value="true" />
+      <created>1713255775416</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713255775416</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,7 +265,8 @@
     <MESSAGE value="updated 16: update login, update broken links, update asset path" />
     <MESSAGE value="updated 17: update convert p6 to www" />
     <MESSAGE value="updated 19" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated 19" />
+    <MESSAGE value="updated 19.1 (fix)" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated 19.1 (fix)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

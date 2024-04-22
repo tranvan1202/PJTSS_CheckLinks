@@ -106,8 +106,9 @@ public class MetaTest extends BaseSetup {
         System.out.println("metaPropertyDescription: " + smetaPropertyDescription);
         System.out.println("metaPropertyKeywords: " + smetaPropertyKeywords);
 
+        //Bỏ smetaNameTwitterCard
         String arrMeta[] = new String[] { spageTitle , smetaTitle , slinkCan , smetaNameKeywords , smetaNameDescription , smetaNameDate ,
-                smetaNameSiteCode , smetaNameTwitterCard , smetaNameTwitterSite , smetaNameTwitterCreator , smetaNameTwitterURL , smetaNameTwitterTitle ,
+                smetaNameSiteCode , smetaNameTwitterSite , smetaNameTwitterCreator , smetaNameTwitterURL , smetaNameTwitterTitle ,
                 smetaNameTwitterDescription , smetaNameTwitterImage , smetaPropertyOgURL , smetaPropertyOgImage, smetaPropertyOgType , smetaPropertyOgSiteName ,
                 smetaPropertyOgLocale , smetaPropertyOgTitle , smetaPropertyOgDescription , smetaPropertyOgCountryName , smetaPropertyName , smetaPropertyImage ,
                 smetaPropertyUrl , smetaPropertyDescription , smetaPropertyKeywords

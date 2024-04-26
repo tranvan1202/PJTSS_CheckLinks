@@ -8,6 +8,7 @@ import projectss.base.BaseSetup;
 import projectss.pages.MetaPage;
 import projectss.pages.SignInPage;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class MetaTest extends BaseSetup {
     @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
     public void verifyExistOfMetaContent(String param) throws Exception {
         metaPage = new MetaPage(driver);
-        System.out.println("URL: " + param);
+        //System.out.println("URL: " + param);
         driver.get(param);
 
         String spageTitle = MetaPage.driver.getTitle();
@@ -68,43 +69,43 @@ public class MetaTest extends BaseSetup {
         String smetaPropertyDescription = MetaPage.metaPropertyDescription.getAttribute("content");
         String smetaPropertyKeywords = MetaPage.metaPropertyKeywords.getAttribute("content");
 
-        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(" ");
-        System.out.println("pageTitle: " + spageTitle);
-        System.out.println("metaTitle: " + smetaTitle);
-        System.out.println("linkCan: " + slinkCan);
-        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(" ");
-        System.out.println("metaNameKeywords: " + smetaNameKeywords);
-        System.out.println("metaNameDescription: " + smetaNameDescription);
-        System.out.println("metaNameDate: " + smetaNameDate);
-        System.out.println("metaNameSiteCode : " + smetaNameSiteCode);
-        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(" ");
-        System.out.println("metaNameTwitterCard: " + smetaNameTwitterCard);
-        System.out.println("metaNameTwitterSite: " + smetaNameTwitterSite);
-        System.out.println("metaNameTwitterCreator: " + smetaNameTwitterCreator);
-        System.out.println("metaNameTwitterURL: " + smetaNameTwitterURL);
-        System.out.println("metaNameTwitterTitle: " + smetaNameTwitterTitle);
-        System.out.println("metaNameTwitterDescription: " + smetaNameTwitterDescription);
-        System.out.println("metaNameTwitterImage: " + smetaNameTwitterImage);
-        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(" ");
-        System.out.println("metaPropertyOgURL: " + smetaPropertyOgURL);
-        System.out.println("metaPropertyOgImage: " + smetaPropertyOgImage);
-        System.out.println("metaPropertyOgType: " + smetaPropertyOgType);
-        System.out.println("metaPropertyOgSiteName: " + smetaPropertyOgSiteName);
-        System.out.println("metaPropertyOgLocale: " + smetaPropertyOgLocale);
-        System.out.println("metaPropertyOgTitle: " + smetaPropertyOgTitle);
-        System.out.println("metaPropertyOgDescription: " + smetaPropertyOgDescription);
-        System.out.println("metaPropertyOgCountryName: " + smetaPropertyOgCountryName);
-        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(" ");
-        System.out.println("metaPropertyName: " + smetaPropertyName);
-        System.out.println("metaPropertyImage: " + smetaPropertyImage);
-        System.out.println("metaPropertyUrl: " + smetaPropertyUrl);
-        System.out.println("metaPropertyDescription: " + smetaPropertyDescription);
-        System.out.println("metaPropertyKeywords: " + smetaPropertyKeywords);
+//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+//        System.out.println(" ");
+//        System.out.println("pageTitle: " + spageTitle);
+//        System.out.println("metaTitle: " + smetaTitle);
+//        System.out.println("linkCan: " + slinkCan);
+//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+//        System.out.println(" ");
+//        System.out.println("metaNameKeywords: " + smetaNameKeywords);
+//        System.out.println("metaNameDescription: " + smetaNameDescription);
+//        System.out.println("metaNameDate: " + smetaNameDate);
+//        System.out.println("metaNameSiteCode : " + smetaNameSiteCode);
+//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+//        System.out.println(" ");
+//        System.out.println("metaNameTwitterCard: " + smetaNameTwitterCard);
+//        System.out.println("metaNameTwitterSite: " + smetaNameTwitterSite);
+//        System.out.println("metaNameTwitterCreator: " + smetaNameTwitterCreator);
+//        System.out.println("metaNameTwitterURL: " + smetaNameTwitterURL);
+//        System.out.println("metaNameTwitterTitle: " + smetaNameTwitterTitle);
+//        System.out.println("metaNameTwitterDescription: " + smetaNameTwitterDescription);
+//        System.out.println("metaNameTwitterImage: " + smetaNameTwitterImage);
+//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+//        System.out.println(" ");
+//        System.out.println("metaPropertyOgURL: " + smetaPropertyOgURL);
+//        System.out.println("metaPropertyOgImage: " + smetaPropertyOgImage);
+//        System.out.println("metaPropertyOgType: " + smetaPropertyOgType);
+//        System.out.println("metaPropertyOgSiteName: " + smetaPropertyOgSiteName);
+//        System.out.println("metaPropertyOgLocale: " + smetaPropertyOgLocale);
+//        System.out.println("metaPropertyOgTitle: " + smetaPropertyOgTitle);
+//        System.out.println("metaPropertyOgDescription: " + smetaPropertyOgDescription);
+//        System.out.println("metaPropertyOgCountryName: " + smetaPropertyOgCountryName);
+//        System.out.println("/////////////////////////////////////////////////////////////////////////////////");
+//        System.out.println(" ");
+//        System.out.println("metaPropertyName: " + smetaPropertyName);
+//        System.out.println("metaPropertyImage: " + smetaPropertyImage);
+//        System.out.println("metaPropertyUrl: " + smetaPropertyUrl);
+//        System.out.println("metaPropertyDescription: " + smetaPropertyDescription);
+//        System.out.println("metaPropertyKeywords: " + smetaPropertyKeywords);
 
         //Bỏ smetaNameTwitterCard
         String arrMeta[] = new String[] { spageTitle , smetaTitle , slinkCan , smetaNameKeywords , smetaNameDescription , smetaNameDate ,
@@ -113,10 +114,14 @@ public class MetaTest extends BaseSetup {
                 smetaPropertyOgLocale , smetaPropertyOgTitle , smetaPropertyOgDescription , smetaPropertyOgCountryName , smetaPropertyName , smetaPropertyImage ,
                 smetaPropertyUrl , smetaPropertyDescription , smetaPropertyKeywords
         };
+
+        ArrayList<String> arrMissingMetaURLs = new ArrayList<>();
         List<String> listMeta = Arrays.asList(arrMeta);
         for (String s : listMeta) {
             //System.out.println("The list is: " + s.toString() + ", ");
-            assertTrue(StringUtils.isNotBlank(s));
+            assertTrue(StringUtils.isNotBlank(s),"Fail URL: " + param);
+            arrMissingMetaURLs.add(param);
         }
+        System.out.println(arrMissingMetaURLs);
     }
 }

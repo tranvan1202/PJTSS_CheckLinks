@@ -14,7 +14,7 @@
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="initializeTestBaseSetup"/>
-          <include name="verifySKUCodeByGoogle" invocation-numbers="0"/>
+          <include name="verifySKUnBadgeByGoogle" invocation-numbers="0"/>
         </methods>
       </class> <!-- projectss.testcases.PDPTest -->
     </classes>

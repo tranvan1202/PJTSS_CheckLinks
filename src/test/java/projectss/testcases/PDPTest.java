@@ -37,7 +37,7 @@ public class PDPTest extends BaseSetup {
     }
 
     @Test(priority = 2)
-    public void verifySKUCodeByGoogle(ITestContext context) throws Exception {
+    public void verifySKUnBadgeByGoogle(ITestContext context) throws Exception {
         commonPage = new CommonPage(driver);
         String parameterGGSpreadSheetID = context.getCurrentXmlTest().getParameter("ggSpreadSheetID");
         String parameterGGSpreadSheetRange = context.getCurrentXmlTest().getParameter("ggSpreadSheetRange");

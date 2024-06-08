@@ -40,7 +40,7 @@
 
             <class name="projectss.testcases.PDPTest">
                 <methods >
-                    <include name="verifySKUCodeByGoogle" />
+                    <include name="verifySKUnBadgeByGoogle" />
                 </methods>
             </class>
 

@@ -5,6 +5,8 @@ import org.jsoup.nodes.Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -14,6 +16,7 @@ import projectss.pages.CommonPage;
 import projectss.pages.SignInPage;
 import org.testng.ITestContext;
 
+import java.time.Duration;
 import java.util.List;
 
 import static org.testng.Assert.assertTrue;
@@ -22,6 +25,7 @@ public class PDPTest extends BaseSetup {
     private WebDriver driver;
     public SignInPage signInPage;
     public CommonPage commonPage;
+
     @BeforeClass
     public void setUp() {
         // Đã khởi tạo browser hết rồi kể cả wait, phóng to màn hình,...
@@ -39,6 +43,8 @@ public class PDPTest extends BaseSetup {
     @Test(priority = 2)
     public void verifySKUnBadgeByGoogle(ITestContext context) throws Exception {
         commonPage = new CommonPage(driver);
+        WebDriverWait wait60s = new WebDriverWait(driver, Duration.ofSeconds(60));
+        WebDriverWait wait10s = new WebDriverWait(driver, Duration.ofSeconds(10));
         String parameterGGSpreadSheetID = context.getCurrentXmlTest().getParameter("ggSpreadSheetID");
         String parameterGGSpreadSheetRange = context.getCurrentXmlTest().getParameter("ggSpreadSheetRange");
         SoftAssert softAssert = new SoftAssert();
@@ -50,7 +56,7 @@ public class PDPTest extends BaseSetup {
             for (List row : receivedValues) {
                 System.out.printf("%s,%s\n",row.get(0), row.get(5));
                 driver.get((String) row.get(5));
-
+                wait60s.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='pd-info__sku-code']")));
                 //Verify SKU Code text
                 WebElement elementSKUCode = driver.findElement(By.xpath("//span[@class='pd-info__sku-code']"));
                 Document doc = Jsoup.parse(elementSKUCode.getAttribute("innerHTML"));
@@ -58,6 +64,7 @@ public class PDPTest extends BaseSetup {
                 softAssert.assertEquals(skuCode,row.get(1),"No lỗi: " + row.get(0) + "_");
 
                 //Verify Badge text
+                wait10s.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//strong[contains(@class,'pd-info__badge-icon')]")));
                 WebElement elementBadgeText = driver.findElement(By.xpath("//strong[contains(@class,'pd-info__badge-icon')]"));
                 Document doc2 = Jsoup.parse(elementBadgeText.getAttribute("innerHTML"));
                 String badgeText = doc2.text();

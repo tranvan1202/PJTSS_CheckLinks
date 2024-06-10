@@ -13,10 +13,8 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.SheetsScopes;
 import com.google.api.services.sheets.v4.model.ValueRange;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+
+import java.io.*;
 import java.security.GeneralSecurityException;
 import java.util.Collections;
 import java.util.List;
@@ -32,7 +30,7 @@ public class SheetsQuickstart {
      */
     private static final List<String> SCOPES =
             Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
-    private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
+    private static final String CREDENTIALS_FILE_PATH = "resources\\spreadsheet\\credentials.json";
 
     /**
      * Creates an authorized Credential object.
@@ -44,7 +42,8 @@ public class SheetsQuickstart {
     private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT)
             throws IOException {
         // Load client secrets.
-        InputStream in = SheetsQuickstart.class.getResourceAsStream(CREDENTIALS_FILE_PATH);
+        //InputStream in = SheetsQuickstart.class.getResourceAsStream(CREDENTIALS_FILE_PATH);
+        InputStream in = new FileInputStream(CREDENTIALS_FILE_PATH);
         if (in == null) {
             throw new FileNotFoundException("Resource not found: " + CREDENTIALS_FILE_PATH);
         }

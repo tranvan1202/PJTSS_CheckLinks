@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="47" passed="45">
+<testng-results skipped="0" failed="1" ignored="2" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="PageObjectTest Example" duration-ms="194648" started-at="2024-06-10T17:29:27 ICT" finished-at="2024-06-10T17:32:41 ICT">
+  <suite name="PageObjectTest Example" duration-ms="72704" started-at="2024-06-11T18:16:34 ICT" finished-at="2024-06-11T18:17:47 ICT">
     <groups>
     </groups>
-    <test name="AutomationTest" duration-ms="194648" started-at="2024-06-10T17:29:27 ICT" finished-at="2024-06-10T17:32:41 ICT">
-      <class name="projectss.testcases.MetaTestNew">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String,java.lang.String)[pri:0, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="initializeTestBaseSetup" is-config="true" duration-ms="5391" started-at="2024-06-10T17:29:27 ICT" finished-at="2024-06-10T17:29:32 ICT">
+    <test name="AutomationTest" duration-ms="72704" started-at="2024-06-11T18:16:34 ICT" finished-at="2024-06-11T18:17:47 ICT">
+      <class name="projectss.testcases.ProductDetailTest">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String,java.lang.String)[pri:0, instance:projectss.testcases.ProductDetailTest@536aaa8d]" name="initializeTestBaseSetup" is-config="true" duration-ms="4659" started-at="2024-06-11T18:16:34 ICT" finished-at="2024-06-11T18:16:39 ICT">
           <params>
             <param index="0">
               <value>
@@ -23,308 +23,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="setUp" is-config="true" duration-ms="0" started-at="2024-06-10T17:29:32 ICT" finished-at="2024-06-10T17:29:32 ICT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projectss.testcases.ProductDetailTest@536aaa8d]" name="setUp" is-config="true" duration-ms="0" started-at="2024-06-11T18:16:39 ICT" finished-at="2024-06-11T18:16:39 ICT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="signIn()[pri:1, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="signIn" duration-ms="3601" started-at="2024-06-10T17:29:32 ICT" finished-at="2024-06-10T17:29:36 ICT">
+        <test-method status="PASS" signature="signIn()[pri:1, instance:projectss.testcases.ProductDetailTest@536aaa8d]" name="signIn" duration-ms="4458" started-at="2024-06-11T18:16:39 ICT" finished-at="2024-06-11T18:16:43 ICT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="10222" started-at="2024-06-10T17:29:36 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:29:46 ICT">
+        <test-method status="FAIL" signature="verifySKUnBadgeByGoogle(org.testng.ITestContext)[pri:2, instance:projectss.testcases.ProductDetailTest@536aaa8d]" name="verifySKUnBadgeByGoogle" duration-ms="60697" started-at="2024-06-11T18:16:43 ICT" finished-at="2024-06-11T18:17:44 ICT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-battery-pack-20000mah-cosmic-gray-eb-p5300xjegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="4164" started-at="2024-06-10T17:29:46 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:29:50 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/super-fast-wireless-charger-duo-dark-gray-ep-p5400tbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3673" started-at="2024-06-10T17:29:50 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:29:54 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/super-fast-wireless-charger-duo-white-ep-p5400bwegww/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2562" started-at="2024-06-10T17:29:54 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:29:56 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/super-fast-wireless-charger-duo-darkgray-ep-p5400bbegww/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3139" started-at="2024-06-10T17:29:56 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:29:59 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/samsung-35mm-earphones-black-eo-ia500bbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3560" started-at="2024-06-10T17:29:59 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:03 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/15w-power-adapter-black-ep-t1510nbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3615" started-at="2024-06-10T17:30:03 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:07 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/15w-power-adapter-white-ep-t1510nwegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="5421" started-at="2024-06-10T17:30:07 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:12 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/15w-power-adapter-white-ep-t1510xwegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3281" started-at="2024-06-10T17:30:12 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:15 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/15w-power-adapter-black-ep-t1510xbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3641" started-at="2024-06-10T17:30:15 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:19 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/10-000mah-battery-pack-beige-eb-p3400xuegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="4060" started-at="2024-06-10T17:30:19 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:23 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-black-ef-bx210tbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="4728" started-at="2024-06-10T17:30:23 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:28 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-white-ef-bx210twegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3603" started-at="2024-06-10T17:30:28 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:31 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-blue-ef-bx210tlegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3400" started-at="2024-06-10T17:30:31 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:35 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-black-ef-bx110tbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2422" started-at="2024-06-10T17:30:35 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:37 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-white-ef-bx110twegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="4933" started-at="2024-06-10T17:30:37 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:42 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-blue-ef-bx110tlegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3049" started-at="2024-06-10T17:30:42 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:45 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-power-adapter-black-ep-t2510xbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3747" started-at="2024-06-10T17:30:45 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:49 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-power-adapter-white-ep-t2510xwegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3476" started-at="2024-06-10T17:30:49 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:52 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-power-adapter-black-ep-t2510nbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3908" started-at="2024-06-10T17:30:52 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:56 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-power-adapter-white-ep-t2510nwegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2345" started-at="2024-06-10T17:30:56 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:30:59 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/45w-power-adapter-black-ep-t4511xbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3883" started-at="2024-06-10T17:30:59 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:02 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-fit3-sport-band-dark-green-et-sfr39mgegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3084" started-at="2024-06-10T17:31:02 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:06 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-fit3-sport-band-orange-et-sfr39moegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3336" started-at="2024-06-10T17:31:06 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:09 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-standing-grip-case-black-ef-ga556tbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3228" started-at="2024-06-10T17:31:09 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:12 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-standing-grip-case-gray-ef-ga556tjegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="FAIL" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2995" started-at="2024-06-10T17:31:12 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:15 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-card-slot-case-black-ef-oa356tbegww]]>
+                <![CDATA[org.testng.TestRunner@44c79f32]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Fail URL: https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-card-slot-case-black-ef-oa356tbegww expected [true] but found [false]]]>
+              <![CDATA[The following asserts failed:
+No 34 lỗi sai text, chi tiết:  expected [เก่าแลกใหม่ 5000z] but found [เก่าแลกใหม่ 5000],
+No 35 lỗi sai mã SKU, chi tiết:  expected [F-RF59U12BPOGG] but found [SM-P625NZAETHL],
+expected [No 35 lỗi ko có badge, chi tiết: ] but found [เก่าแลกใหม่ 5000]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Fail URL: https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-card-slot-case-black-ef-oa356tbegww expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at projectss.testcases.MetaTestNew.verifyExistOfMetaContent2(MetaTestNew.java:84)
-at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+No 34 lỗi sai text, chi tiết:  expected [เก่าแลกใหม่ 5000z] but found [เก่าแลกใหม่ 5000],
+No 35 lỗi sai mã SKU, chi tiết:  expected [F-RF59U12BPOGG] but found [SM-P625NZAETHL],
+expected [No 35 lỗi ko có badge, chi tiết: ] but found [เก่าแลกใหม่ 5000]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at projectss.testcases.ProductDetailTest.verifySKUnBadgeByGoogle(ProductDetailTest.java:116)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -355,221 +86,12 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3131" started-at="2024-06-10T17:31:15 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:18 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-card-slot-case-lime-ef-oa356tmegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="4609" started-at="2024-06-10T17:31:18 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:23 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-silicone-case-black-ef-pa356tbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2679" started-at="2024-06-10T17:31:23 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:26 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-silicone-case-light-blue-ef-pa356tlegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2758" started-at="2024-06-10T17:31:26 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:28 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-silicone-case-lime-ef-pa356tmegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3128" started-at="2024-06-10T17:31:28 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:31 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-silicone-case-black-ef-pa556tbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3401" started-at="2024-06-10T17:31:31 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:35 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-silicone-case-light-blue-ef-pa556tlegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3205" started-at="2024-06-10T17:31:35 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:38 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-silicone-case-lime-ef-pa556tmegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="4878" started-at="2024-06-10T17:31:38 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:43 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-clear-case-transparent-ef-qa356ctegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3403" started-at="2024-06-10T17:31:43 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:46 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-clear-case-transparent-ef-qa556ctegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2403" started-at="2024-06-10T17:31:46 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:49 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-smart-view-wallet-case-black-ef-za356cbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3484" started-at="2024-06-10T17:31:49 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:52 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-smart-view-wallet-case-lavender-ef-za356cvegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3364" started-at="2024-06-10T17:31:52 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:56 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-smart-view-wallet-case-white-ef-za356cwegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2736" started-at="2024-06-10T17:31:56 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:31:58 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-smart-view-wallet-case-black-ef-za556cbegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3355" started-at="2024-06-10T17:31:58 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:32:02 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-smart-view-wallet-case-lavender-ef-za556cvegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="3692" started-at="2024-06-10T17:32:02 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:32:05 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-smart-view-wallet-case-white-ef-za556cwegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2817" started-at="2024-06-10T17:32:05 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:32:08 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/wolke-clear-case-for-galaxy-a35-transparent-gp-fpa356vaatw]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="24025" started-at="2024-06-10T17:32:08 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:32:32 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/wolke-clear-case-for-galaxy-a55-transparent-gp-fpa556vaatw]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2785" started-at="2024-06-10T17:32:32 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:32:35 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/battery-pack-20-000mah-beige-eb-p4520xuegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="verifyExistOfMetaContent2(java.lang.String)[pri:3, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="verifyExistOfMetaContent2" duration-ms="2749" started-at="2024-06-10T17:32:35 ICT" data-provider="qaURLs" finished-at="2024-06-10T17:32:38 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[https://p6-qa.samsung.com/vn/business/mobile-accessories/wireless-battery-pack-10-000mah-beige-eb-u2510xuegww]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExistOfMetaContent2 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:projectss.testcases.MetaTestNew@1b68ddbd]" name="tearDown" is-config="true" duration-ms="3528" started-at="2024-06-10T17:32:38 ICT" finished-at="2024-06-10T17:32:41 ICT">
+        </test-method> <!-- verifySKUnBadgeByGoogle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:projectss.testcases.ProductDetailTest@536aaa8d]" name="tearDown" is-config="true" duration-ms="2851" started-at="2024-06-11T18:17:44 ICT" finished-at="2024-06-11T18:17:47 ICT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- projectss.testcases.MetaTestNew -->
+      </class> <!-- projectss.testcases.ProductDetailTest -->
     </test> <!-- AutomationTest -->
   </suite> <!-- PageObjectTest Example -->
 </testng-results>

@@ -123,4 +123,8 @@ public class CommonPage {
         }
         return url;
     }
+    public static boolean isPresent(WebDriver driver, By locator)
+    {
+        return !driver.findElements(locator).isEmpty();
+    }
 }

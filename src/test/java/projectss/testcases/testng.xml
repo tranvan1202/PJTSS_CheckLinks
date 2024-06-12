@@ -24,19 +24,20 @@
 <!--                </methods>-->
 <!--            </class>-->
 
-            <class name="projectss.testcases.MetaTestNew">
-                <methods >
-                    <include name="signIn" />
-                    <include name="verifyExistOfMetaContent2" />
-                </methods>
-            </class>
-
-<!--            <class name="projectss.testcases.PDPTest">-->
+<!--            <class name="projectss.testcases.MetaTestNew">-->
 <!--                <methods >-->
-<!--&lt;!&ndash;                    <include name="signIn" />&ndash;&gt;-->
-<!--                    <include name="verifySKUnBadgeByGoogle" />-->
+<!--                    <include name="signIn" />-->
+<!--                    <include name="verifyExistOfMetaContent2" />-->
 <!--                </methods>-->
 <!--            </class>-->
+
+            <class name="projectss.testcases.ProductDetailTest">
+                <methods >
+                    <include name="signIn" />
+<!--                    <include name="getDataFromURLs" />-->
+                    <include name="verifySKUnBadgeByGoogle" />
+                </methods>
+            </class>
 
         </classes>
     </test>

@@ -9,14 +9,14 @@
   <parameter name="ggSpreadSheetID" value="1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4"/>
   <test thread-count="5" name="AutomationTest(failed)">
     <classes>
-      <class name="projectss.testcases.MetaTestNew">
+      <class name="projectss.testcases.ProductDetailTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyExistOfMetaContent2" invocation-numbers="25"/>
+          <include name="tearDown"/>
           <include name="initializeTestBaseSetup"/>
+          <include name="verifySKUnBadgeByGoogle" invocation-numbers="0"/>
         </methods>
-      </class> <!-- projectss.testcases.MetaTestNew -->
+      </class> <!-- projectss.testcases.ProductDetailTest -->
     </classes>
   </test> <!-- AutomationTest(failed) -->
 </suite> <!-- Failed suite [PageObjectTest Example] -->

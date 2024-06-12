@@ -4,36 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 25: update verify text (v2.1)">
-      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 28: update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTestNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTestNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/testng-failed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-alphabetical.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-not-run.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-not-run.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/testng.xml.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/toc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-reports.css" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-reports.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-reports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-reports1.css" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-reports1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-reports2.js" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-reports2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,9 +53,13 @@
     &quot;last_opened_file_path&quot;: &quot;D:/Auto/PJTSS_CheckLinks/src/test/java/projectss/config&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
+  <component name="Push.Settings">
+    <option name="SHOW_DETAILS_PANEL" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\config" />
@@ -281,7 +257,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717888181933</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="updated 27: update code dư">
+      <option name="closed" value="true" />
+      <created>1718019010393</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1718019010393</updated>
+    </task>
+    <task id="LOCAL-00020" summary="updated 28: update">
+      <option name="closed" value="true" />
+      <created>1718106974203</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1718106974203</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,7 +307,9 @@
     <MESSAGE value="updated 22: new meta test (jsoup)" />
     <MESSAGE value="updated 25: update verify text (v2)" />
     <MESSAGE value="updated 25: update verify text (v2.1)" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated 25: update verify text (v2.1)" />
+    <MESSAGE value="updated 27: update code dư" />
+    <MESSAGE value="updated 28: update" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated 28: update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -338,6 +332,24 @@
           <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
           <option name="timeStamp" value="59" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTestNew.java</url>
+          <line>91</line>
+          <properties class="projectss.testcases.ProductDetailTestNew" method="verifySKUByGoogle">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java</url>
+          <line>33</line>
+          <properties class="projectss.pages.ProductDetailPage" method="getSKUCodes">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

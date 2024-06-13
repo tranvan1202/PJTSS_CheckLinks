@@ -9,7 +9,7 @@ import projectss.pages.StaticPage;
 
 import static org.testng.Assert.assertTrue;
 
-public class StaticPageTest extends BaseSetup {
+public class StaticPageTest extends projectss.base.BaseSetup {
     private WebDriver driver;
     public SignInPage signInPage;
     @BeforeClass

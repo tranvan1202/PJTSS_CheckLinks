@@ -14,7 +14,7 @@ import java.util.List;
 
 import static org.testng.Assert.assertTrue;
 
-public class MetaTest extends BaseSetup {
+public class MetaTest extends projectss.base.BaseSetup {
     private WebDriver driver;
     public SignInPage signInPage;
     public MetaPage metaPage;

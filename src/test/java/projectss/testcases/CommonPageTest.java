@@ -9,22 +9,13 @@ import projectss.pages.CommonPage;
 
 import static org.testng.Assert.assertTrue;
 
-public class CommonPageTest extends BaseSetup {
-    private WebDriver driver;
-    public SignInPage signInPage;
+public class CommonPageTest extends projectss.base.BaseSetup {
+    public WebDriver driver;
     public CommonPage commonPage;
     @BeforeClass
     public void setUp() {
         // Đã khởi tạo browser hết rồi kể cả wait, phóng to màn hình,...
         driver = getDriver();
-    }
-    @Test(priority = 1)
-    public void signIn() throws Exception {
-        System.out.println(driver);
-        signInPage = new SignInPage(driver);
-
-        SignInPage.loginThroughSession();
-        assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
     }
     @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
     public void verifyAssetPath(String param) throws Exception {
@@ -34,7 +25,7 @@ public class CommonPageTest extends BaseSetup {
         CommonPage.getWrongSiteCodeAssetPath(driver,"/ph");
     }
     @Test(priority = 3, dataProvider = "hrefLinks", dataProviderClass = BaseSetup.class)
-    public void verifyBrokenInputLinks(String param) throws Exception {
+    public void verifyBrokenInputLinks(String param) {
         //commonPage = new CommonPage(driver);
         assertTrue(CommonPage.isInputLinkBroken(param));
         //assertTrue(CommonPage.isGetLinkBroken(commonPage.getHrefFromOrginalURL(param)));

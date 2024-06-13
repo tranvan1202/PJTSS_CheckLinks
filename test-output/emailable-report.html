@@ -9,19 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">PageObjectTest Example</th></tr>
-<tr><td><a href="#t0">AutomationTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">72,704</td><td></td><td></td></tr>
+<tr><td><a href="#t0">AutomationTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">13,057</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PageObjectTest Example</th></tr></tbody><tbody id="t0"><tr><th colspan="4">AutomationTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">projectss.testcases.ProductDetailTest</td><td><a href="#m0">verifySKUnBadgeByGoogle</a></td><td rowspan="1">1718104603902</td><td rowspan="1">60697</td></tr><tr><th colspan="4">AutomationTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">projectss.testcases.ProductDetailTest</td><td><a href="#m1">signIn</a></td><td rowspan="1">1718104599440</td><td rowspan="1">4458</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PageObjectTest Example</th></tr></tbody><tbody id="t0"><tr><th colspan="4">AutomationTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">projectss.testcases.ProductDetailTest</td><td><a href="#m0">verifyTextByXpath</a></td><td rowspan="1">1718282927298</td><td rowspan="1">1311</td></tr><tr><th colspan="4">AutomationTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">projectss.testcases.SignInTest</td><td><a href="#m1">signIn</a></td><td rowspan="1">1718282921853</td><td rowspan="1">3229</td></tr></tbody>
 </table>
-<h2>AutomationTest</h2><h3 id="m0">projectss.testcases.ProductDetailTest#verifySKUnBadgeByGoogle</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@44c79f32</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	No 34 lỗi sai text, chi tiết:  expected [เก่าแลกใหม่ 5000z] but found [เก่าแลกใหม่ 5000],
-	No 35 lỗi sai mã SKU, chi tiết:  expected [F-RF59U12BPOGG] but found [SM-P625NZAETHL],
-	expected [No 35 lỗi ko có badge, chi tiết: ] but found [เก่าแลกใหม่ 5000]
-	at projectss.testcases.ProductDetailTest.verifySKUnBadgeByGoogle(ProductDetailTest.java:116)
+<h2>AutomationTest</h2><h3 id="m0">projectss.testcases.ProductDetailTest#verifyTextByXpath</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4</td><td>QuickSample!A2:F</td><td>3</td><td>//span[@class=&apos;pd-info__sku-code&apos;]</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Input must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:74)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:43)
+	at projectss.pages.ProductDetailPage.actualTextFromInputtedElement(ProductDetailPage.java:59)
+	at projectss.testcases.ProductDetailTest.verifyTextByXpath(ProductDetailTest.java:109)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">projectss.testcases.ProductDetailTest#signIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">projectss.testcases.SignInTest#signIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

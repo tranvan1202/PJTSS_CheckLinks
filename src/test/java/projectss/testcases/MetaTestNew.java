@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 import static org.testng.Assert.assertTrue;
 
-public class MetaTestNew extends BaseSetup {
+public class MetaTestNew extends projectss.base.BaseSetup {
     private WebDriver driver;
     public SignInPage signInPage;
     public MetaPage metaPage;

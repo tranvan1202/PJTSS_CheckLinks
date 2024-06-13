@@ -11,6 +11,7 @@ import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import projectss.base.BaseSetup;
@@ -25,7 +26,7 @@ import java.util.List;
 
 import static org.testng.Assert.assertTrue;
 
-public class ProductDetailTestNew extends BaseSetup{
+public class ProductDetailTestNew extends projectss.base.BaseSetup{
     private WebDriver driver;
     public SignInPage signInPage;
     public ProductDetailPage productDetailPage;
@@ -115,5 +116,11 @@ public class ProductDetailTestNew extends BaseSetup{
         Document doc = Jsoup.parse(ProductDetailPage.getElementBadgeText(driver));
         String badgeText = doc.body().text();
         Assert.assertEquals(badgeText,"เก่าแลกใหม่ 1000");
+    }
+
+    @Test
+    @Parameters({ "key1", "key2" })
+    public void m1(String key1, String key2) throws Exception {
+        System.out.println(key1 + ", " + key2);
     }
 }

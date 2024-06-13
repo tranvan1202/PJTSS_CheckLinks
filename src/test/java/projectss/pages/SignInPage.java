@@ -17,25 +17,21 @@ import java.util.Set;
 
 import static java.lang.Thread.sleep;
 
-public class SignInPage {
-    private static WebDriver driver;
+public class SignInPage extends projectss.pages.CommonPage{
+    //Khai báo driver cục bộ
+    public static WebDriver driver;
     public static Properties prop;
-    @FindBy(xpath = "//meta[@name='mswebdialog-title']")
-    private static WebElement elementHeaderPageText;
-
-    @FindBy(xpath = "//*[@id=\"loginContent\"]/div/div[1]/fieldset[1]/div/ul/table/tbody/tr/td[2]/a")
-    private static WebElement loginButton;
-
-    @FindBy(id = "userNameInput")
-    private static WebElement userNameInput;
-
-    @FindBy(id = "otpCode")
-    private static WebElement otpCode;
-
-    private static String cookiesCurrent;
     @FindBy(xpath = "/html/body/div/div[2]/div/div[1]/div[1]/div/dl[4]/dd[1]")
     private static WebElement submitQALink;
-
+//    @FindBy(xpath = "//meta[@name='mswebdialog-title']")
+//    private static WebElement elementHeaderPageText;
+//    @FindBy(xpath = "//*[@id=\"loginContent\"]/div/div[1]/fieldset[1]/div/ul/table/tbody/tr/td[2]/a")
+//    private static WebElement loginButton;
+//    @FindBy(id = "userNameInput")
+//    private static WebElement userNameInput;
+//    @FindBy(id = "otpCode")
+//    private static WebElement otpCode;
+//    private static String cookiesCurrent;
     //private static By loginButton = By.xpath("//*[@id=\"loginContent\"]/div/div[1]/fieldset[1]/div/ul/table/tbody/tr/td[2]/a");
     //private static By emailInput = By.id("userNameInput");
     //private static By otpCode = By.id("otpCode");
@@ -46,7 +42,8 @@ public class SignInPage {
     // Khởi tạo class khi được gọi và truyền driver vào để các thành phần trong
     // Và khởi tạo initElements
     public SignInPage(WebDriver driver) {
-        SignInPage.driver = driver;
+        super(driver);
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
     public String getSignInPageTitle() {
@@ -57,10 +54,8 @@ public class SignInPage {
         String expectedTitle = "Home Electronics | Home Appliances | Mobile | Computing |";
         return getSignInPageTitle().equals(expectedTitle);
     }
-
     public static void loginThroughSession() throws InterruptedException {
-        String winHandleBefore = driver.getWindowHandle();
-
+        //String winHandleBefore = driver.getWindowHandle();
         // Add the cookie into current browser context (cookiesCurrent)
         //System.out.println("Get Current Cookies: " + BaseSetup.prop.getProperty("cook"));
         driver.manage().addCookie(new Cookie("JSESSIONID", BaseSetup.prop.getProperty("session")));
@@ -72,59 +67,61 @@ public class SignInPage {
         sleep(2000);
         ArrayList<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
         driver.switchTo().window(browserTabs.get(1));
-
     }
-
-    public static void signin() throws InterruptedException {
-        String winHandleBefore = driver.getWindowHandle();
-
-        //Find the Login button
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].click();", loginButton);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
-
-        Set<String> windowIds = driver.getWindowHandles();
-        for (String windowId : windowIds) {
-            driver.switchTo().window(windowId);
-            if (driver.getTitle().equals("Sign In")) {
-                //Nhập username
-                enterEmail(BaseSetup.prop.getProperty("username"));
-                wait.until((ExpectedConditions.invisibilityOf(userNameInput)));
-                driver.switchTo().window(winHandleBefore);
-            }
-        }
-        wait.until(ExpectedConditions.visibilityOf(otpCode));
-        if (otpCode.isDisplayed()) {
-            try {
-                otpCode.sendKeys("");
-                wait.until(ExpectedConditions.visibilityOf(submitQALink));
-            } catch (UnhandledAlertException f) {
-                wait.until(ExpectedConditions.alertIsPresent());
-                Alert alert = driver.switchTo().alert();
-                String alertText = alert.getText();
-                System.out.println("Alert data: " + alertText);
-                alert.accept();
-            }
-        }
-        //Click nút QA
-        clickSubmitQALink();
-        sleep(2000);
-        ArrayList<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
-        driver.switchTo().window(browserTabs.get(1));
+    public static ProductDetailPage loginAndGoToPDP() throws InterruptedException{
+        loginThroughSession();
+        return new ProductDetailPage(driver);
     }
-
-    public static void enterEmail(String email) {
-        WebElement emailTxtBox = userNameInput;
-        if (emailTxtBox.isDisplayed()) {
-            emailTxtBox.sendKeys(email);
-            emailTxtBox.sendKeys(Keys.TAB);
-        }
-    }
-
     public static void clickSubmitQALink() {
         WebElement submitQA = submitQALink;
         if (submitQA.isDisplayed()) {
             submitQA.click();
         }
     }
+//    public static void signInManually() throws InterruptedException {
+//        String winHandleBefore = driver.getWindowHandle();
+//
+//        //Find the Login button
+//        JavascriptExecutor executor = (JavascriptExecutor) driver;
+//        executor.executeScript("arguments[0].click();", loginButton);
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+//
+//        Set<String> windowIds = driver.getWindowHandles();
+//        for (String windowId : windowIds) {
+//            driver.switchTo().window(windowId);
+//            if (driver.getTitle().equals("Sign In")) {
+//                //Nhập username
+//                enterEmail(BaseSetup.prop.getProperty("username"));
+//                wait.until((ExpectedConditions.invisibilityOf(userNameInput)));
+//                driver.switchTo().window(winHandleBefore);
+//            }
+//        }
+//        wait.until(ExpectedConditions.visibilityOf(otpCode));
+//        if (otpCode.isDisplayed()) {
+//            try {
+//                otpCode.sendKeys("");
+//                wait.until(ExpectedConditions.visibilityOf(submitQALink));
+//            } catch (UnhandledAlertException f) {
+//                wait.until(ExpectedConditions.alertIsPresent());
+//                Alert alert = driver.switchTo().alert();
+//                String alertText = alert.getText();
+//                System.out.println("Alert data: " + alertText);
+//                alert.accept();
+//            }
+//        }
+//        //Click nút QA
+//        clickSubmitQALink();
+//        sleep(2000);
+//        ArrayList<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+//        driver.switchTo().window(browserTabs.get(1));
+//    }
+//
+//    public static void enterEmail(String email) {
+//        WebElement emailTxtBox = userNameInput;
+//        if (emailTxtBox.isDisplayed()) {
+//            emailTxtBox.sendKeys(email);
+//            emailTxtBox.sendKeys(Keys.TAB);
+//        }
+//    }
+//
 }

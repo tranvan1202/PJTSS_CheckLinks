@@ -31,7 +31,7 @@ public class MetaTest extends projectss.base.BaseSetup {
         System.out.println(driver);
         signInPage = new SignInPage(driver);
 
-        SignInPage.loginThroughSession();
+        signInPage.loginThroughSession();
         assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
     }
     //Phần xử lý get Meta

@@ -8,8 +8,8 @@ import projectss.pages.ProductDetailPage;
 import projectss.pages.SignInPage;
 
 public class SignInTest extends projectss.base.BaseSetup {
-    public WebDriver driver;
-    public SignInPage signInPage;
+    private WebDriver driver;
+    private SignInPage signInPage;
     public ProductDetailPage productDetailPage;
     @BeforeClass
     public void setUp() {
@@ -20,7 +20,7 @@ public class SignInTest extends projectss.base.BaseSetup {
     public void signIn() throws Exception {
         System.out.println(driver);
         signInPage = new SignInPage(driver);
-        productDetailPage = SignInPage.loginAndGoToPDP();
+        productDetailPage = signInPage.loginAndGoToPDP();
         //Assert.assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
     }
 

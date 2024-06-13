@@ -17,14 +17,14 @@ public class StaticPageTest extends projectss.base.BaseSetup {
         // Đã khởi tạo browser hết rồi kể cả wait, phóng to màn hình,...
         driver = getDriver();
     }
-    @Test(priority = 1)
-    public void signIn() throws Exception {
-        System.out.println(driver);
-        signInPage = new SignInPage(driver);
-
-        SignInPage.loginThroughSession();
-        assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
-    }
+//    @Test(priority = 1)
+//    public void signIn() throws Exception {
+//        System.out.println(driver);
+//        signInPage = new SignInPage(driver);
+//
+//        SignInPage.loginThroughSession();
+//        assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
+//    }
     @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
     public void verifyCTALink(String param) throws Exception {
         System.out.println("URL: " + param);

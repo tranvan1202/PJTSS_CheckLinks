@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 28: update">
-      <change afterPath="$PROJECT_DIR$/resources/spreadsheet/credentials.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tokens/StoredCredential" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/LiveSpacePage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" afterDir="false" />
@@ -33,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/testng.xml.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/toc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
     </list>
@@ -362,13 +360,8 @@
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java</url>
-          <line>119</line>
+          <line>121</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -377,31 +370,9 @@
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="18" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
           <option name="timeStamp" value="59" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTestNew.java</url>
-          <line>92</line>
-          <properties class="projectss.testcases.ProductDetailTestNew" method="verifySKUByGoogle">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java</url>
-          <line>36</line>
-          <properties class="projectss.pages.ProductDetailPage" method="getSKUCodes">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java</url>
           <line>19</line>
@@ -413,7 +384,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java</url>
-          <line>56</line>
+          <line>60</line>
           <properties class="projectss.pages.SignInPage" method="loginThroughSession">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -421,31 +392,40 @@
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
-          <line>55</line>
-          <properties class="projectss.testcases.ProductDetailTest">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java</url>
-          <line>21</line>
-          <properties class="projectss.pages.ProductDetailPage" method="&lt;init&gt;">
+          <line>39</line>
+          <properties class="projectss.pages.ProductDetailPage" method="getQALinkList">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="106" />
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java</url>
+          <line>15</line>
+          <properties class="projectss.testcases.CommonPageTest" method="setUp">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
-          <line>99</line>
+          <line>29</line>
+          <properties class="projectss.testcases.ProductDetailTest" method="signIn">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
+          <line>112</line>
           <properties class="projectss.testcases.ProductDetailTest" method="verifyTextByXpath">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="109" />
+          <option name="timeStamp" value="127" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

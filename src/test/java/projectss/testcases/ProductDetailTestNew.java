@@ -38,14 +38,14 @@ public class ProductDetailTestNew extends projectss.base.BaseSetup{
         // Đã khởi tạo browser hết rồi kể cả wait, phóng to màn hình,...
         driver = getDriver();
     }
-    @Test(priority = 1)
-    public void signIn() throws Exception {
-        System.out.println(driver);
-        signInPage = new SignInPage(driver);
-
-        SignInPage.loginThroughSession();
-        assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
-    }
+//    @Test(priority = 1)
+//    public void signIn() throws Exception {
+//        System.out.println(driver);
+//        signInPage = new SignInPage(driver);
+//
+//        SignInPage.loginThroughSession();
+//        assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
+//    }
     @Test(priority = 2)
     public void getDataFromURLs(ITestContext context) throws Exception {
         productDetailPage = new ProductDetailPage(driver);

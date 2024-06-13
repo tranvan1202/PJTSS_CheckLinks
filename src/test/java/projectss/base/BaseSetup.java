@@ -34,36 +34,36 @@ public class BaseSetup {
     }
 
     //Hàm này để tùy chọn Browser. Cho chạy trước khi gọi class này (BeforeClass)
-    private void setDriver(String browserType, String appURL) {
+    private void setDriver(String browserType) {
         switch (browserType) {
             case "chrome":
-                driver = initChromeDriver(appURL);
+                driver = initChromeDriver();
                 break;
             default:
                 System.out.println("Browser: " + browserType + " is invalid, Launching Chrome as browser of choice...");
-                driver = initChromeDriver(appURL);
+                driver = initChromeDriver();
         }
     }
 
     //Khởi tạo cấu hình của các Browser để đưa vào Switch Case
-    private static WebDriver initChromeDriver(String appURL) {
+    private static WebDriver initChromeDriver() {
         System.out.println("Launching Chrome browser...");
         System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.navigate().to(appURL);
+        //driver.navigate().to(appURL);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         return driver;
     }
 
     // Chạy hàm initializeTestBaseSetup trước hết khi class này được gọi
-    @Parameters({ "browserType", "loginURL" })
+    @Parameters({ "browserType"})
     @BeforeClass
-    public void initializeTestBaseSetup(String browserType, String loginURL) {
+    public void initializeTestBaseSetup(String browserType) {
         try {
             // Khởi tạo driver và browser
-            setDriver(browserType, loginURL);
+            setDriver(browserType);
         } catch (Exception e) {
             System.out.println("Error..." + e.getStackTrace());
         }
@@ -91,8 +91,16 @@ public class BaseSetup {
         }
         return returnValues;
     }
+    @DataProvider(name="paramsVerifyTextByInputXpath")
+    public Object[][] paramsVerifyTextByInputXpath(ITestContext context) {
+        String ggSpreadSheetID = context.getCurrentXmlTest().getParameter("paramSheetID");
+        String ggSpreadSheetRange = context.getCurrentXmlTest().getParameter("paramSheetDataRange");
+        String inputExpectedResultColumn = context.getCurrentXmlTest().getParameter("paramExpectedResultColumn");
+        String inputXpath = context.getCurrentXmlTest().getParameter("paramInputXpathString");
 
-
+        Object[][] returnParams = {{ggSpreadSheetID,ggSpreadSheetRange,inputExpectedResultColumn,inputXpath}};
+        return returnParams;
+    }
     @AfterClass
     public void tearDown() throws Exception {
         Thread.sleep(2000);

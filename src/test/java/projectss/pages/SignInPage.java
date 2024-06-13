@@ -17,9 +17,9 @@ import java.util.Set;
 
 import static java.lang.Thread.sleep;
 
-public class SignInPage extends projectss.pages.CommonPage{
+public class SignInPage extends projectss.pages.CommonPage {
     //Khai báo driver cục bộ
-    public static WebDriver driver;
+    private WebDriver driver;
     public static Properties prop;
     @FindBy(xpath = "/html/body/div/div[2]/div/div[1]/div[1]/div/dl[4]/dd[1]")
     private static WebElement submitQALink;
@@ -54,10 +54,15 @@ public class SignInPage extends projectss.pages.CommonPage{
         String expectedTitle = "Home Electronics | Home Appliances | Mobile | Computing |";
         return getSignInPageTitle().equals(expectedTitle);
     }
-    public static void loginThroughSession() throws InterruptedException {
+    public ProductDetailPage loginAndGoToPDP() throws InterruptedException{
+        loginThroughSession();
+        return new ProductDetailPage(driver);
+    }
+    public void loginThroughSession() throws InterruptedException {
         //String winHandleBefore = driver.getWindowHandle();
         // Add the cookie into current browser context (cookiesCurrent)
         //System.out.println("Get Current Cookies: " + BaseSetup.prop.getProperty("cook"));
+        driver.navigate().to("https://wds.samsung.com/wds/sso/login/forwardLogin.do");
         driver.manage().addCookie(new Cookie("JSESSIONID", BaseSetup.prop.getProperty("session")));
         sleep(3);
         driver.navigate().to("https://wds.samsung.com/wds/sso/login/ssoLoginSuccess.do");
@@ -68,11 +73,8 @@ public class SignInPage extends projectss.pages.CommonPage{
         ArrayList<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
         driver.switchTo().window(browserTabs.get(1));
     }
-    public static ProductDetailPage loginAndGoToPDP() throws InterruptedException{
-        loginThroughSession();
-        return new ProductDetailPage(driver);
-    }
-    public static void clickSubmitQALink() {
+
+    public void clickSubmitQALink() {
         WebElement submitQA = submitQALink;
         if (submitQA.isDisplayed()) {
             submitQA.click();

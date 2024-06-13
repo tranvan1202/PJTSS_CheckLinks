@@ -37,7 +37,7 @@ public class MetaTestNew extends projectss.base.BaseSetup {
         System.out.println(driver);
         signInPage = new SignInPage(driver);
 
-        SignInPage.loginThroughSession();
+        signInPage.loginThroughSession();
     }
     //Phần xử lý get Meta (version 2.0| dùng driver Browser để get| pros: không giới hạn QA links, cons: cần gọi sign in, chậm)
     @Test(priority = 3, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)

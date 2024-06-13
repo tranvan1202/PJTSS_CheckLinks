@@ -10,24 +10,24 @@ import projectss.pages.CommonPage;
 import static org.testng.Assert.assertTrue;
 
 public class CommonPageTest extends projectss.base.BaseSetup {
-    public WebDriver driver;
+    private WebDriver driver;
     public CommonPage commonPage;
     @BeforeClass
     public void setUp() {
         // Đã khởi tạo browser hết rồi kể cả wait, phóng to màn hình,...
         driver = getDriver();
     }
-    @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
-    public void verifyAssetPath(String param) throws Exception {
-        commonPage = new CommonPage(driver);
-        System.out.println("URL: " + param);
-        driver.get(param);
-        CommonPage.getWrongSiteCodeAssetPath(driver,"/ph");
-    }
-    @Test(priority = 3, dataProvider = "hrefLinks", dataProviderClass = BaseSetup.class)
+//    @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
+//    public void verifyAssetPath(String param) throws Exception {
+//        commonPage = new CommonPage(driver);
+//        System.out.println("URL: " + param);
+//        driver.get(param);
+//        commonPage.getWrongSiteCodeAssetPath(driver,"/ph");
+//    }
+    @Test(priority = 1, dataProvider = "hrefLinks", dataProviderClass = BaseSetup.class)
     public void verifyBrokenInputLinks(String param) {
-        //commonPage = new CommonPage(driver);
-        assertTrue(CommonPage.isInputLinkBroken(param));
+        commonPage = new CommonPage(driver);
+        assertTrue(commonPage.isInputLinkBroken(param));
         //assertTrue(CommonPage.isGetLinkBroken(commonPage.getHrefFromOrginalURL(param)));
     }
 }

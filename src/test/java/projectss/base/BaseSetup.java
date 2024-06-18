@@ -1,7 +1,9 @@
 package projectss.base;
 
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 import org.testng.ITestContext;
 
@@ -49,11 +51,13 @@ public class BaseSetup {
     private static WebDriver initChromeDriver() {
         System.out.println("Launching Chrome browser...");
         System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.setPageLoadStrategy(PageLoadStrategy.NONE);
+        WebDriver driver=new ChromeDriver(options);
         driver.manage().window().maximize();
         //driver.navigate().to(appURL);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
         return driver;
     }
 
@@ -95,10 +99,11 @@ public class BaseSetup {
     public Object[][] paramsVerifyTextByInputXpath(ITestContext context) {
         String ggSpreadSheetID = context.getCurrentXmlTest().getParameter("paramSheetID");
         String ggSpreadSheetRange = context.getCurrentXmlTest().getParameter("paramSheetDataRange");
+        String inputQALinkColumn = context.getCurrentXmlTest().getParameter("paramQALinkColumn");
+        String inputXpath = context.getCurrentXmlTest().getParameter("paramInputXpathColumn");
         String inputExpectedResultColumn = context.getCurrentXmlTest().getParameter("paramExpectedResultColumn");
-        String inputXpath = context.getCurrentXmlTest().getParameter("paramInputXpathString");
 
-        Object[][] returnParams = {{ggSpreadSheetID,ggSpreadSheetRange,inputExpectedResultColumn,inputXpath}};
+        Object[][] returnParams = {{ggSpreadSheetID,ggSpreadSheetRange,inputQALinkColumn,inputXpath,inputExpectedResultColumn}};
         return returnParams;
     }
     @AfterClass

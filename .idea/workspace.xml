@@ -4,26 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 28: update">
-      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/CommonPage.java" afterDir="false" />
+    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 29: update 2">
+      <change afterPath="$PROJECT_DIR$/resources/spreadsheet/credentials.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokens/StoredCredential" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTestNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTestNew.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTestNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTestNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/StaticPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/StaticPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/testng-failed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-projectss.testcases.MetaTestNew.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-projectss.testcases.MetaTestNew.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/classes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-alphabetical.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-not-run.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-not-run.html" afterDir="false" />
@@ -359,47 +354,10 @@
           <line>37</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java</url>
-          <line>121</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="107" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
           <option name="timeStamp" value="59" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/SignInTest.java</url>
-          <line>19</line>
-          <properties class="projectss.testcases.SignInTest" method="signIn">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/SignInPage.java</url>
-          <line>60</line>
-          <properties class="projectss.pages.SignInPage" method="loginThroughSession">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java</url>
-          <line>39</line>
-          <properties class="projectss.pages.ProductDetailPage" method="getQALinkList">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="113" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java</url>
           <line>15</line>
@@ -408,24 +366,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="114" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
-          <line>29</line>
-          <properties class="projectss.testcases.ProductDetailTest" method="signIn">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
-          <line>112</line>
-          <properties class="projectss.testcases.ProductDetailTest" method="verifyTextByXpath">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="127" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

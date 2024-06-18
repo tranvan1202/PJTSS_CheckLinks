@@ -68,58 +68,16 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
 //        Assert.assertTrue(catalogueButton.isEmpty());
 //    }
 
-//    @Test(priority = 1)
-//    public void verifySKUnBadgeByGoogle(ITestContext context) throws Exception {
-//        System.out.println(driver);
-//        productDetailPage = new ProductDetailPage(driver);
-//        WebDriverWait wait60s = new WebDriverWait(driver, Duration.ofSeconds(60));
-//        String parameterGGSpreadSheetID = context.getCurrentXmlTest().getParameter("ggSpreadSheetID");
-//        String parameterGGSpreadSheetRange = context.getCurrentXmlTest().getParameter("ggSpreadSheetRange");
-//        SoftAssert softAssert = new SoftAssert();
-//        List<List<Object>> receivedValues = (List<List<Object>>) SheetsQuickstart.getQALinks(parameterGGSpreadSheetID ,parameterGGSpreadSheetRange);
-//        if (receivedValues == null || receivedValues.isEmpty()) {
-//            System.out.println("No data found.");
-//        } else {
-//            System.out.println("QA link");
-//            for (List row : receivedValues) {
-//                System.out.printf("%s,%s\n",row.get(0), row.get(5));
-//                driver.get((String) row.get(5));
-//                wait60s.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='pd-info__sku-code']")));
-//                //Verify SKU Code text
-//                WebElement elementSKUCode = driver.findElement(By.xpath("//span[@class='pd-info__sku-code']"));
-//                Document doc = Jsoup.parse(elementSKUCode.getAttribute("innerHTML"));
-//                String skuCode = doc.text();
-//                softAssert.assertEquals(skuCode,row.get(1),"No " + row.get(0) + " lỗi sai mã SKU, chi tiết: ");
-//
-//                //Verify Badge text
-//                List<WebElement>  elementBadgeList = driver.findElements(By.xpath("//strong[contains(@class,'pd-info__badge-icon')]"));
-//                boolean isElementBadgeEmpty = elementBadgeList.size()>0;
-//                if(isElementBadgeEmpty){
-//                    // Element is present
-//                    for (WebElement webElementBadgeText: elementBadgeList ) {
-//                        Document doc2 = Jsoup.parse(webElementBadgeText.getAttribute("innerHTML"));
-//                        String badgeText = doc2.text();
-//                        softAssert.assertEquals(badgeText,row.get(2),"No " + row.get(0) + " lỗi sai text, chi tiết: ");
-//                    }
-//                }  else{
-//                    // Element is not present
-//                    softAssert.assertTrue(isElementBadgeEmpty,"No " + row.get(0) + " lỗi ko có badge, chi tiết: ");
-//                }
-//            }
-//            softAssert.assertAll();
-//        }
-//    }
     @Test(priority = 2, dataProvider = "paramsVerifyTextByInputXpath", dataProviderClass = BaseSetup.class)
-    public void verifyTextByXpath(String ggSpreadSheetID, String ggSpreadSheetRange, String inputExpectedResultColumn,String inputXpath) throws Exception {
+    public void verifyTextByXpath(String ggSpreadSheetID, String ggSpreadSheetRange,String inputQALinkColumn,String inputXpathColumn, String inputExpectedResultColumn) throws Exception {
         SoftAssert softAssert = new SoftAssert();
-        By byInputXpath = By.xpath(inputXpath);
         productDetailPage.getQALinkList(ggSpreadSheetID,ggSpreadSheetRange);
-        //WebDriverWait wait60s = new WebDriverWait(driver, Duration.ofSeconds(60));
         System.out.println("QA link");
         //For qua các row data trong Google Sheet
         for (List row : ProductDetailPage.ggDataList) {
-            System.out.printf("%s,%s\n", row.get(0), row.get(5));
-            driver.get((String) row.get(5));
+            By byInputXpath = By.xpath((String) row.get(Integer.parseInt(inputXpathColumn)));
+            System.out.printf("%s,%s\n", row.get(0), row.get(Integer.parseInt(inputQALinkColumn)));
+            driver.get((String) row.get(Integer.parseInt(inputQALinkColumn)));
             //Đợi Element text
             Thread.sleep(2000);
             //Lưu Elements List khi ng dùng input Xpath
@@ -127,15 +85,15 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
             boolean isInputedElementEmpty = inputedElement.size() > 0;
             if (isInputedElementEmpty) {
                 // Element is present
-                // For qua Elements List lấy được 1 String
                 for (WebElement webInputedElementText : inputedElement) {
                     Document doc = Jsoup.parse(webInputedElementText.getAttribute("innerHTML"));
                     String actualElementText = doc.text();
-                    softAssert.assertEquals(actualElementText,row.get(Integer.parseInt(inputExpectedResultColumn)),"No " + row.get(0) + " lỗi sai text cho Element, chi tiết: ");
+                    softAssert.assertEquals(actualElementText,row.get(Integer.parseInt(inputExpectedResultColumn)),"TestCase_ID: " + row.get(0) + " lỗi sai text cho Element, chi tiết: ");
                 }
             } else {
                 // Element is not present
-                softAssert.assertTrue(isInputedElementEmpty,"No " + row.get(0) + " lỗi ko có text cho element này ");
+                softAssert.assertTrue(isInputedElementEmpty,"TestCase_ID: " + row.get(0) + " lỗi ko có text cho element này ");
+
             }
         }
         softAssert.assertAll();

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-PageObjectTest_Example">
-              <span class="suite-name border-passed">PageObjectTest Example</span>
+              <span class="suite-name border-failed">PageObjectTest Example</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-PageObjectTest_Example">
-                    <span>D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\testcases\testng.xml</span>
+                    <span>D:\Auto\Project\PJTSS_CheckLinks\src\test\java\projectss\testcases\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-PageObjectTest_Example" class="hide-methods failed suite-PageObjectTest_Example"> (hide)</a> <!-- hide-methods failed suite-PageObjectTest_Example -->
+                      <a href="#" panel-name="suite-PageObjectTest_Example" class="show-methods failed suite-PageObjectTest_Example"> (show)</a> <!-- show-methods failed suite-PageObjectTest_Example -->
+                    </span>
+                    <div class="method-list-content failed suite-PageObjectTest_Example">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PageObjectTest_Example" title="projectss.testcases.ProductDetailTest" hash-for-method="verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)">verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-PageObjectTest_Example -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,11 +119,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-PageObjectTest_Example" title="projectss.testcases.ProductDetailTest" hash-for-method="signIn">signIn</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-PageObjectTest_Example" title="projectss.testcases.ProductDetailTest" hash-for-method="verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:H, 6, 2, 7)">verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:H, 6, 2, 7)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-PageObjectTest_Example -->
@@ -124,6 +133,32 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-PageObjectTest_Example" class="panel PageObjectTest_Example">
+          <div class="suite-PageObjectTest_Example-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">projectss.testcases.ProductDetailTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)">
+                  </a> <!-- verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4) -->
+                  <span class="method-name">verifyTextByXpath</span>
+                  <span class="parameters">(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)</span>
+                  <div class="stack-trace">java.io.FileNotFoundException: Resource not found: ./credentials.json
+	at projectss.base.SheetsQuickstart.getCredentials(SheetsQuickstart.java:55)
+	at projectss.base.SheetsQuickstart.getQALinks(SheetsQuickstart.java:102)
+	at projectss.pages.ProductDetailPage.getQALinkList(ProductDetailPage.java:45)
+	at projectss.testcases.ProductDetailTest.verifyTextByXpath(ProductDetailTest.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-PageObjectTest_Example-class-failed -->
           <div class="suite-PageObjectTest_Example-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -137,20 +172,12 @@
                   <span class="method-name">signIn</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:H, 6, 2, 7)">
-                  </a> <!-- verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:H, 6, 2, 7) -->
-                  <span class="method-name">verifyTextByXpath</span>
-                  <span class="parameters">(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:H, 6, 2, 7)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-PageObjectTest_Example-class-passed -->
         </div> <!-- panel PageObjectTest_Example -->
         <div panel-name="test-xml-PageObjectTest_Example" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\testcases\testng.xml</span>
+            <span class="header-content">D:\Auto\Project\PJTSS_CheckLinks\src\test\java\projectss\testcases\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -159,11 +186,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;PageObjectTest Example&quot;&gt;
   &lt;parameter name=&quot;paramSheetID&quot; value=&quot;1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4&quot;/&gt;
   &lt;parameter name=&quot;qaURLs&quot; value=&quot;https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-cac-with-omnidirectional-outlet-ac071rn4pkg-eu,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-cac-with-omnidirectional-outlet-ac100rn4pkg-eu,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-cac-with-omnidirectional-outlet-ac120rn4pkg-eu,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-cac-with-omnidirectional-outlet-ac140rn4pkg-eu,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-round-black-panel-f-ac071rn4p1rb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-round-black-panel-f-ac100rn4p1rb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-round-black-panel-f-ac100rn4p3rb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-round-black-panel-f-ac120rn4p1rb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-round-black-panel-f-ac120rn4p3rb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-round-black-panel-f-ac140rn4p1rb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-round-black-panel-f-ac140rn4p3rb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-white-panel-f-ac071rn4p1sw,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-white-panel-f-ac100rn4p1sw,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-white-panel-f-ac100rn4p3sw,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-white-panel-f-ac120rn4p1sw,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-white-panel-f-ac120rn4p3sw,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-white-panel-f-ac140rn4p1sw,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-white-panel-f-ac140rn4p3sw,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-black-panel-f-ac071rn4p1sb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-black-panel-f-ac100rn4p1sb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-black-panel-f-ac100rn4p3sb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-black-panel-f-ac120rn4p1sb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-black-panel-f-ac120rn4p3sb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-black-panel-f-ac140rn4p1sb,https://p6-qa.samsung.com/my/system-air-conditioners/ceiling-air-conditioner/360-cassette-inverter-r32-square-black-panel-f-ac140rn4p3sb&quot;/&gt;
-  &lt;parameter name=&quot;paramExpectedResultColumn&quot; value=&quot;2&quot;/&gt;
-  &lt;parameter name=&quot;paramInputXpathColumn&quot; value=&quot;7&quot;/&gt;
-  &lt;parameter name=&quot;paramQALinkColumn&quot; value=&quot;6&quot;/&gt;
+  &lt;parameter name=&quot;paramInputXpathColumn&quot; value=&quot;3&quot;/&gt;
+  &lt;parameter name=&quot;paramExpectedResultColumn&quot; value=&quot;4&quot;/&gt;
+  &lt;parameter name=&quot;paramQALinkColumn&quot; value=&quot;2&quot;/&gt;
   &lt;parameter name=&quot;hrefLinks&quot; value=&quot;https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-battery-pack-20000mah-cosmic-gray-eb-p5300xjegww,https://p6-qa.samsung.com/vn/businessz/mobile-accessories/super-fast-wireless-charger-duo-dark-gray-ep-p5400tbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/super-fast-wireless-charger-duo-white-ep-p5400bwegww/,https://p6-qa.samsung.com/vn/business/mobile-accessories/super-fast-wireless-charger-duo-darkgray-ep-p5400bbegww/,https://p6-qa.samsung.com/vn/business/mobile-accessories/samsung-35mm-earphones-black-eo-ia500bbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/15w-power-adapter-black-ep-t1510nbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/15w-power-adapter-white-ep-t1510nwegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/15w-power-adapter-white-ep-t1510xwegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/15w-power-adapter-black-ep-t1510xbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/10-000mah-battery-pack-beige-eb-p3400xuegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-black-ef-bx210tbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-white-ef-bx210twegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-blue-ef-bx210tlegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-black-ef-bx110tbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-white-ef-bx110twegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-tab-a9-book-cover-blue-ef-bx110tlegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-power-adapter-black-ep-t2510xbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-power-adapter-white-ep-t2510xwegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-power-adapter-black-ep-t2510nbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/25w-power-adapter-white-ep-t2510nwegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/45w-power-adapter-black-ep-t4511xbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-fit3-sport-band-dark-green-et-sfr39mgegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-fit3-sport-band-orange-et-sfr39moegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-standing-grip-case-black-ef-ga556tbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-standing-grip-case-gray-ef-ga556tjegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-card-slot-case-black-ef-oa356tbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-card-slot-case-lime-ef-oa356tmegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-silicone-case-black-ef-pa356tbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-silicone-case-light-blue-ef-pa356tlegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-silicone-case-lime-ef-pa356tmegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-silicone-case-black-ef-pa556tbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-silicone-case-light-blue-ef-pa556tlegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-silicone-case-lime-ef-pa556tmegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-clear-case-transparent-ef-qa356ctegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-clear-case-transparent-ef-qa556ctegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-smart-view-wallet-case-black-ef-za356cbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-smart-view-wallet-case-lavender-ef-za356cvegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a35-5g-smart-view-wallet-case-white-ef-za356cwegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-smart-view-wallet-case-black-ef-za556cbegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-smart-view-wallet-case-lavender-ef-za556cvegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/galaxy-a55-5g-smart-view-wallet-case-white-ef-za556cwegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/wolke-clear-case-for-galaxy-a35-transparent-gp-fpa356vaatw,https://p6-qa.samsung.com/vn/business/mobile-accessories/wolke-clear-case-for-galaxy-a55-transparent-gp-fpa556vaatw,https://p6-qa.samsung.com/vn/business/mobile-accessories/battery-pack-20-000mah-beige-eb-p4520xuegww,https://p6-qa.samsung.com/vn/business/mobile-accessories/wireless-battery-pack-10-000mah-beige-eb-u2510xuegww&quot;/&gt;
-  &lt;parameter name=&quot;paramSheetDataRange&quot; value=&quot;QuickSample!A2:H&quot;/&gt;
+  &lt;parameter name=&quot;paramSheetDataRange&quot; value=&quot;QuickSample!A2:F&quot;/&gt;
   &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;AutomationTest&quot;&gt;
     &lt;classes&gt;
@@ -214,18 +241,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyTextByXpath')
+data.setCell(0, 1, 'signIn')
 data.setCell(0, 2, 'projectss.testcases.ProductDetailTest')
-data.setCell(0, 3, 561224);
+data.setCell(0, 3, 4253);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'signIn')
+data.setCell(1, 1, 'verifyTextByXpath')
 data.setCell(1, 2, 'projectss.testcases.ProductDetailTest')
-data.setCell(1, 3, 7434);
+data.setCell(1, 3, 82);
 window.suiteTableData['PageObjectTest_Example']= { tableData: data, tableDiv: 'times-div-PageObjectTest_Example'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-PageObjectTest_Example">
               </div> <!-- times-div-PageObjectTest_Example -->
             </div> <!-- times-div -->
@@ -258,19 +285,21 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">4496 ms</span>
+                <span class="method-start">1633 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">signIn</span>
-                <span class="method-start">4505 ms</span>
+                <span class="method-start">1637 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:H, 6, 2, 7)</span>
-                <span class="method-start">11946 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)</span>
+                <span class="method-start">5893 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">573171 ms</span>
+                <span class="method-start">5979 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

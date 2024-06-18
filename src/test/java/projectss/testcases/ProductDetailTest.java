@@ -5,16 +5,17 @@ import org.jsoup.nodes.Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import projectss.base.BaseSetup;
+import projectss.base.SheetsQuickstart;
+import projectss.base.SheetsUpdate;
 import projectss.pages.ProductDetailPage;
 import projectss.pages.SignInPage;
 
-import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -72,6 +73,8 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
     public void verifyTextByXpath(String ggSpreadSheetID, String ggSpreadSheetRange,String inputQALinkColumn,String inputXpathColumn, String inputExpectedResultColumn) throws Exception {
         SoftAssert softAssert = new SoftAssert();
         productDetailPage.getQALinkList(ggSpreadSheetID,ggSpreadSheetRange);
+
+        List<List<Object>> values = new ArrayList<>();;
         System.out.println("QA link");
         //For qua các row data trong Google Sheet
         for (List row : ProductDetailPage.ggDataList) {
@@ -88,12 +91,14 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
                 for (WebElement webInputedElementText : inputedElement) {
                     Document doc = Jsoup.parse(webInputedElementText.getAttribute("innerHTML"));
                     String actualElementText = doc.text();
+                    System.out.println("TestCase_ID " + row.get(0) + " text: " + actualElementText );
                     softAssert.assertEquals(actualElementText,row.get(Integer.parseInt(inputExpectedResultColumn)),"TestCase_ID: " + row.get(0) + " lỗi sai text cho Element, chi tiết: ");
+                    values.add(Collections.singletonList(actualElementText));
+                    SheetsQuickstart.updateValues(ggSpreadSheetID,"QuickSample!F2:F100","RAW",values);
                 }
             } else {
                 // Element is not present
                 softAssert.assertTrue(isInputedElementEmpty,"TestCase_ID: " + row.get(0) + " lỗi ko có text cho element này ");
-
             }
         }
         softAssert.assertAll();

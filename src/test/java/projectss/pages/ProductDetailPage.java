@@ -1,19 +1,13 @@
 package projectss.pages;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
-import projectss.base.SheetsQuickstart;
+import projectss.base.SheetsQuickstart_original;
 import projectss.testcases.ProductDetailTestNew;
 
-import java.time.Duration;
 import java.util.List;
 
 public class ProductDetailPage extends projectss.pages.CommonPage {
@@ -42,7 +36,7 @@ public class ProductDetailPage extends projectss.pages.CommonPage {
         //String paramSheetID = context.getCurrentXmlTest().getParameter("ggSpreadSheetID");
        // String paramSheetDataRange = context.getCurrentXmlTest().getParameter("ggSpreadSheetRange");
         //int paramExpectedResultColumn = Integer.parseInt(context.getCurrentXmlTest().getParameter("inputExpectedResultColumn"));
-        ggDataList = (List<List<Object>>) SheetsQuickstart.getQALinks(sheetId ,sheetRange);
+        ggDataList = (List<List<Object>>) SheetsQuickstart_original.getQALinks(sheetId ,sheetRange);
         if (ggDataList == null || ggDataList.isEmpty()) {
             System.out.println("No data found.");
         } else{

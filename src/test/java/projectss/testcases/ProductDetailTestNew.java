@@ -5,17 +5,14 @@ import org.jsoup.nodes.Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import projectss.base.BaseSetup;
-import projectss.base.SheetsQuickstart;
+import projectss.base.SheetsQuickstart_original;
 import projectss.pages.CommonPage;
 import projectss.pages.ProductDetailPage;
 import projectss.pages.SignInPage;
@@ -53,7 +50,7 @@ public class ProductDetailTestNew extends projectss.base.BaseSetup{
         WebDriverWait wait10s = new WebDriverWait(driver, Duration.ofSeconds(10));
         String parameterGGSpreadSheetID = context.getCurrentXmlTest().getParameter("ggSpreadSheetID");
         String parameterGGSpreadSheetRange = context.getCurrentXmlTest().getParameter("ggSpreadSheetRange");
-        List<List<Object>> receivedValues = (List<List<Object>>) SheetsQuickstart.getQALinks(parameterGGSpreadSheetID ,parameterGGSpreadSheetRange);
+        List<List<Object>> receivedValues = (List<List<Object>>) SheetsQuickstart_original.getQALinks(parameterGGSpreadSheetID ,parameterGGSpreadSheetRange);
 
         if (receivedValues == null || receivedValues.isEmpty()) {
             System.out.println("No data found.");
@@ -93,7 +90,7 @@ public class ProductDetailTestNew extends projectss.base.BaseSetup{
     public void verifySKUByGoogle(ITestContext context) throws Exception {
         String parameterGGSpreadSheetID = context.getCurrentXmlTest().getParameter("ggSpreadSheetID");
         String parameterGGSpreadSheetRange = context.getCurrentXmlTest().getParameter("ggSpreadSheetRange");
-        List<List<Object>> receivedValues = (List<List<Object>>) SheetsQuickstart.getQALinks(parameterGGSpreadSheetID ,parameterGGSpreadSheetRange);
+        List<List<Object>> receivedValues = (List<List<Object>>) SheetsQuickstart_original.getQALinks(parameterGGSpreadSheetID ,parameterGGSpreadSheetRange);
 
         if (receivedValues == null || receivedValues.isEmpty()) {
             System.out.println("No data found.");

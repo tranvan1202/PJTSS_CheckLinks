@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 29: update 2">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/credentials.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart_original.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTestNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTestNew.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/testng-failed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/classes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-alphabetical.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/testng.xml.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/toc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,32 +59,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Auto/Project/PJTSS_CheckLinks/src/main/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Auto/PJTSS_CheckLinks/src/test/java/projectss/config&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Auto\Project\PJTSS_CheckLinks\src\main\resources" />
       <recent name="D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\config" />
       <recent name="D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\testcases" />
       <recent name="D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\pages" />
       <recent name="D:\Auto\PJTSS_CheckLinks\src\test\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Auto\PJTSS_CheckLinks\src\main\resources" />
       <recent name="D:\Auto\Project\PJTSS_CheckLinks\src\main\resources" />
       <recent name="D:\Auto\PJTSS_CheckLinks\resources\drivers" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager">
@@ -349,21 +349,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/htmlUnitTest.java</url>
           <line>37</line>
           <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="133" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />

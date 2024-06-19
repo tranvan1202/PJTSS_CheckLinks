@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import projectss.base.BaseSetup;
 import projectss.base.SheetsQuickstart;
-import projectss.base.SheetsUpdate;
+import projectss.base.SheetsQuickstart_original;
 import projectss.pages.ProductDetailPage;
 import projectss.pages.SignInPage;
 
@@ -74,6 +74,10 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
         SoftAssert softAssert = new SoftAssert();
         productDetailPage.getQALinkList(ggSpreadSheetID,ggSpreadSheetRange);
 
+        SheetsQuickstart.getCredentials();
+        SheetsQuickstart.getSpreadsheetInstance();
+
+
         List<List<Object>> values = new ArrayList<>();;
         System.out.println("QA link");
         //For qua các row data trong Google Sheet
@@ -94,7 +98,8 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
                     System.out.println("TestCase_ID " + row.get(0) + " text: " + actualElementText );
                     softAssert.assertEquals(actualElementText,row.get(Integer.parseInt(inputExpectedResultColumn)),"TestCase_ID: " + row.get(0) + " lỗi sai text cho Element, chi tiết: ");
                     values.add(Collections.singletonList(actualElementText));
-                    SheetsQuickstart.updateValues(ggSpreadSheetID,"QuickSample!F2:F100","RAW",values);
+                    SheetsQuickstart_original.updateValues(ggSpreadSheetID,"QuickSample!F2:F100","RAW",values);
+
                 }
             } else {
                 // Element is not present

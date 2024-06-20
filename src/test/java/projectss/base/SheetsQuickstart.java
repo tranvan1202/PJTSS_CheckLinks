@@ -37,7 +37,7 @@ public class SheetsQuickstart {
      */
     private static final List<String> SCOPES =
             Arrays.asList(SheetsScopes.SPREADSHEETS, SheetsScopes.DRIVE);
-    private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
+    private static final String CREDENTIALS_FILE_PATH = "/credentials2.json";
     static Credential credential;
     static Sheets.Spreadsheets spreadsheets;
 
@@ -46,7 +46,7 @@ public class SheetsQuickstart {
      *
      * @param HTTP_TRANSPORT The network HTTP Transport.
      * @return An authorized Credential object.
-     * @throws IOException If the credentials.json file cannot be found.
+     * @throws IOException If the credentials2.json file cannot be found.
      */
     private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT)
             throws IOException {
@@ -114,7 +114,7 @@ public class SheetsQuickstart {
 
         //createNewSpreadSheet();
         //createNewSheet(existingSpreadSheetID,"YoutubeTest1");
-        writeDataGoogleSheets("YoutubeTest1", new ArrayList<Object>(Arrays.asList("Source1","Status Code1", "Test Status1")),"!A", existingSpreadSheetID);
+        writeDataGoogleSheets("YoutubeTest1", new ArrayList<Object>(Arrays.asList("Source2","Status Code2", "Test Status2")), existingSpreadSheetID);
         // writeSheet(new ArrayList<Object>(Arrays.asList("","","")),"",);
     }
 
@@ -216,9 +216,9 @@ public class SheetsQuickstart {
         System.out.printf("%d cells updated. \n", result.getUpdatedCells());
     }
 
-    public static void writeDataGoogleSheets(String sheetName, List<Object> data, String rangeStart, String existingSpreadSheetID) throws IOException {
+    public static void writeDataGoogleSheets(String sheetName, List<Object> data, String existingSpreadSheetID) throws IOException {
         int nextRow = getRows(sheetName, existingSpreadSheetID) + 1;
-        writeSheet(data, rangeStart + nextRow, existingSpreadSheetID);
+        writeSheet(data, "!A"+ nextRow, existingSpreadSheetID);
     }
     public static int getRows(String sheetName, String existingSpreadSheetID) throws IOException {
         List<List<Object>> values = spreadsheets.values().get(existingSpreadSheetID, sheetName)
@@ -227,4 +227,5 @@ public class SheetsQuickstart {
         System.out.printf("%d rows retrieved. in '" + sheetName + "'\n", numRows);
         return numRows;
     }
+
 }

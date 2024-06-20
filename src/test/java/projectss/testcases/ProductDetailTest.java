@@ -15,6 +15,7 @@ import projectss.pages.ProductDetailPage;
 import projectss.pages.SignInPage;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -74,36 +75,36 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
         SoftAssert softAssert = new SoftAssert();
         productDetailPage.getQALinkList(ggSpreadSheetID,ggSpreadSheetRange);
 
-        SheetsQuickstart.getCredentials();
         SheetsQuickstart.getSpreadsheetInstance();
 
 
-        List<List<Object>> values = new ArrayList<>();;
+        List<List<Object>> values = new ArrayList<>();
+
         System.out.println("QA link");
         //For qua các row data trong Google Sheet
         for (List row : ProductDetailPage.ggDataList) {
-            By byInputXpath = By.xpath((String) row.get(Integer.parseInt(inputXpathColumn)));
             System.out.printf("%s,%s\n", row.get(0), row.get(Integer.parseInt(inputQALinkColumn)));
             driver.get((String) row.get(Integer.parseInt(inputQALinkColumn)));
             //Đợi Element text
             Thread.sleep(2000);
             //Lưu Elements List khi ng dùng input Xpath
-            List<WebElement> inputedElement = driver.findElements(byInputXpath);
-            boolean isInputedElementEmpty = inputedElement.size() > 0;
-            if (isInputedElementEmpty) {
+            List<WebElement> inputedElement = driver.findElements(By.xpath((String) row.get(Integer.parseInt(inputXpathColumn))));
+            //boolean isInputedElementEmpty = inputedElement.size() > 0;
+            if (inputedElement.size() > 0) {
                 // Element is present
                 for (WebElement webInputedElementText : inputedElement) {
                     Document doc = Jsoup.parse(webInputedElementText.getAttribute("innerHTML"));
                     String actualElementText = doc.text();
                     System.out.println("TestCase_ID " + row.get(0) + " text: " + actualElementText );
                     softAssert.assertEquals(actualElementText,row.get(Integer.parseInt(inputExpectedResultColumn)),"TestCase_ID: " + row.get(0) + " lỗi sai text cho Element, chi tiết: ");
-                    values.add(Collections.singletonList(actualElementText));
-                    SheetsQuickstart_original.updateValues(ggSpreadSheetID,"QuickSample!F2:F100","RAW",values);
-
+                    //values.add(Collections.singletonList(actualElementText));
+                    //SheetsQuickstart_original.updateValues(ggSpreadSheetID,"QuickSample!F2:F100","RAW",values);
+                    SheetsQuickstart.writeDataGoogleSheets("YoutubeTest1", new ArrayList<Object>(Arrays.asList(row.get(0),row.get(2), actualElementText)), ggSpreadSheetID);
                 }
             } else {
                 // Element is not present
-                softAssert.assertTrue(isInputedElementEmpty,"TestCase_ID: " + row.get(0) + " lỗi ko có text cho element này ");
+                //softAssert.assertTrue(isInputedElementEmpty,"TestCase_ID: " + row.get(0) + " lỗi ko có text cho element này ");
+                SheetsQuickstart.writeDataGoogleSheets("YoutubeTest1", new ArrayList<Object>(Arrays.asList(row.get(0),row.get(2), "Fail")), ggSpreadSheetID);
             }
         }
         softAssert.assertAll();

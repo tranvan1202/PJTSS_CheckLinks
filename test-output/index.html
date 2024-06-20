@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-PageObjectTest_Example">
-              <span class="suite-name border-failed">PageObjectTest Example</span>
+              <span class="suite-name border-passed">PageObjectTest Example</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-PageObjectTest_Example">
-                    <span>D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\testcases\testng.xml</span>
+                    <span>D:\Auto\Project\PJTSS_CheckLinks\src\test\java\projectss\testcases\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-PageObjectTest_Example" class="hide-methods failed suite-PageObjectTest_Example"> (hide)</a> <!-- hide-methods failed suite-PageObjectTest_Example -->
-                      <a href="#" panel-name="suite-PageObjectTest_Example" class="show-methods failed suite-PageObjectTest_Example"> (show)</a> <!-- show-methods failed suite-PageObjectTest_Example -->
-                    </span>
-                    <div class="method-list-content failed suite-PageObjectTest_Example">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-PageObjectTest_Example" title="projectss.testcases.ProductDetailTest" hash-for-method="verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)">verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-PageObjectTest_Example -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -119,6 +105,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-PageObjectTest_Example" title="projectss.testcases.ProductDetailTest" hash-for-method="signIn">signIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PageObjectTest_Example" title="projectss.testcases.ProductDetailTest" hash-for-method="verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)">verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-PageObjectTest_Example -->
@@ -133,57 +124,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-PageObjectTest_Example" class="panel PageObjectTest_Example">
-          <div class="suite-PageObjectTest_Example-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">projectss.testcases.ProductDetailTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)">
-                  </a> <!-- verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4) -->
-                  <span class="method-name">verifyTextByXpath</span>
-                  <span class="parameters">(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)</span>
-                  <div class="stack-trace">com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
-PUT https://sheets.googleapis.com/v4/spreadsheets/1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4/values/QuickSample!F2:F100?valueInputOption=RAW
-{
-  &quot;code&quot;: 403,
-  &quot;details&quot;: [
-    {
-      &quot;@type&quot;: &quot;type.googleapis.com/google.rpc.ErrorInfo&quot;,
-      &quot;reason&quot;: &quot;ACCESS_TOKEN_SCOPE_INSUFFICIENT&quot;
-    }
-  ],
-  &quot;errors&quot;: [
-    {
-      &quot;domain&quot;: &quot;global&quot;,
-      &quot;message&quot;: &quot;Insufficient Permission&quot;,
-      &quot;reason&quot;: &quot;insufficientPermissions&quot;
-    }
-  ],
-  &quot;message&quot;: &quot;Request had insufficient authentication scopes.&quot;,
-  &quot;status&quot;: &quot;PERMISSION_DENIED&quot;
-}
-	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:146)
-	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:118)
-	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:37)
-	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:439)
-	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1111)
-	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:525)
-	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:466)
-	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:576)
-	at projectss.base.SheetsQuickstart_original.updateValues(projectss.base.SheetsQuickstart.java:123)
-	at projectss.testcases.ProductDetailTest.verifyTextByXpath(ProductDetailTest.java:97)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-PageObjectTest_Example-class-failed -->
           <div class="suite-PageObjectTest_Example-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -197,12 +137,20 @@ PUT https://sheets.googleapis.com/v4/spreadsheets/1ua7soFSoBeEeaZGu9khbHHmXdTIUk
                   <span class="method-name">signIn</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)">
+                  </a> <!-- verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4) -->
+                  <span class="method-name">verifyTextByXpath</span>
+                  <span class="parameters">(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-PageObjectTest_Example-class-passed -->
         </div> <!-- panel PageObjectTest_Example -->
         <div panel-name="test-xml-PageObjectTest_Example" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\testcases\testng.xml</span>
+            <span class="header-content">D:\Auto\Project\PJTSS_CheckLinks\src\test\java\projectss\testcases\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -268,16 +216,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyTextByXpath')
 data.setCell(0, 2, 'projectss.testcases.ProductDetailTest')
-data.setCell(0, 3, 12667);
+data.setCell(0, 3, 24411);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'signIn')
 data.setCell(1, 2, 'projectss.testcases.ProductDetailTest')
-data.setCell(1, 3, 4795);
+data.setCell(1, 3, 4112);
 window.suiteTableData['PageObjectTest_Example']= { tableData: data, tableDiv: 'times-div-PageObjectTest_Example'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-PageObjectTest_Example">
               </div> <!-- times-div-PageObjectTest_Example -->
             </div> <!-- times-div -->
@@ -310,21 +258,19 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">3700 ms</span>
+                <span class="method-start">1649 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">signIn</span>
-                <span class="method-start">3713 ms</span>
+                <span class="method-start">1652 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyTextByXpath(1ua7soFSoBeEeaZGu9khbHHmXdTIUkfdTljeOdgJSKT4, QuickSample!A2:F, 2, 3, 4)</span>
-                <span class="method-start">8516 ms</span>
+                <span class="method-start">5767 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">21188 ms</span>
+                <span class="method-start">30179 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

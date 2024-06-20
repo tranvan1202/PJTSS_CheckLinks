@@ -29,6 +29,8 @@ public class SheetsQuickstart_original {
     private static final String APPLICATION_NAME = "Google Sheets API Java Quickstart";
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
     private static final String TOKENS_DIRECTORY_PATH = "tokens/path";
+    static Credential credential;
+    static Sheets.Spreadsheets spreadsheets;
 
     /**
      * Global instance of the scopes required by this quickstart.
@@ -36,15 +38,15 @@ public class SheetsQuickstart_original {
      */
     private static final List<String> SCOPES =
             Arrays.asList(SheetsScopes.SPREADSHEETS, SheetsScopes.DRIVE);
-    //private static final String CREDENTIALS_FILE_PATH = "resources\\spreadsheet\\credentials.json";
-    private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
+    //private static final String CREDENTIALS_FILE_PATH = "resources\\spreadsheet\\credentials2.json";
+    private static final String CREDENTIALS_FILE_PATH = "/credentials2.json";
 
     /**
      * Creates an authorized Credential object.
      *
      * @param HTTP_TRANSPORT The network HTTP Transport.
      * @return An authorized Credential object.
-     * @throws IOException If the credentials.json file cannot be found.
+     * @throws IOException If the credentials2.json file cannot be found.
      */
     private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT)
             throws IOException {
@@ -66,6 +68,22 @@ public class SheetsQuickstart_original {
         LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
         return new AuthorizationCodeInstalledApp(flow, receiver).authorize("user");
     }
+    public static void getCredentials() throws IOException, GeneralSecurityException {
+        final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+        InputStream in = SheetsQuickstart.class.getResourceAsStream(CREDENTIALS_FILE_PATH);
+        if (in == null) {
+            throw new FileNotFoundException("Resource not found: " +  CREDENTIALS_FILE_PATH);
+        }
+        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,new InputStreamReader(in));
+
+        //Build flow and trigger user authorization request.
+        GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(HTTP_TRANSPORT,JSON_FACTORY,
+                clientSecrets,SCOPES)
+                .setDataStoreFactory(new FileDataStoreFactory(new java.io.File(TOKENS_DIRECTORY_PATH)))
+                .setAccessType("offline").build();
+        LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
+        credential = new AuthorizationCodeInstalledApp(flow,receiver).authorize("user");
+    }
 
     public static Object getQALinks(String spreadsheetId, String range) throws IOException, GeneralSecurityException{
         // Build a new authorized API client service.
@@ -80,6 +98,13 @@ public class SheetsQuickstart_original {
         List<List<Object>> values = response.getValues();
 
         return values;
+    }
+
+    public static void getSpreadsheetInstance() throws GeneralSecurityException, IOException {
+        final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+        spreadsheets = new Sheets.Builder(GoogleNetHttpTransport.newTrustedTransport(),
+                GsonFactory.getDefaultInstance(), getCredentials(HTTP_TRANSPORT))
+                .setApplicationName("Google Sheet Java Integrate").build().spreadsheets();
     }
 
     /**

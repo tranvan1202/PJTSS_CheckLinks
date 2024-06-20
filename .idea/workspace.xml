@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 29: update 2">
+    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 31: update minor">
+      <change afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/GoogleSheetTestScenarios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart_original.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart_original.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart_original.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/pages/ProductDetailPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTestNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTestNew.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
@@ -59,27 +60,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Auto/PJTSS_CheckLinks/src/test/java/projectss/config&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Auto/Project/PJTSS_CheckLinks/src/test/java/projectss/config",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Auto\Project\PJTSS_CheckLinks\src\test\java\projectss\config" />
+      <recent name="D:\Auto\Project\PJTSS_CheckLinks\src\main\resources" />
       <recent name="D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\config" />
       <recent name="D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\testcases" />
       <recent name="D:\Auto\PJTSS_CheckLinks\src\test\java\projectss\pages" />
-      <recent name="D:\Auto\PJTSS_CheckLinks\src\test\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Auto\PJTSS_CheckLinks\src\main\resources" />
@@ -350,6 +352,16 @@
           <line>37</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
           <option name="timeStamp" value="59" />
@@ -362,6 +374,24 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart_original.java</url>
+          <line>119</line>
+          <properties class="projectss.base.SheetsQuickstart_original" method="updateValues">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java</url>
+          <line>73</line>
+          <properties class="projectss.testcases.ProductDetailTest" method="verifyTextByXpath">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="116" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

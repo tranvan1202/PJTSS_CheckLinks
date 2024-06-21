@@ -37,7 +37,7 @@ public class SheetsQuickstart {
      */
     private static final List<String> SCOPES =
             Arrays.asList(SheetsScopes.SPREADSHEETS, SheetsScopes.DRIVE);
-    private static final String CREDENTIALS_FILE_PATH = "/credentials2.json";
+    private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
     static Credential credential;
     static Sheets.Spreadsheets spreadsheets;
 
@@ -46,7 +46,7 @@ public class SheetsQuickstart {
      *
      * @param HTTP_TRANSPORT The network HTTP Transport.
      * @return An authorized Credential object.
-     * @throws IOException If the credentials2.json file cannot be found.
+     * @throws IOException If the credentials.json file cannot be found.
      */
     private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT)
             throws IOException {
@@ -226,6 +226,20 @@ public class SheetsQuickstart {
         int numRows = values != null ? values.size() :0;
         System.out.printf("%d rows retrieved. in '" + sheetName + "'\n", numRows);
         return numRows;
+    }
+    public static Object getQALinks(String spreadsheetId, String range) throws IOException, GeneralSecurityException{
+        // Build a new authorized API client service.
+        final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+        Sheets service =
+                new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+                        .setApplicationName(APPLICATION_NAME)
+                        .build();
+        ValueRange response = service.spreadsheets().values()
+                .get(spreadsheetId, range)
+                .execute();
+        List<List<Object>> values = response.getValues();
+
+        return values;
     }
 
 }

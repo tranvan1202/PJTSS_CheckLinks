@@ -10,12 +10,14 @@ import org.testng.ITestContext;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class BaseSetup {
     private WebDriver driver;
     public static Properties prop;
+    public static List<List<Object>> ggDataList;
     static String driverPath = "resources\\drivers\\";
 
     public BaseSetup() {
@@ -95,16 +97,38 @@ public class BaseSetup {
         }
         return returnValues;
     }
-    @DataProvider(name="paramsVerifyTextByInputXpath")
-    public Object[][] paramsVerifyTextByInputXpath(ITestContext context) {
-        String ggSpreadSheetID = context.getCurrentXmlTest().getParameter("paramSheetID");
-        String ggSpreadSheetRange = context.getCurrentXmlTest().getParameter("paramSheetDataRange");
-        String inputQALinkColumn = context.getCurrentXmlTest().getParameter("paramQALinkColumn");
-        String inputXpath = context.getCurrentXmlTest().getParameter("paramInputXpathColumn");
-        String inputExpectedResultColumn = context.getCurrentXmlTest().getParameter("paramExpectedResultColumn");
-
-        Object[][] returnParams = {{ggSpreadSheetID,ggSpreadSheetRange,inputQALinkColumn,inputXpath,inputExpectedResultColumn}};
-        return returnParams;
+//    @DataProvider(name="paramsVerifyTextByInputXpath")
+//    public static Object[][] paramsVerifyTextByInputXpath(ITestContext context) {
+//        String ggTestDataSheetRange = context.getCurrentXmlTest().getParameter("paramTestDataSheetRange");
+//        String inputQALinkColumn = context.getCurrentXmlTest().getParameter("paramQALinkColumn");
+//        String inputXpath = context.getCurrentXmlTest().getParameter("paramInputXpathColumn");
+//        String inputExpectedResultColumn = context.getCurrentXmlTest().getParameter("paramExpectedResultColumn");
+//
+//        Object[][] returnParams = {{ggTestDataSheetRange,inputQALinkColumn,inputXpath,inputExpectedResultColumn}};
+//        return returnParams;
+//    }
+    public static String paramsInputTestDataSheetRange(ITestContext context) {
+        return context.getCurrentXmlTest().getParameter("paramTestDataSheetRange");
+    }
+    public static String paramsInputQALinkColumn(ITestContext context) {
+        return context.getCurrentXmlTest().getParameter("paramQALinkColumn");
+    }
+    public static String paramsInputXpath(ITestContext context) {
+        return context.getCurrentXmlTest().getParameter("paramInputXpathColumn");
+    }
+    public static String paramsInputExpectedResultColumn(ITestContext context) {
+        return context.getCurrentXmlTest().getParameter("paramExpectedResultColumn");
+    }
+    @DataProvider(name="ggDataTestList")
+    public List<List<Object>> getQALinkList(String sheetId, String sheetRange) throws Exception{
+        System.out.println(driver);
+        ggDataList = (List<List<Object>>) SheetsQuickstart.getQALinks(sheetId ,sheetRange);
+        if (ggDataList == null || ggDataList.isEmpty()) {
+            System.out.println("No data found.");
+        } else{
+            return ggDataList;
+        }
+        return ggDataList;
     }
     @AfterClass
     public void tearDown() throws Exception {

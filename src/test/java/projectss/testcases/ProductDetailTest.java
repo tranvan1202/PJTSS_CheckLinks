@@ -1,10 +1,13 @@
 package projectss.testcases;
 
+import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -14,19 +17,45 @@ import projectss.base.SheetsQuickstart_original;
 import projectss.pages.ProductDetailPage;
 import projectss.pages.SignInPage;
 
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 public class ProductDetailTest extends projectss.base.BaseSetup {
     private WebDriver driver;
     private SignInPage signInPage;
+    private BaseSetup baseSetup = this;
+    private static String existingSpreadSheetID = "";
     private ProductDetailPage productDetailPage;
+    private static String resultSheetName = "";
     @BeforeClass
     public void setUp() {
         driver = getDriver();
+    }
+    @BeforeClass(dependsOnMethods = { "setUp" })
+    public static void testSetupWriteResultIntoSheets(ITestContext context) throws GeneralSecurityException, IOException {
+        existingSpreadSheetID = context.getCurrentXmlTest().getParameter("paramExistingSpreadSheetID");
+        LocalDateTime myDateTime = LocalDateTime.now();
+
+        SheetsQuickstart.getCredentials();
+        SheetsQuickstart.getSpreadsheetInstance();
+
+        DateTimeFormatter myDateTimeFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy_HH:mm:ss");
+        String formatDate = myDateTime.format(myDateTimeFormat);
+
+        resultSheetName = "TestResult_" + formatDate;
+        System.out.println("SheetName-" + formatDate);
+        SheetsQuickstart.createNewSheet(existingSpreadSheetID, resultSheetName);
+        SheetsQuickstart.writeDataGoogleSheets(resultSheetName,
+                new ArrayList<Object>(Arrays.asList("Test Case ID","Test Case Name", "QA No", "QA URL","Xpath", "Expected","Actual","Result")),
+                existingSpreadSheetID);
     }
     @Test(priority = 1)
     public void signIn() throws Exception {
@@ -70,23 +99,26 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
 //        Assert.assertTrue(catalogueButton.isEmpty());
 //    }
 
-    @Test(priority = 2, dataProvider = "paramsVerifyTextByInputXpath", dataProviderClass = BaseSetup.class)
-    public void verifyTextByXpath(String ggSpreadSheetID, String ggSpreadSheetRange,String inputQALinkColumn,String inputXpathColumn, String inputExpectedResultColumn) throws Exception {
-        SoftAssert softAssert = new SoftAssert();
-        productDetailPage.getQALinkList(ggSpreadSheetID,ggSpreadSheetRange);
+    @Test(priority = 2)
+    public void verifyTextByXpath() throws Exception {
+        //SoftAssert softAssert = new SoftAssert();
+        // Biến load params
+        org.testng.ITestContext context = org.testng.Reporter.getCurrentTestResult().getTestContext();
+        String ggSpreadSheetRange = BaseSetup.paramsInputTestDataSheetRange(context);
+        String inputQALinkColumn = BaseSetup.paramsInputQALinkColumn(context) ;
+        String inputXpathColumn = BaseSetup.paramsInputXpath(context);
+        String inputExpectedResultColumn = BaseSetup.paramsInputExpectedResultColumn(context);
 
-        SheetsQuickstart.getSpreadsheetInstance();
-
-
-        List<List<Object>> values = new ArrayList<>();
-
+        baseSetup.getQALinkList(existingSpreadSheetID,ggSpreadSheetRange);
         System.out.println("QA link");
         //For qua các row data trong Google Sheet
-        for (List row : ProductDetailPage.ggDataList) {
+        for (List row : BaseSetup.ggDataList) {
             System.out.printf("%s,%s\n", row.get(0), row.get(Integer.parseInt(inputQALinkColumn)));
             driver.get((String) row.get(Integer.parseInt(inputQALinkColumn)));
             //Đợi Element text
             Thread.sleep(2000);
+            //Đợi 5s ko tìm thấy Element thì move tiếp
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             //Lưu Elements List khi ng dùng input Xpath
             List<WebElement> inputedElement = driver.findElements(By.xpath((String) row.get(Integer.parseInt(inputXpathColumn))));
             //boolean isInputedElementEmpty = inputedElement.size() > 0;
@@ -96,17 +128,21 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
                     Document doc = Jsoup.parse(webInputedElementText.getAttribute("innerHTML"));
                     String actualElementText = doc.text();
                     System.out.println("TestCase_ID " + row.get(0) + " text: " + actualElementText );
-                    softAssert.assertEquals(actualElementText,row.get(Integer.parseInt(inputExpectedResultColumn)),"TestCase_ID: " + row.get(0) + " lỗi sai text cho Element, chi tiết: ");
-                    //values.add(Collections.singletonList(actualElementText));
-                    //SheetsQuickstart_original.updateValues(ggSpreadSheetID,"QuickSample!F2:F100","RAW",values);
-                    SheetsQuickstart.writeDataGoogleSheets("YoutubeTest1", new ArrayList<Object>(Arrays.asList(row.get(0),row.get(2), actualElementText)), ggSpreadSheetID);
+                    SheetsQuickstart.writeDataGoogleSheets(resultSheetName, new ArrayList<Object>(Arrays.asList(
+                            row.get(0),row.get(1), row.get(2),row.get(3),row.get(4),row.get(5),
+                            actualElementText)), existingSpreadSheetID);
+
+                    Assert.assertEquals(actualElementText,row.get(Integer.parseInt(inputExpectedResultColumn)),"TestCase_ID: "
+                            + row.get(0) + " lỗi sai text cho Element, chi tiết: ");
                 }
             } else {
                 // Element is not present
                 //softAssert.assertTrue(isInputedElementEmpty,"TestCase_ID: " + row.get(0) + " lỗi ko có text cho element này ");
-                SheetsQuickstart.writeDataGoogleSheets("YoutubeTest1", new ArrayList<Object>(Arrays.asList(row.get(0),row.get(2), "Fail")), ggSpreadSheetID);
+                SheetsQuickstart.writeDataGoogleSheets(resultSheetName, new ArrayList<Object>(Arrays.asList(
+                        row.get(0),row.get(1), row.get(2),row.get(3),row.get(4),row.get(5),
+                        "Not found")),existingSpreadSheetID);
             }
         }
-        softAssert.assertAll();
+        //softAssert.assertAll();
     }
 }

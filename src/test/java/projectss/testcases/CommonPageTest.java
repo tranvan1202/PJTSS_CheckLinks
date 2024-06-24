@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import projectss.base.BaseSetup;
-import projectss.pages.SignInPage;
 import projectss.pages.CommonPage;
 
 import static org.testng.Assert.assertTrue;
@@ -24,7 +23,7 @@ public class CommonPageTest extends projectss.base.BaseSetup {
 //        driver.get(param);
 //        commonPage.getWrongSiteCodeAssetPath(driver,"/ph");
 //    }
-    @Test(priority = 1, dataProvider = "hrefLinks", dataProviderClass = BaseSetup.class)
+    @Test(priority = 1, dataProvider = "urlList", dataProviderClass = BaseSetup.class)
     public void verifyBrokenInputLinks(String param) {
         commonPage = new CommonPage(driver);
         assertTrue(commonPage.isInputLinkBroken(param));

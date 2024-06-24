@@ -227,7 +227,7 @@ public class SheetsQuickstart {
         System.out.printf("%d rows retrieved. in '" + sheetName + "'\n", numRows);
         return numRows;
     }
-    public static Object getQALinks(String spreadsheetId, String range) throws IOException, GeneralSecurityException{
+    public static Object getTestData(String spreadsheetId, String range) throws IOException, GeneralSecurityException{
         // Build a new authorized API client service.
         final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
         Sheets service =

@@ -25,7 +25,7 @@ public class StaticPageTest extends projectss.base.BaseSetup {
 //        SignInPage.loginThroughSession();
 //        assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
 //    }
-    @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
+    @Test(priority = 2, dataProvider = "urlList", dataProviderClass = BaseSetup.class)
     public void verifyCTALink(String param) throws Exception {
         System.out.println("URL: " + param);
         driver.get(param);

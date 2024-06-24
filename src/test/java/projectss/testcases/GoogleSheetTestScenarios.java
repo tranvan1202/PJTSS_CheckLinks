@@ -97,7 +97,7 @@ public class GoogleSheetTestScenarios {
 //
 //                for (int i = 0; i < totalColumnsTestDataSheet; i++) {
 //                    if(row ==0) {
-//                        headerData = SheetsQuickstart.(0,i,testDataSheetName);
+//                        headerData = SheetsQuickstart.getCellContent(0,i,testDataSheetName);
 //                        headerValues.add(headerData);
 //                    } else if (row !=0) {
 //                        String rowData;

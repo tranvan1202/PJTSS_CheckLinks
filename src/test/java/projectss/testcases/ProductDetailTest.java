@@ -1,6 +1,5 @@
 package projectss.testcases;
 
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.openqa.selenium.By;
@@ -13,7 +12,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import projectss.base.BaseSetup;
 import projectss.base.SheetsQuickstart;
-import projectss.base.SheetsQuickstart_original;
 import projectss.pages.ProductDetailPage;
 import projectss.pages.SignInPage;
 
@@ -23,7 +21,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -32,7 +29,6 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
     private WebDriver driver;
     private SignInPage signInPage;
     private BaseSetup baseSetup = this;
-    private static String existingSpreadSheetID = "";
     private ProductDetailPage productDetailPage;
     private static String resultSheetName = "";
     @BeforeClass
@@ -41,8 +37,8 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
     }
     @BeforeClass(dependsOnMethods = { "setUp" })
     public static void testSetupWriteResultIntoSheets(ITestContext context) throws GeneralSecurityException, IOException {
-        existingSpreadSheetID = context.getCurrentXmlTest().getParameter("paramExistingSpreadSheetID");
         LocalDateTime myDateTime = LocalDateTime.now();
+        String existingSpreadSheetID = paramsInputExistingSheetId(context);
 
         SheetsQuickstart.getCredentials();
         SheetsQuickstart.getSpreadsheetInstance();
@@ -65,7 +61,7 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
     }
 
     //Xài driver, cookie và jsoup
-//    @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
+//    @Test(priority = 2, dataProvider = "urlList", dataProviderClass = BaseSetup.class)
 //    public void verifyBadgeText(String param) throws Exception {
 //        productDetailPage = new ProductDetailPage(driver);
 //        System.out.println("URL: " + param);
@@ -75,7 +71,7 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
 //        Assert.assertEquals(badgeText,"เก่าแลกใหม่ 1000");
 //    }
 //    //Xài cookie và jsoup, max 50 links
-//    @Test(priority = 1, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
+//    @Test(priority = 1, dataProvider = "urlList", dataProviderClass = BaseSetup.class)
 //    public void verifyBadgeText2(String param) throws Exception {
 //        productDetailPage = new ProductDetailPage(driver);
 //        System.out.println("URL: " + param);
@@ -88,7 +84,7 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
 //        Assert.assertEquals(badgeText,"Thu cũ đổi mới");
 //    }
 
-//    @Test(priority = 4, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
+//    @Test(priority = 4, dataProvider = "urlList", dataProviderClass = BaseSetup.class)
 //    public void verifyXemCatalogueButton(String param) throws Exception {
 //        productDetailPage = new ProductDetailPage(driver);
 //        System.out.println("URL: " + param);
@@ -99,17 +95,31 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
 //        Assert.assertTrue(catalogueButton.isEmpty());
 //    }
 
-    @Test(priority = 2)
-    public void verifyTextByXpath() throws Exception {
+    @Test(priority = 2, dataProvider = "urlSheetLink", dataProviderClass = BaseSetup.class)
+    public void verifyTextByXpath2(String urlLink) throws Exception {
         //SoftAssert softAssert = new SoftAssert();
         // Biến load params
         org.testng.ITestContext context = org.testng.Reporter.getCurrentTestResult().getTestContext();
+
+        baseSetup.getUrlLink2(context);
+        System.out.println("QA link" + urlLink);
+        //For qua các row data trong Google Sheet
+
+        //softAssert.assertAll();
+    }
+
+    @Test(priority = 2)
+    public void verifyTextByXpath() throws Exception {
+        SoftAssert softAssert = new SoftAssert();
+        // Biến load params
+        org.testng.ITestContext context = org.testng.Reporter.getCurrentTestResult().getTestContext();
+        String existingSpreadSheetID = paramsInputExistingSheetId(context);
         String ggSpreadSheetRange = BaseSetup.paramsInputTestDataSheetRange(context);
         String inputQALinkColumn = BaseSetup.paramsInputQALinkColumn(context) ;
         String inputXpathColumn = BaseSetup.paramsInputXpath(context);
         String inputExpectedResultColumn = BaseSetup.paramsInputExpectedResultColumn(context);
 
-        baseSetup.getQALinkList(existingSpreadSheetID,ggSpreadSheetRange);
+        baseSetup.getUrlLink1(existingSpreadSheetID,ggSpreadSheetRange);
         System.out.println("QA link");
         //For qua các row data trong Google Sheet
         for (List row : BaseSetup.ggDataList) {
@@ -132,7 +142,7 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
                             row.get(0),row.get(1), row.get(2),row.get(3),row.get(4),row.get(5),
                             actualElementText)), existingSpreadSheetID);
 
-                    Assert.assertEquals(actualElementText,row.get(Integer.parseInt(inputExpectedResultColumn)),"TestCase_ID: "
+                    softAssert.assertEquals(actualElementText,row.get(Integer.parseInt(inputExpectedResultColumn)),"TestCase_ID: "
                             + row.get(0) + " lỗi sai text cho Element, chi tiết: ");
                 }
             } else {
@@ -143,6 +153,6 @@ public class ProductDetailTest extends projectss.base.BaseSetup {
                         "Not found")),existingSpreadSheetID);
             }
         }
-        //softAssert.assertAll();
+        softAssert.assertAll();
     }
 }

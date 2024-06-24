@@ -1,7 +1,6 @@
 package projectss.testcases;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -40,7 +39,7 @@ public class MetaTestNew extends projectss.base.BaseSetup {
         signInPage.loginThroughSession();
     }
     //Phần xử lý get Meta (version 2.0| dùng driver Browser để get| pros: không giới hạn QA links, cons: cần gọi sign in, chậm)
-    @Test(priority = 3, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
+    @Test(priority = 3, dataProvider = "urlList", dataProviderClass = BaseSetup.class)
     public void verifyExistOfMetaContent2(String param) throws Exception {
         System.out.println("URL: " + param);
         driver.get(param);
@@ -86,7 +85,7 @@ public class MetaTestNew extends projectss.base.BaseSetup {
     }
 
     //Phần xử lý get Meta (version 3.0| Jsoup| pros: nhanh, ko cần gọi sign in, cons: 50-70 links/ lần chạy do cookies không tồn tại lâu)
-    @Test(priority = 4, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
+    @Test(priority = 4, dataProvider = "urlList", dataProviderClass = BaseSetup.class)
     public void verifyExistOfMetaContent3(String param) throws Exception {
         Document doc = Jsoup.connect(param)
                 .cookie("AWSALB", BaseSetup.prop.getProperty("quickLoginID"))

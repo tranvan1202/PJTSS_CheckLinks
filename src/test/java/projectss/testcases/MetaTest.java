@@ -35,7 +35,7 @@ public class MetaTest extends projectss.base.BaseSetup {
         assertTrue(signInPage.verifySignInPageTitle(), "Sign In page title doesn't match");
     }
     //Phần xử lý get Meta
-    @Test(priority = 2, dataProvider = "qaURLs", dataProviderClass = BaseSetup.class)
+    @Test(priority = 2, dataProvider = "urlList", dataProviderClass = BaseSetup.class)
     public void verifyExistOfMetaContent(String param) throws Exception {
         metaPage = new MetaPage(driver);
         //System.out.println("URL: " + param);

@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import static projectss.base.SheetsQuickstart.getTestData;
+
 public class BaseSetup {
     private WebDriver driver;
     public static Properties prop;
@@ -75,38 +77,9 @@ public class BaseSetup {
         }
     }
 
-    @DataProvider(name="qaURLs")
-    public Object[][] splitQALinks(ITestContext context) {
-        String parameter = context.getCurrentXmlTest().getParameter("qaURLs");
-        String[] names = parameter.split(",");
-        Object[][] returnValues = new Object[names.length][1];
-        int index = 0;
-        for (Object[] each : returnValues) {
-            each[0] = names[index++].trim();
-        }
-        return returnValues;
+    public static String paramsInputExistingSheetId(ITestContext context) {
+        return context.getCurrentXmlTest().getParameter("paramExistingSpreadSheetID");
     }
-    @DataProvider(name="hrefLinks")
-    public Object[][] splitHrefLinks(ITestContext context) {
-        String parameter = context.getCurrentXmlTest().getParameter("hrefLinks");
-        String[] names = parameter.split(",");
-        Object[][] returnValues = new Object[names.length][1];
-        int index = 0;
-        for (Object[] each : returnValues) {
-            each[0] = names[index++].trim();
-        }
-        return returnValues;
-    }
-//    @DataProvider(name="paramsVerifyTextByInputXpath")
-//    public static Object[][] paramsVerifyTextByInputXpath(ITestContext context) {
-//        String ggTestDataSheetRange = context.getCurrentXmlTest().getParameter("paramTestDataSheetRange");
-//        String inputQALinkColumn = context.getCurrentXmlTest().getParameter("paramQALinkColumn");
-//        String inputXpath = context.getCurrentXmlTest().getParameter("paramInputXpathColumn");
-//        String inputExpectedResultColumn = context.getCurrentXmlTest().getParameter("paramExpectedResultColumn");
-//
-//        Object[][] returnParams = {{ggTestDataSheetRange,inputQALinkColumn,inputXpath,inputExpectedResultColumn}};
-//        return returnParams;
-//    }
     public static String paramsInputTestDataSheetRange(ITestContext context) {
         return context.getCurrentXmlTest().getParameter("paramTestDataSheetRange");
     }
@@ -119,10 +92,39 @@ public class BaseSetup {
     public static String paramsInputExpectedResultColumn(ITestContext context) {
         return context.getCurrentXmlTest().getParameter("paramExpectedResultColumn");
     }
-    @DataProvider(name="ggDataTestList")
-    public List<List<Object>> getQALinkList(String sheetId, String sheetRange) throws Exception{
+
+    @DataProvider(name="urlList")
+    public Object[][] splitURLLinks(ITestContext context) {
+        String parameter = context.getCurrentXmlTest().getParameter("urlList");
+        String[] names = parameter.split(",");
+        Object[][] returnValues = new Object[names.length][1];
+        int index = 0;
+        for (Object[] each : returnValues) {
+            each[0] = names[index++].trim();
+        }
+        return returnValues;
+    }
+    @DataProvider(name="urlSheetLink")
+    public Object[][] getUrlLink2(ITestContext context) throws Exception {
+        String existingSpreadSheetID = paramsInputExistingSheetId(context);
+        String ggSpreadSheetRange = paramsInputTestDataSheetRange(context);
+
+        ggDataList = (List<List<Object>>) getTestData(existingSpreadSheetID, ggSpreadSheetRange);
+        String[] listOfUrls = new String[0];
+        if (ggDataList == null || ggDataList.isEmpty()) {
+            System.out.println("No data found.");
+        } else {
+            String[] urlArray = new String[ggDataList.size()];
+            listOfUrls = ggDataList.toArray(new String[0]);
+
+            return new String[][]{listOfUrls};
+        }
+        return new String[][]{listOfUrls};
+    }
+
+    public List<List<Object>> getUrlLink1(String sheetId, String sheetRange) throws Exception{
         System.out.println(driver);
-        ggDataList = (List<List<Object>>) SheetsQuickstart.getQALinks(sheetId ,sheetRange);
+        ggDataList = (List<List<Object>>) getTestData(sheetId ,sheetRange);
         if (ggDataList == null || ggDataList.isEmpty()) {
             System.out.println("No data found.");
         } else{

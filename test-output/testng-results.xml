@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="3" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="PageObjectTest Example" duration-ms="19592" started-at="2024-06-24T19:19:27 ICT" finished-at="2024-06-24T19:19:47 ICT">
+  <suite name="PageObjectTest Example" duration-ms="13230" started-at="2024-06-28T19:06:00 ICT" finished-at="2024-06-28T19:06:14 ICT">
     <groups>
     </groups>
-    <test name="AutomationTest" duration-ms="19592" started-at="2024-06-24T19:19:27 ICT" finished-at="2024-06-24T19:19:47 ICT">
+    <test name="AutomationTest" duration-ms="13230" started-at="2024-06-28T19:06:00 ICT" finished-at="2024-06-28T19:06:14 ICT">
       <class name="projectss.testcases.ProductDetailTest">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String)[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="initializeTestBaseSetup" is-config="true" duration-ms="6026" started-at="2024-06-24T19:19:27 ICT" finished-at="2024-06-24T19:19:34 ICT">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String)[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="initializeTestBaseSetup" is-config="true" duration-ms="3993" started-at="2024-06-28T19:06:00 ICT" finished-at="2024-06-28T19:06:04 ICT">
           <params>
             <param index="0">
               <value>
@@ -18,45 +18,43 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="setUp" is-config="true" duration-ms="0" started-at="2024-06-24T19:19:34 ICT" finished-at="2024-06-24T19:19:34 ICT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSetupWriteResultIntoSheets(org.testng.ITestContext)[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="testSetupWriteResultIntoSheets" is-config="true" duration-ms="2072" started-at="2024-06-24T19:19:34 ICT" depends-on-methods="projectss.testcases.ProductDetailTest.setUp" finished-at="2024-06-24T19:19:36 ICT">
+        <test-method status="PASS" signature="testSetupWriteResultIntoSheets(org.testng.ITestContext)[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="testSetupWriteResultIntoSheets" is-config="true" duration-ms="2299" started-at="2024-06-28T19:06:04 ICT" depends-on-methods="projectss.testcases.ProductDetailTest.setUp" finished-at="2024-06-28T19:06:07 ICT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@65327f5]]>
+                <![CDATA[org.testng.TestRunner@4fe01805]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetupWriteResultIntoSheets -->
-        <test-method status="PASS" signature="signIn()[pri:1, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="signIn" duration-ms="3440" started-at="2024-06-24T19:19:36 ICT" finished-at="2024-06-24T19:19:39 ICT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="setUp" is-config="true" duration-ms="0" started-at="2024-06-28T19:06:04 ICT" finished-at="2024-06-28T19:06:04 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signIn()[pri:1, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="signIn" duration-ms="3632" started-at="2024-06-28T19:06:07 ICT" finished-at="2024-06-28T19:06:10 ICT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="FAIL" signature="verifyTextByXpath()[pri:2, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyTextByXpath" duration-ms="4805" started-at="2024-06-24T19:19:39 ICT" finished-at="2024-06-24T19:19:44 ICT">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="verifyTextByXpath2(int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyTextByXpath2" duration-ms="481" started-at="2024-06-28T19:06:10 ICT" data-provider="urlSheetLink" finished-at="2024-06-28T19:06:11 ICT">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
             <message>
-              <![CDATA[TestCase_ID: 1 lỗi sai text cho Element, chi tiết:  expected [เก่าแลกใหม่ 5000z] but found [เก่าแลกใหม่ 5500]]]>
+              <![CDATA[
+[public void projectss.testcases.ProductDetailTest.verifyTextByXpath2(int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyTextByXpath2([Parameter{index=0, type=int, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=int, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.util.ArrayList) [1, Verify badge text, 1, https://www.samsung.com/th/refrigerators/french-door/rf7000cc-french-door-refrigerators-with-bespoke-design-649l-f-rf59u12b12gg, //strong[contains(@class,'pd-info__badge-icon')], เก่าแลกใหม่ 5000z]]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: TestCase_ID: 1 lỗi sai text cho Element, chi tiết:  expected [เก่าแลกใหม่ 5000z] but found [เก่าแลกใหม่ 5500]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at projectss.testcases.ProductDetailTest.verifyTextByXpath(ProductDetailTest.java:144)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+[public void projectss.testcases.ProductDetailTest.verifyTextByXpath2(int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyTextByXpath2([Parameter{index=0, type=int, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=int, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.util.ArrayList) [1, Verify badge text, 1, https://www.samsung.com/th/refrigerators/french-door/rf7000cc-french-door-refrigerators-with-bespoke-design-649l-f-rf59u12b12gg, //strong[contains(@class,'pd-info__badge-icon')], เก่าแลกใหม่ 5000z]]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:914)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -78,11 +76,11 @@ at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTextByXpath -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="tearDown" is-config="true" duration-ms="3191" started-at="2024-06-24T19:19:44 ICT" finished-at="2024-06-24T19:19:47 ICT">
+        </test-method> <!-- verifyTextByXpath2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="tearDown" is-config="true" duration-ms="2793" started-at="2024-06-28T19:06:11 ICT" finished-at="2024-06-28T19:06:14 ICT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

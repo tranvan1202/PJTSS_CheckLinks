@@ -10,8 +10,7 @@ import org.testng.ITestContext;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static projectss.base.SheetsQuickstart.getTestData;
@@ -19,7 +18,7 @@ import static projectss.base.SheetsQuickstart.getTestData;
 public class BaseSetup {
     private WebDriver driver;
     public static Properties prop;
-    public static List<List<Object>> ggDataList;
+    //public static Object ggDataList;
     static String driverPath = "resources\\drivers\\";
 
     public BaseSetup() {
@@ -105,33 +104,25 @@ public class BaseSetup {
         return returnValues;
     }
     @DataProvider(name="urlSheetLink")
-    public Object[][] getUrlLink2(ITestContext context) throws Exception {
+    public Iterator<Object> getUrlLink2(ITestContext context) throws Exception {
         String existingSpreadSheetID = paramsInputExistingSheetId(context);
         String ggSpreadSheetRange = paramsInputTestDataSheetRange(context);
-
-        ggDataList = (List<List<Object>>) getTestData(existingSpreadSheetID, ggSpreadSheetRange);
-        String[] listOfUrls = new String[0];
-        if (ggDataList == null || ggDataList.isEmpty()) {
-            System.out.println("No data found.");
-        } else {
-            String[] urlArray = new String[ggDataList.size()];
-            listOfUrls = ggDataList.toArray(new String[0]);
-
-            return new String[][]{listOfUrls};
-        }
-        return new String[][]{listOfUrls};
+        List<Object> list;
+        list = (List<Object>) getTestData(existingSpreadSheetID, ggSpreadSheetRange);
+        return list.iterator();
     }
 
-    public List<List<Object>> getUrlLink1(String sheetId, String sheetRange) throws Exception{
-        System.out.println(driver);
-        ggDataList = (List<List<Object>>) getTestData(sheetId ,sheetRange);
-        if (ggDataList == null || ggDataList.isEmpty()) {
-            System.out.println("No data found.");
-        } else{
-            return ggDataList;
-        }
-        return ggDataList;
-    }
+
+//    public List<List<Object>> getUrlLink1(String sheetId, String sheetRange) throws Exception{
+//        System.out.println(driver);
+//        ggDataList = (List<List<Object>>) getTestData(sheetId ,sheetRange);
+//        if (ggDataList == null || ggDataList.isEmpty()) {
+//            System.out.println("No data found.");
+//        } else{
+//            return ggDataList;
+//        }
+//        return ggDataList;
+//    }
     @AfterClass
     public void tearDown() throws Exception {
         Thread.sleep(2000);

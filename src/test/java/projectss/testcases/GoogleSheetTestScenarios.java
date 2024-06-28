@@ -82,43 +82,43 @@ public class GoogleSheetTestScenarios {
     /**
      * @return
      */
-//    @DataProvider(name = "TestData")
-//    public Object[][] readAllSheetData(){
-//        List<String> headerValues = new ArrayList<String>();
-//        List<String> rowValues = new ArrayList<>();
-//        String headerData = null;
-//        Map<String,String> rowMap = new HashMap<String, String>();
-//
-//        Object[][] finalData = new HashMap[totalRows -1][1];
-//        try {
-//            for(int row = 0; row < totalRows; row++) {
-//                rowValues = new ArrayList<String>();
-//                rowMap = new HashMap<String, String>();
-//
-//                for (int i = 0; i < totalColumnsTestDataSheet; i++) {
-//                    if(row ==0) {
-//                        headerData = SheetsQuickstart.getCellContent(0,i,testDataSheetName);
-//                        headerValues.add(headerData);
-//                    } else if (row !=0) {
-//                        String rowData;
-//                        rowData = SheetsQuickstart.getCellContent(row, i, testDataSheetName);
-//                        rowValues.add(rowData);
-//                    }
-//                }
-//                if (row ==0) {
-//                    continue;
-//                }
-//                for (int j = 0; j< totalColumnsTestDataSheet; j++) {
-//                    rowMap.put(headerValues.get(j), rowValues.get(j));
-//                }
-//                finalData[index][0] = rowMap;
-//                index++;
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return finalData;
-//    }
+    @DataProvider(name = "TestData")
+    public Object[][] readAllSheetData(){
+        List<String> headerValues = new ArrayList<String>();
+        List<String> rowValues = new ArrayList<>();
+        String headerData = null;
+        Map<String,String> rowMap = new HashMap<String, String>();
+
+        Object[][] finalData = new HashMap[totalRows -1][1];
+        try {
+            for(int row = 0; row < totalRows; row++) {
+                rowValues = new ArrayList<String>();
+                rowMap = new HashMap<String, String>();
+
+                for (int i = 0; i < totalColumnsTestDataSheet; i++) {
+                    if(row ==0) {
+                        headerData = SheetsQuickstart.getCellContent(0,i,testDataSheetName);
+                        headerValues.add(headerData);
+                    } else if (row !=0) {
+                        String rowData;
+                        rowData = SheetsQuickstart.getCellContent(row, i, testDataSheetName);
+                        rowValues.add(rowData);
+                    }
+                }
+                if (row ==0) {
+                    continue;
+                }
+                for (int j = 0; j< totalColumnsTestDataSheet; j++) {
+                    rowMap.put(headerValues.get(j), rowValues.get(j));
+                }
+                finalData[index][0] = rowMap;
+                index++;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return finalData;
+    }
 
     //@DataProvider(name = "TestData")
 //    public Object[][] readFirst2ColumnData() throws IOException {

@@ -242,4 +242,7 @@ public class SheetsQuickstart {
         return values;
     }
 
+    public static String getCellContent(int i, int i1, String sheetName) {
+        return "test";
+    }
 }

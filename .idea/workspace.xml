@@ -4,23 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 33: update minor">
+    <list default="true" id="0f291e85-b1dd-4266-b83e-8d2c1c1252af" name="Changes" comment="updated 35:minor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/base/SheetsQuickstart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/CommonPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/GoogleSheetTestScenarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/GoogleSheetTestScenarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTestNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/MetaTestNew.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/ProductDetailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/StaticPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/StaticPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/projectss/testcases/testng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/AutomationTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/PageObjectTest Example/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/PageObjectTest Example/testng-failed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-projectss.testcases.MetaTestNew.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-projectss.testcases.MetaTestNew.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/classes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-alphabetical.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-not-run.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/PageObjectTest Example/methods-not-run.html" afterDir="false" />
@@ -317,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718971610588</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="updated 34: update minor 2">
+      <option name="closed" value="true" />
+      <created>1719232487620</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1719232487620</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -355,7 +360,9 @@
     <MESSAGE value="updated 28: update" />
     <MESSAGE value="updated 31: minor" />
     <MESSAGE value="updated 33: update minor" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated 33: update minor" />
+    <MESSAGE value="updated 34: update minor 2" />
+    <MESSAGE value="updated 35:minor" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated 35:minor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -385,8 +392,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/projectss/base/BaseSetup.java</url>
-          <line>107</line>
-          <properties class="projectss.base.BaseSetup" method="getUrlLink">
+          <line>106</line>
+          <properties class="projectss.base.BaseSetup" method="getUrlLink2">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

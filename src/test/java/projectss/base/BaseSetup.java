@@ -18,7 +18,7 @@ import static projectss.base.SheetsQuickstart.getTestData;
 public class BaseSetup {
     private WebDriver driver;
     public static Properties prop;
-    //public static Object ggDataList;
+    //public static List<List<Object>> ggDataList;
     static String driverPath = "resources\\drivers\\";
 
     public BaseSetup() {
@@ -104,11 +104,26 @@ public class BaseSetup {
         return returnValues;
     }
     @DataProvider(name="urlSheetLink")
-    public Iterator<Object> getUrlLink2(ITestContext context) throws Exception {
+    public Iterator<Object[]> getUrlLink2(ITestContext context) throws Exception {
         String existingSpreadSheetID = paramsInputExistingSheetId(context);
         String ggSpreadSheetRange = paramsInputTestDataSheetRange(context);
-        List<Object> list;
-        list = (List<Object>) getTestData(existingSpreadSheetID, ggSpreadSheetRange);
+        List<Object[]> list = new ArrayList<Object[]>();
+        List<List<Object>> ggDataList = (List<List<Object>>) getTestData(existingSpreadSheetID ,ggSpreadSheetRange) ;
+
+        if (ggDataList == null || ggDataList.isEmpty()) {
+            System.out.println("No data found.");
+        } else{
+            for (List row : ggDataList) {
+                String testCaseID = row.get(0).toString();
+                String testCaseName=  row.get(1).toString();
+                String qaNo=  row.get(2).toString();
+                String qaURL=  row.get(3).toString();
+                String xpath=  row.get(4).toString();
+                String expectedResult=  row.get(5).toString();
+
+                list.add(new Object[] { testCaseID, testCaseName, qaNo, qaURL,xpath,expectedResult });
+            }
+        }
         return list.iterator();
     }
 

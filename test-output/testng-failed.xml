@@ -14,9 +14,8 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyTextByXpath2"/>
           <include name="initializeTestBaseSetup"/>
-          <include name="testSetupWriteResultIntoSheets"/>
+          <include name="verifyExistOfKeywords" invocation-numbers="0 9 18"/>
         </methods>
       </class> <!-- projectss.testcases.ProductDetailTest -->
     </classes>

@@ -31,8 +31,8 @@
 
             <class name="projectss.testcases.ProductDetailTest">
                 <methods >
-                    <include name="signIn" />
-                    <include name="verifyTextByXpath2" />
+<!--                    <include name="signIn" />-->
+                    <include name="verifyExistOfKeywords" />
                 </methods>
             </class>
 

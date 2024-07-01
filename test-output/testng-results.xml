@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="3" ignored="2" total="29" passed="24">
   <reporter-output>
   </reporter-output>
-  <suite name="PageObjectTest Example" duration-ms="13230" started-at="2024-06-28T19:06:00 ICT" finished-at="2024-06-28T19:06:14 ICT">
+  <suite name="PageObjectTest Example" duration-ms="127085" started-at="2024-07-01T19:27:00 ICT" finished-at="2024-07-01T19:29:07 ICT">
     <groups>
     </groups>
-    <test name="AutomationTest" duration-ms="13230" started-at="2024-06-28T19:06:00 ICT" finished-at="2024-06-28T19:06:14 ICT">
+    <test name="AutomationTest" duration-ms="127085" started-at="2024-07-01T19:27:00 ICT" finished-at="2024-07-01T19:29:07 ICT">
       <class name="projectss.testcases.ProductDetailTest">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String)[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="initializeTestBaseSetup" is-config="true" duration-ms="3993" started-at="2024-06-28T19:06:00 ICT" finished-at="2024-06-28T19:06:04 ICT">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String)[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="initializeTestBaseSetup" is-config="true" duration-ms="4428" started-at="2024-07-01T19:27:04 ICT" finished-at="2024-07-01T19:27:09 ICT">
           <params>
             <param index="0">
               <value>
@@ -18,43 +18,65 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="testSetupWriteResultIntoSheets(org.testng.ITestContext)[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="testSetupWriteResultIntoSheets" is-config="true" duration-ms="2299" started-at="2024-06-28T19:06:04 ICT" depends-on-methods="projectss.testcases.ProductDetailTest.setUp" finished-at="2024-06-28T19:06:07 ICT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4fe01805]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSetupWriteResultIntoSheets -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="setUp" is-config="true" duration-ms="0" started-at="2024-06-28T19:06:04 ICT" finished-at="2024-06-28T19:06:04 ICT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="setUp" is-config="true" duration-ms="0" started-at="2024-07-01T19:27:09 ICT" finished-at="2024-07-01T19:27:09 ICT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="signIn()[pri:1, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="signIn" duration-ms="3632" started-at="2024-06-28T19:06:07 ICT" finished-at="2024-06-28T19:06:10 ICT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signIn -->
-        <test-method status="FAIL" signature="verifyTextByXpath2(int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyTextByXpath2" duration-ms="481" started-at="2024-06-28T19:06:10 ICT" data-provider="urlSheetLink" finished-at="2024-06-28T19:06:11 ICT">
-          <exception class="org.testng.internal.reflect.MethodMatcherException">
+        <test-method status="FAIL" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3451" started-at="2024-07-01T19:27:09 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:13 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/vn/business/business-tvs/uhd-4k-tv/professional-display-bea-h-lh65beahlgkxxv/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Thời Gian Phản Hồi (G-to-G)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[
-[public void projectss.testcases.ProductDetailTest.verifyTextByXpath2(int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: verifyTextByXpath2([Parameter{index=0, type=int, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=int, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.util.ArrayList) [1, Verify badge text, 1, https://www.samsung.com/th/refrigerators/french-door/rf7000cc-french-door-refrigerators-with-bespoke-design-649l-f-rf59u12b12gg, //strong[contains(@class,'pd-info__badge-icon')], เก่าแลกใหม่ 5000z]]]]>
+Expected: not a string containing "Thời Gian Phản Hồi (G-to-G)"
+     but: was "TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Tính Năng Hình Ảnh Thông Số Kỹ Thuật Hỗ Trợ So Sánh TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Trước Tiếp theo Zoom in TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV Quản lý nội dung từ xa với ứng dụng Business TV Thiết kế nội dung hiệu quả với hơn 100 mẫu có sẵn Vận hành bền bỉ 16h/ngày, 7 ngày/tuần Chọn Kích cỡ màn hình 43 55 65 75 {{tradeIn.title}} {{tradeIn.learnMoreCta.text}} {{tradeIn.description}} {{tradeIn.yesAttr.text}} {{tradeIn.yesAttr.subText}} Thiết bị của bạn thuộc hãng nào? {{tradeIn.noAttr.text}} {{tradeIn.noAttr.subText}} {{tradeInResult.displayModelName}} {{tradeInResult.discountText1}} {{tradeInResult.discountText2}} {{tradeInResult.discountText3}} {{tradeInResult.description}} Đóng {{care.title}} {{care.learnMoreCta.text}} {{care.description}} None {{item.optionName}} {{item.optionSalePrice}} {{item.optionOriPrice}} {{item.optionSavePrice}} {{item.specialText}} Sản phẩm yêu thích {{price.priceWrapper.ficheAttr.text}} {{price.priceWrapper.labelAttr.text}} {{price.priceWrapper.ficheAttr.text}} {{price.priceWrapper.labelAttr.text}} {{priceAnchor.priceWrapper.info.noLineOrignal}} {{price.priceWrapper.ficheAttr.text}} {{price.priceWrapper.labelAttr.text}} {{price.priceWrapper.ficheAttr.text}} {{price.priceWrapper.labelAttr.text}} {{priceAnchor.priceWrapper.info.totalPrice}} {{priceAnchor.priceWrapper.info.orignalPriceAddText}} Giá gốc: {{priceAnchor.priceWrapper.info.orignalPrice}} {{priceAnchor.priceWrapper.info.savePrice}} {{price.anchorNaviAttr.text}} TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 65 {{price.priceWrapper.info.totalPrice}} {{price.priceWrapper.info.orignalPriceAddText}} Giá Cũ{{price.priceWrapper.info.orignalPrice}} GIÁ BÁN{{price.priceWrapper.info.savePrice}} {{price.priceWrapper.info.vatText}} {{price.priceWrapper.info.salesPitch}} {{price.priceWrapper.info.text}} {{price.priceWrapper.info.text2}} {{price.bespokeAttr.text}} {{price.containedAttr.text}} {{price.reserveInStoreAttr.text}} {{price.outlinedAttr.text}} {{price.wtbAttr.text}} {{price.contactUsAttr.text}} {{delivery.headline}} {{delivery.label}} {{delivery.errorMessage}} Chọn {{deliveryResult.priorityText}} {{deliveryResult.mainText}} {{deliveryResult.decText}} {{item.disclaimer}} Đóng {{offer.headline}} {{decmain.text}} {{tieredOption.headline}} Số lượng Đăng ký với tư cách là người mua hàng khoảng số lượng{{item.unit}} sản phẩm Tiết kiệm {{item.formattedSavePrice}} / sản phẩm total price {{item.formattedTotalPrice}} total price {{item.formattedVatExclusive}} Liên hệ với chúng tôi để mua thêm {{tieredOption.disclaimer}} TV dành riêng cho doanh nghiệp *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Sử dụng TV tốI ưu Hỗ trợ giao tiếp hiệu quả với khách hàng và chia sẻ các thông tin về thương hiệu mà không cần đến các bản in ấn giấy thông thường. Đơn giản chạm vào ứng dụng Business TV dễ sử dụng để hiển thị những quảng cáo có liên quan cùng với các chương trình TV có sẵn, tạo nên trải nghiệm nội dung tối ưu nhất. Truyền tải nội dung thu hút Với chế độ bảo hành ấn tượng, màn hình mang đến khả năng vận hành hiệu quả, đáng tin cậy lên tới 16 tiếng/ngày, 7 ngày/tuần. Được thiết kế để hoạt động liên tục 16 tiếng/ngày, 7 ngày/tuần và kèm với chế độ bảo hành ấn tượng để khách hàng hoàn toàn yên tâm. Hoàn toàn đáp ứng phù hợp với các nhu cầu sử dụng khác nhau từ giáo dục cho đến bán lẻ hoặc y tế. *Thông số về giờ hoạt động có thể khác nhau tùy theo quốc gia. Quản lý nội dung vớI thiết bị cá nhân Ứng dụng Business TV (có trên thiết bị Android và iOS) cho phép người dùng quản lý và điều khiển từ xa mọi nội dung một cách dễ dàng với trải nghiệm liền mạch và thuận tiện - tận hưởng hiệu quả vượt trội ngay cả khi bạn đang di chuyển. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết lập nhanh chóng Sau khi tải về ứng dụng Business TV, các thiết bị của người dùng sẽ được tự động kết nối với màn hình và sẵn sàng để sử dụng ngay lập tức. > Do đó việc cài đặt trở nên dễ dàng, không gặp khó khăn. Với Ứng dụng Business TV trực quan, bạn luôn được kết nối và sẵn sàng sử dụng ngay lập tức *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết kế nội dung chỉ vớI một chạm Thỏa sức sáng tạo, tùy chỉnh màn hình với hơn 100 mẫu sẵn có từ bố cục thanh chữ L cho đến nội dung được nhúng hiệu ứng chuyển động. Truyền tải thông điệp và quảng cáo một cách sống động và thu hút, nhưng vẫn phù hợp với giá trị của doanh nghiệp. Dễ dàng quản lý nội dung Giao diện cực kỳ đơn giản cho phép chỉnh sửa, xem trước, hoàn thiện và triển khai nội dung - thậm chí trên nhiều màn hình khác nhau - chỉ với một vài thao tác nhanh chóng. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. Tiếp theo Indicator 1 Thông số kỹ thuật Xem thêm Thông số kỹ thuật Chi tiết Hiển Thị Tên sản phẩm 60Hz E-LED BLU Độ Sáng (Tiêu chuẩn) 250 nit Thời Gian Phản Hồi (G-to-G) 8ms Độ Lóa 2.3% Màu sắc hiển thị 16.7 M Screen Curvature N/A, Phẳng Diagonal Size (Inch) 65\" Diagonal Size (cm) 163.9 cm Screen Resolution 3,840 x 2,160 Tỷ lệ tương phản 4700:1 Góc nhìn (ngang/dọc) 178:178 Gam màu 72% Video Engine Hình ảnh Bộ xử lý Crystal 4K HDR10+ Có Âm thanh Dolby digital plus/ HEAAC Có Loại loa 2CH Bluetooth Audio Có Smart Service Smart TV Type Smart Hệ Điều Hành Tizen™ Trình duyệt Web Có App Casting Có Kết nối thẳng WiFi Có Sound Mirroring Có Kết Nối HDMI 3 USB 1 Ethernet (LAN) Có Cổng Digital Audio Out (Optical) 1 RF In (Terrestrial / Cable input / Satellite Input) 1/1(Common Use for Terrestrial)/0 HDMI A / Return Ch. Support Có eARC Có HDMI Quick Switch Có Wi-Fi Có (WiFi5) Bluetooth (BT) Có (BT4.2) Anynet+ (HDMI-CEC) Có Thiết kế Thiết kế Chamfer Mold Bezel Type 3 Bezel-less Slim Type Slim look Front Color Titan Gray Dạng chân đế Slim Feet Stand Color Titan Gray Pin & Sạc Mức tiêu thụ nguồn (Typical) 116.0 W Mức tiêu thụ nguồn (Chế độ Mở) 195 Mức tiêu thụ nguồn (Chế độ chờ) 0.5 W Kích thước Kích thước (RxCxS) 1449.4 x 830.3 x 59.9 mm Thùng máy (RxCxD) 1606 x 963 x 184 mm Trọng lượng Bộ máy 20.6 kg Thùng máy 28.6 kg Hoạt động Operation Hours 16/7 Rửa tiết kiệm Cảm biến Eco Có Phụ kiện Mini Wall Mount Supported Có Vesa Wall Mount Supported Có Chứng chỉ EMC Class B An toàn 60065, 62368-1 Hệ thống Truyền thanh Kỹ thuật số DVB-T2 Bộ dò đài Analog Có Additional Feature Adaptive Sound Adaptive Sound Instant On Có Business TV App (Android, iOS) Có Chế độ chơi Game Có Panel Button Lock Có Mobile to TV - Mirroring, DLNA Có USB Port Lock Có Remote Access Có Cài đặt Đơn giản No Wired TV On - Samsung WOL Có Kết nối thẳng WiFi Có TV Sound to Mobile Có Chia sẻ âm thanh Có Ứng dung BizTV (Android,iOS) Có Autorun Signage (Tự động khởi chạy ứng dụng) Có Ứng dung cài đặt sẵn Có Bật tắt OTN Có Khoá Menu kết nối di động Có Ẩn tất cả các đặc tả Hỗ Trợ Tìm câu trả lời cho thắc mắc của bạn về sản phẩm Hỗ trợ Sản phẩm Xem Thêm Hướng Dẫn Sử Dụng & Cài Đặt Quick Guide Phiên bản 2102030 0.32 MB 26-06-2021 MULTI LANGUAGE Anh, Việt, ARABIC, PORTUGUESE, Pháp, CHINESE Multi-Language Đóng cửa sổ Popup TẢI XUỐNG Xem Thêm vn LH65BEAHLGKXXV {\"reviewsEnabled\":true,\"reevooEnabled\":false,\"bazaarVoiceEnabled\":false,\"priceDisplayEnabled\":true,\"wtbCtaBtnEnabled\":false,\"offerCheckEnabled\":false,\"calculateFinancingEnabled\":false,\"twoCtaBtnEnabled\":false,\"pfPdUrlAnchorCheckEnabled\":false,\"cartUrl\":\"/vn/cart\",\"slingSettingsService\":{\"logger\":{\"name\":\"org.apache.sling.settings.impl.SlingSettingsServiceImpl\"},\"slingId\":\"6600d4f6-a175-48b3-8598-63d6c3d36216\",\"slingHome\":\"/aem/publish/crx-quickstart\",\"slingHomeUrl\":\"file:/aem/publish/crx-quickstart/\",\"runModes\":[\"prod\",\"s7connect\",\"crx3\",\"nosamplecontent\",\"publish\",\"live\",\"crx3tar\"],\"slingProps\":{}},\"isEnableSite\":true,\"isShopOfferUseSite\":false,\"isHybrisSite\":true,\"isHybrisIntegrationSite\":false,\"isHybrisNewSite\":false,\"isGpv2site\":false,\"isShopSite\":true,\"isTaskOnlySite\":false,\"siteCode\":\"vn\",\"shopIntegrationFlag\":\"Hybris\",\"searchPlaceholder\":\"Galaxy S24 Ultra\",\"searchPlaceholderEpp\":\"Galaxy Note10\",\"hreflang\":\"vi-VN\",\"languageCode\":\"vi\",\"jcrLanguage\":\"vi_VN\",\"countryCode\":\"VN\",\"countryLocalName\":\"Việt Nam\",\"titleOption\":\"C\",\"facebookYn\":\"Y\",\"googleYn\":\"N\",\"twitterYn\":\"Y\",\"timeformat\":\"dd-MM-yyyy\",\"priceCurrency\":\"VND\",\"timeZoneCheck\":\"Y\",\"cookieManageCtaYn\":\"N\"} LH75BETHLGKXXV /vn/common/review/ true {{family.currentModel.displayName}} {{family.currentModel.modelCode}} Màu sắc : {{chip.displayName}} Click to Expand {{chip.displayName}} Màu sắc : Close {{chip.displayName}} Trước Tiếp theo {{chip.displayName}} Trước Tiếp theo Mức đánh giá Xếp hạng sản phẩm:{{model.ratings.score}} (Số lượng xếp hạng:{{model.ratings.reviewCount}}) Phiếu sản phẩm {{model.energyLabel.grade}} PRODUCT INFORMATION SHEET {{model.energyLabel.grade}} Giá hiện tại: {{model.prices.currentPriceDisplay}} Giá hiện tại: Từ {{model.prices.monthlyPrice}}/tháng cho {{model.prices.months}} tháng Giá hàng tháng: hoặc {{model.prices.currentPriceDisplay}} Price without VAT: {{model.prices.vatFreePriceFormatted}} Price with discount: {{model.prices.currentPriceDisplay}} Price before: {{model.prices.priceDisplay}} Giá gốc: {{model.prices.priceDisplay}} {{model.prices.savePrice}} {{summary.title}} {{summary.value}}{{summary.unit}} {{summary.title}} So sánh các sản phẩm So sánh với các sản phẩm tương tự Phụ kiện Đã xem gần đây Đóng cửa sổ Popup"]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
-[public void projectss.testcases.ProductDetailTest.verifyTextByXpath2(int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String) throws java.lang.Exception] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
-Data provider mismatch
-Method: verifyTextByXpath2([Parameter{index=0, type=int, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=int, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.util.ArrayList) [1, Verify badge text, 1, https://www.samsung.com/th/refrigerators/french-door/rf7000cc-french-door-refrigerators-with-bespoke-design-649l-f-rf59u12b12gg, //strong[contains(@class,'pd-info__badge-icon')], เก่าแลกใหม่ 5000z]]
-at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
-at org.testng.internal.Parameters.injectParameters(Parameters.java:914)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
+              <![CDATA[java.lang.AssertionError: 
+Expected: not a string containing "Thời Gian Phản Hồi (G-to-G)"
+     but: was "TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Tính Năng Hình Ảnh Thông Số Kỹ Thuật Hỗ Trợ So Sánh TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Trước Tiếp theo Zoom in TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV Quản lý nội dung từ xa với ứng dụng Business TV Thiết kế nội dung hiệu quả với hơn 100 mẫu có sẵn Vận hành bền bỉ 16h/ngày, 7 ngày/tuần Chọn Kích cỡ màn hình 43 55 65 75 {{tradeIn.title}} {{tradeIn.learnMoreCta.text}} {{tradeIn.description}} {{tradeIn.yesAttr.text}} {{tradeIn.yesAttr.subText}} Thiết bị của bạn thuộc hãng nào? {{tradeIn.noAttr.text}} {{tradeIn.noAttr.subText}} {{tradeInResult.displayModelName}} {{tradeInResult.discountText1}} {{tradeInResult.discountText2}} {{tradeInResult.discountText3}} {{tradeInResult.description}} Đóng {{care.title}} {{care.learnMoreCta.text}} {{care.description}} None {{item.optionName}} {{item.optionSalePrice}} {{item.optionOriPrice}} {{item.optionSavePrice}} {{item.specialText}} Sản phẩm yêu thích {{price.priceWrapper.ficheAttr.text}} {{price.priceWrapper.labelAttr.text}} {{price.priceWrapper.ficheAttr.text}} {{price.priceWrapper.labelAttr.text}} {{priceAnchor.priceWrapper.info.noLineOrignal}} {{price.priceWrapper.ficheAttr.text}} {{price.priceWrapper.labelAttr.text}} {{price.priceWrapper.ficheAttr.text}} {{price.priceWrapper.labelAttr.text}} {{priceAnchor.priceWrapper.info.totalPrice}} {{priceAnchor.priceWrapper.info.orignalPriceAddText}} Giá gốc: {{priceAnchor.priceWrapper.info.orignalPrice}} {{priceAnchor.priceWrapper.info.savePrice}} {{price.anchorNaviAttr.text}} TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 65 {{price.priceWrapper.info.totalPrice}} {{price.priceWrapper.info.orignalPriceAddText}} Giá Cũ{{price.priceWrapper.info.orignalPrice}} GIÁ BÁN{{price.priceWrapper.info.savePrice}} {{price.priceWrapper.info.vatText}} {{price.priceWrapper.info.salesPitch}} {{price.priceWrapper.info.text}} {{price.priceWrapper.info.text2}} {{price.bespokeAttr.text}} {{price.containedAttr.text}} {{price.reserveInStoreAttr.text}} {{price.outlinedAttr.text}} {{price.wtbAttr.text}} {{price.contactUsAttr.text}} {{delivery.headline}} {{delivery.label}} {{delivery.errorMessage}} Chọn {{deliveryResult.priorityText}} {{deliveryResult.mainText}} {{deliveryResult.decText}} {{item.disclaimer}} Đóng {{offer.headline}} {{decmain.text}} {{tieredOption.headline}} Số lượng Đăng ký với tư cách là người mua hàng khoảng số lượng{{item.unit}} sản phẩm Tiết kiệm {{item.formattedSavePrice}} / sản phẩm total price {{item.formattedTotalPrice}} total price {{item.formattedVatExclusive}} Liên hệ với chúng tôi để mua thêm {{tieredOption.disclaimer}} TV dành riêng cho doanh nghiệp *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Sử dụng TV tốI ưu Hỗ trợ giao tiếp hiệu quả với khách hàng và chia sẻ các thông tin về thương hiệu mà không cần đến các bản in ấn giấy thông thường. Đơn giản chạm vào ứng dụng Business TV dễ sử dụng để hiển thị những quảng cáo có liên quan cùng với các chương trình TV có sẵn, tạo nên trải nghiệm nội dung tối ưu nhất. Truyền tải nội dung thu hút Với chế độ bảo hành ấn tượng, màn hình mang đến khả năng vận hành hiệu quả, đáng tin cậy lên tới 16 tiếng/ngày, 7 ngày/tuần. Được thiết kế để hoạt động liên tục 16 tiếng/ngày, 7 ngày/tuần và kèm với chế độ bảo hành ấn tượng để khách hàng hoàn toàn yên tâm. Hoàn toàn đáp ứng phù hợp với các nhu cầu sử dụng khác nhau từ giáo dục cho đến bán lẻ hoặc y tế. *Thông số về giờ hoạt động có thể khác nhau tùy theo quốc gia. Quản lý nội dung vớI thiết bị cá nhân Ứng dụng Business TV (có trên thiết bị Android và iOS) cho phép người dùng quản lý và điều khiển từ xa mọi nội dung một cách dễ dàng với trải nghiệm liền mạch và thuận tiện - tận hưởng hiệu quả vượt trội ngay cả khi bạn đang di chuyển. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết lập nhanh chóng Sau khi tải về ứng dụng Business TV, các thiết bị của người dùng sẽ được tự động kết nối với màn hình và sẵn sàng để sử dụng ngay lập tức. > Do đó việc cài đặt trở nên dễ dàng, không gặp khó khăn. Với Ứng dụng Business TV trực quan, bạn luôn được kết nối và sẵn sàng sử dụng ngay lập tức *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết kế nội dung chỉ vớI một chạm Thỏa sức sáng tạo, tùy chỉnh màn hình với hơn 100 mẫu sẵn có từ bố cục thanh chữ L cho đến nội dung được nhúng hiệu ứng chuyển động. Truyền tải thông điệp và quảng cáo một cách sống động và thu hút, nhưng vẫn phù hợp với giá trị của doanh nghiệp. Dễ dàng quản lý nội dung Giao diện cực kỳ đơn giản cho phép chỉnh sửa, xem trước, hoàn thiện và triển khai nội dung - thậm chí trên nhiều màn hình khác nhau - chỉ với một vài thao tác nhanh chóng. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. Tiếp theo Indicator 1 Thông số kỹ thuật Xem thêm Thông số kỹ thuật Chi tiết Hiển Thị Tên sản phẩm 60Hz E-LED BLU Độ Sáng (Tiêu chuẩn) 250 nit Thời Gian Phản Hồi (G-to-G) 8ms Độ Lóa 2.3% Màu sắc hiển thị 16.7 M Screen Curvature N/A, Phẳng Diagonal Size (Inch) 65\" Diagonal Size (cm) 163.9 cm Screen Resolution 3,840 x 2,160 Tỷ lệ tương phản 4700:1 Góc nhìn (ngang/dọc) 178:178 Gam màu 72% Video Engine Hình ảnh Bộ xử lý Crystal 4K HDR10+ Có Âm thanh Dolby digital plus/ HEAAC Có Loại loa 2CH Bluetooth Audio Có Smart Service Smart TV Type Smart Hệ Điều Hành Tizen™ Trình duyệt Web Có App Casting Có Kết nối thẳng WiFi Có Sound Mirroring Có Kết Nối HDMI 3 USB 1 Ethernet (LAN) Có Cổng Digital Audio Out (Optical) 1 RF In (Terrestrial / Cable input / Satellite Input) 1/1(Common Use for Terrestrial)/0 HDMI A / Return Ch. Support Có eARC Có HDMI Quick Switch Có Wi-Fi Có (WiFi5) Bluetooth (BT) Có (BT4.2) Anynet+ (HDMI-CEC) Có Thiết kế Thiết kế Chamfer Mold Bezel Type 3 Bezel-less Slim Type Slim look Front Color Titan Gray Dạng chân đế Slim Feet Stand Color Titan Gray Pin & Sạc Mức tiêu thụ nguồn (Typical) 116.0 W Mức tiêu thụ nguồn (Chế độ Mở) 195 Mức tiêu thụ nguồn (Chế độ chờ) 0.5 W Kích thước Kích thước (RxCxS) 1449.4 x 830.3 x 59.9 mm Thùng máy (RxCxD) 1606 x 963 x 184 mm Trọng lượng Bộ máy 20.6 kg Thùng máy 28.6 kg Hoạt động Operation Hours 16/7 Rửa tiết kiệm Cảm biến Eco Có Phụ kiện Mini Wall Mount Supported Có Vesa Wall Mount Supported Có Chứng chỉ EMC Class B An toàn 60065, 62368-1 Hệ thống Truyền thanh Kỹ thuật số DVB-T2 Bộ dò đài Analog Có Additional Feature Adaptive Sound Adaptive Sound Instant On Có Business TV App (Android, iOS) Có Chế độ chơi Game Có Panel Button Lock Có Mobile to TV - Mirroring, DLNA Có USB Port Lock Có Remote Access Có Cài đặt Đơn giản No Wired TV On - Samsung WOL Có Kết nối thẳng WiFi Có TV Sound to Mobile Có Chia sẻ âm thanh Có Ứng dung BizTV (Android,iOS) Có Autorun Signage (Tự động khởi chạy ứng dụng) Có Ứng dung cài đặt sẵn Có Bật tắt OTN Có Khoá Menu kết nối di động Có Ẩn tất cả các đặc tả Hỗ Trợ Tìm câu trả lời cho thắc mắc của bạn về sản phẩm Hỗ trợ Sản phẩm Xem Thêm Hướng Dẫn Sử Dụng & Cài Đặt Quick Guide Phiên bản 2102030 0.32 MB 26-06-2021 MULTI LANGUAGE Anh, Việt, ARABIC, PORTUGUESE, Pháp, CHINESE Multi-Language Đóng cửa sổ Popup TẢI XUỐNG Xem Thêm vn LH65BEAHLGKXXV {\"reviewsEnabled\":true,\"reevooEnabled\":false,\"bazaarVoiceEnabled\":false,\"priceDisplayEnabled\":true,\"wtbCtaBtnEnabled\":false,\"offerCheckEnabled\":false,\"calculateFinancingEnabled\":false,\"twoCtaBtnEnabled\":false,\"pfPdUrlAnchorCheckEnabled\":false,\"cartUrl\":\"/vn/cart\",\"slingSettingsService\":{\"logger\":{\"name\":\"org.apache.sling.settings.impl.SlingSettingsServiceImpl\"},\"slingId\":\"6600d4f6-a175-48b3-8598-63d6c3d36216\",\"slingHome\":\"/aem/publish/crx-quickstart\",\"slingHomeUrl\":\"file:/aem/publish/crx-quickstart/\",\"runModes\":[\"prod\",\"s7connect\",\"crx3\",\"nosamplecontent\",\"publish\",\"live\",\"crx3tar\"],\"slingProps\":{}},\"isEnableSite\":true,\"isShopOfferUseSite\":false,\"isHybrisSite\":true,\"isHybrisIntegrationSite\":false,\"isHybrisNewSite\":false,\"isGpv2site\":false,\"isShopSite\":true,\"isTaskOnlySite\":false,\"siteCode\":\"vn\",\"shopIntegrationFlag\":\"Hybris\",\"searchPlaceholder\":\"Galaxy S24 Ultra\",\"searchPlaceholderEpp\":\"Galaxy Note10\",\"hreflang\":\"vi-VN\",\"languageCode\":\"vi\",\"jcrLanguage\":\"vi_VN\",\"countryCode\":\"VN\",\"countryLocalName\":\"Việt Nam\",\"titleOption\":\"C\",\"facebookYn\":\"Y\",\"googleYn\":\"N\",\"twitterYn\":\"Y\",\"timeformat\":\"dd-MM-yyyy\",\"priceCurrency\":\"VND\",\"timeZoneCheck\":\"Y\",\"cookieManageCtaYn\":\"N\"} LH75BETHLGKXXV /vn/common/review/ true {{family.currentModel.displayName}} {{family.currentModel.modelCode}} Màu sắc : {{chip.displayName}} Click to Expand {{chip.displayName}} Màu sắc : Close {{chip.displayName}} Trước Tiếp theo {{chip.displayName}} Trước Tiếp theo Mức đánh giá Xếp hạng sản phẩm:{{model.ratings.score}} (Số lượng xếp hạng:{{model.ratings.reviewCount}}) Phiếu sản phẩm {{model.energyLabel.grade}} PRODUCT INFORMATION SHEET {{model.energyLabel.grade}} Giá hiện tại: {{model.prices.currentPriceDisplay}} Giá hiện tại: Từ {{model.prices.monthlyPrice}}/tháng cho {{model.prices.months}} tháng Giá hàng tháng: hoặc {{model.prices.currentPriceDisplay}} Price without VAT: {{model.prices.vatFreePriceFormatted}} Price with discount: {{model.prices.currentPriceDisplay}} Price before: {{model.prices.priceDisplay}} Giá gốc: {{model.prices.priceDisplay}} {{model.prices.savePrice}} {{summary.title}} {{summary.value}}{{summary.unit}} {{summary.title}} So sánh các sản phẩm So sánh với các sản phẩm tương tự Phụ kiện Đã xem gần đây Đóng cửa sổ Popup"
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at org.junit.Assert.assertThat(Assert.java:964)
+at org.junit.Assert.assertThat(Assert.java:930)
+at projectss.testcases.ProductDetailTest.verifyExistOfKeywords(ProductDetailTest.java:126)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -76,11 +98,1034 @@ at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTextByXpath2 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="tearDown" is-config="true" duration-ms="2793" started-at="2024-06-28T19:06:11 ICT" finished-at="2024-06-28T19:06:14 ICT">
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3156" started-at="2024-07-01T19:27:14 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:17 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-navy-256gb-sm-a556ezkdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Thời Gian Phản Hồi (G-to-G)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3325" started-at="2024-07-01T19:27:18 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:21 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/refrigerators/bespoke-refrigerators/bespoke-2-door-clean-vanilla-340l-orange-f-rb33du18db3k]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Thời Gian Phản Hồi (G-to-G)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3151" started-at="2024-07-01T19:27:22 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:25 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-iceblue-256gb-sm-a556elbdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Thời Gian Phản Hồi (G-to-G)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3420" started-at="2024-07-01T19:27:26 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:29 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/refrigerators/french-door/rf7000cc-french-door-refrigerators-with-bespoke-design-649l-f-rf59u12b12gg]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Thời Gian Phản Hồi (G-to-G)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3943" started-at="2024-07-01T19:27:30 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:34 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-navy-256gb-sm-a556ezkdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Thời Gian Phản Hồi (G-to-G)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3346" started-at="2024-07-01T19:27:35 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:38 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/refrigerators/bespoke-refrigerators/bespoke-2-door-clean-vanilla-340l-orange-f-rb33du18db3k]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Thời Gian Phản Hồi (G-to-G)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3126" started-at="2024-07-01T19:27:39 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:42 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-iceblue-256gb-sm-a556elbdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Thời Gian Phản Hồi (G-to-G)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3715" started-at="2024-07-01T19:27:43 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:46 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/lifestyle-tvs/the-frame/ls03d-43-inch-black-qa43ls03dakxxt/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Thời Gian Phản Hồi (G-to-G)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="FAIL" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3107" started-at="2024-07-01T19:27:47 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:50 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/vn/business/business-tvs/uhd-4k-tv/professional-display-bea-h-lh65beahlgkxxv/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Màu sắc hiển thị]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expected: not a string containing "Màu sắc hiển thị"
+     but: was "Đăng kí ngay để nhận thêm nhiều ưu đãiĐăng kí ngay TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Tính Năng Hình Ảnh Thông Số Kỹ Thuật Hỗ Trợ So Sánh Liên hệ TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Trước Tiếp theo Zoom in TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV Quản lý nội dung từ xa với ứng dụng Business TV Thiết kế nội dung hiệu quả với hơn 100 mẫu có sẵn Vận hành bền bỉ 16h/ngày, 7 ngày/tuần Đóng Chọn Kích cỡ màn hình 43 55 65 75 Đóng TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 65 Liên hệ TV dành riêng cho doanh nghiệp *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Sử dụng TV tốI ưu Hỗ trợ giao tiếp hiệu quả với khách hàng và chia sẻ các thông tin về thương hiệu mà không cần đến các bản in ấn giấy thông thường. Đơn giản chạm vào ứng dụng Business TV dễ sử dụng để hiển thị những quảng cáo có liên quan cùng với các chương trình TV có sẵn, tạo nên trải nghiệm nội dung tối ưu nhất. Truyền tải nội dung thu hút Với chế độ bảo hành ấn tượng, màn hình mang đến khả năng vận hành hiệu quả, đáng tin cậy lên tới 16 tiếng/ngày, 7 ngày/tuần. Được thiết kế để hoạt động liên tục 16 tiếng/ngày, 7 ngày/tuần và kèm với chế độ bảo hành ấn tượng để khách hàng hoàn toàn yên tâm. Hoàn toàn đáp ứng phù hợp với các nhu cầu sử dụng khác nhau từ giáo dục cho đến bán lẻ hoặc y tế. *Thông số về giờ hoạt động có thể khác nhau tùy theo quốc gia. Quản lý nội dung vớI thiết bị cá nhân Ứng dụng Business TV (có trên thiết bị Android và iOS) cho phép người dùng quản lý và điều khiển từ xa mọi nội dung một cách dễ dàng với trải nghiệm liền mạch và thuận tiện - tận hưởng hiệu quả vượt trội ngay cả khi bạn đang di chuyển. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết lập nhanh chóng Sau khi tải về ứng dụng Business TV, các thiết bị của người dùng sẽ được tự động kết nối với màn hình và sẵn sàng để sử dụng ngay lập tức. > Do đó việc cài đặt trở nên dễ dàng, không gặp khó khăn. Với Ứng dụng Business TV trực quan, bạn luôn được kết nối và sẵn sàng sử dụng ngay lập tức *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết kế nội dung chỉ vớI một chạm Thỏa sức sáng tạo, tùy chỉnh màn hình với hơn 100 mẫu sẵn có từ bố cục thanh chữ L cho đến nội dung được nhúng hiệu ứng chuyển động. Truyền tải thông điệp và quảng cáo một cách sống động và thu hút, nhưng vẫn phù hợp với giá trị của doanh nghiệp. Dễ dàng quản lý nội dung Giao diện cực kỳ đơn giản cho phép chỉnh sửa, xem trước, hoàn thiện và triển khai nội dung - thậm chí trên nhiều màn hình khác nhau - chỉ với một vài thao tác nhanh chóng. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. Tiếp theo TốI ưu thời gian vận hành doanh nghiệp TốI ưu thời gian vận hành doanh nghiệp Thông số kỹ thuật Thông số kỹ thuật Chi tiết Hiển Thị Tên sản phẩm 60Hz E-LED BLU Độ Sáng (Tiêu chuẩn) 250 nit Thời Gian Phản Hồi (G-to-G) 8ms Độ Lóa 2.3% Màu sắc hiển thị 16.7 M Screen Curvature N/A, Phẳng Diagonal Size (Inch) 65\" Diagonal Size (cm) 163.9 cm Screen Resolution 3,840 x 2,160 Tỷ lệ tương phản 4700:1 Góc nhìn (ngang/dọc) 178:178 Gam màu 72% Video Engine Hình ảnh Bộ xử lý Crystal 4K HDR10+ Có Âm thanh Dolby digital plus/ HEAAC Có Loại loa 2CH Bluetooth Audio Có Smart Service Smart TV Type Smart Hệ Điều Hành Tizen™ Trình duyệt Web Có App Casting Có Kết nối thẳng WiFi Có Sound Mirroring Có Kết Nối HDMI 3 USB 1 Ethernet (LAN) Có Cổng Digital Audio Out (Optical) 1 RF In (Terrestrial / Cable input / Satellite Input) 1/1(Common Use for Terrestrial)/0 HDMI A / Return Ch. Support Có eARC Có HDMI Quick Switch Có Wi-Fi Có (WiFi5) Bluetooth (BT) Có (BT4.2) Anynet+ (HDMI-CEC) Có Thiết kế Thiết kế Chamfer Mold Bezel Type 3 Bezel-less Slim Type Slim look Front Color Titan Gray Dạng chân đế Slim Feet Stand Color Titan Gray Pin & Sạc Mức tiêu thụ nguồn (Typical) 116.0 W Mức tiêu thụ nguồn (Chế độ Mở) 195 Mức tiêu thụ nguồn (Chế độ chờ) 0.5 W Kích thước Kích thước (RxCxS) 1449.4 x 830.3 x 59.9 mm Thùng máy (RxCxD) 1606 x 963 x 184 mm Trọng lượng Bộ máy 20.6 kg Thùng máy 28.6 kg Hoạt động Operation Hours 16/7 Rửa tiết kiệm Cảm biến Eco Có Phụ kiện Mini Wall Mount Supported Có Vesa Wall Mount Supported Có Chứng chỉ EMC Class B An toàn 60065, 62368-1 Hệ thống Truyền thanh Kỹ thuật số DVB-T2 Bộ dò đài Analog Có Additional Feature Adaptive Sound Adaptive Sound Instant On Có Business TV App (Android, iOS) Có Chế độ chơi Game Có Panel Button Lock Có Mobile to TV - Mirroring, DLNA Có USB Port Lock Có Remote Access Có Cài đặt Đơn giản No Wired TV On - Samsung WOL Có Kết nối thẳng WiFi Có TV Sound to Mobile Có Chia sẻ âm thanh Có Ứng dung BizTV (Android,iOS) Có Autorun Signage (Tự động khởi chạy ứng dụng) Có Ứng dung cài đặt sẵn Có Bật tắt OTN Có Khoá Menu kết nối di động Có Hỗ Trợ Tìm câu trả lời cho thắc mắc của bạn về sản phẩm Hỗ trợ Sản phẩm Xem Thêm Hướng Dẫn Sử Dụng & Cài Đặt Quick Guide Phiên bản 2102030 0.32 MB 26-06-2021 MULTI LANGUAGE Anh, Việt, ARABIC, PORTUGUESE, Pháp, CHINESE Multi-Language Đóng cửa sổ Popup TẢI XUỐNG Xem Thêm So sánh các sản phẩm So sánh với các sản phẩm tương tự TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV 43 55 65 75 Trước Tiếp theo Samsung Biz TV dòng 75 inch LH75BETHLGKXXV 43 50 55 65 75 Trước Tiếp theo Phụ kiện Đã xem gần đây TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 43556575 Trước Tiếp theo 43556575 Đóng cửa sổ Popup"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+Expected: not a string containing "Màu sắc hiển thị"
+     but: was "Đăng kí ngay để nhận thêm nhiều ưu đãiĐăng kí ngay TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Tính Năng Hình Ảnh Thông Số Kỹ Thuật Hỗ Trợ So Sánh Liên hệ TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Trước Tiếp theo Zoom in TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV Quản lý nội dung từ xa với ứng dụng Business TV Thiết kế nội dung hiệu quả với hơn 100 mẫu có sẵn Vận hành bền bỉ 16h/ngày, 7 ngày/tuần Đóng Chọn Kích cỡ màn hình 43 55 65 75 Đóng TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 65 Liên hệ TV dành riêng cho doanh nghiệp *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Sử dụng TV tốI ưu Hỗ trợ giao tiếp hiệu quả với khách hàng và chia sẻ các thông tin về thương hiệu mà không cần đến các bản in ấn giấy thông thường. Đơn giản chạm vào ứng dụng Business TV dễ sử dụng để hiển thị những quảng cáo có liên quan cùng với các chương trình TV có sẵn, tạo nên trải nghiệm nội dung tối ưu nhất. Truyền tải nội dung thu hút Với chế độ bảo hành ấn tượng, màn hình mang đến khả năng vận hành hiệu quả, đáng tin cậy lên tới 16 tiếng/ngày, 7 ngày/tuần. Được thiết kế để hoạt động liên tục 16 tiếng/ngày, 7 ngày/tuần và kèm với chế độ bảo hành ấn tượng để khách hàng hoàn toàn yên tâm. Hoàn toàn đáp ứng phù hợp với các nhu cầu sử dụng khác nhau từ giáo dục cho đến bán lẻ hoặc y tế. *Thông số về giờ hoạt động có thể khác nhau tùy theo quốc gia. Quản lý nội dung vớI thiết bị cá nhân Ứng dụng Business TV (có trên thiết bị Android và iOS) cho phép người dùng quản lý và điều khiển từ xa mọi nội dung một cách dễ dàng với trải nghiệm liền mạch và thuận tiện - tận hưởng hiệu quả vượt trội ngay cả khi bạn đang di chuyển. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết lập nhanh chóng Sau khi tải về ứng dụng Business TV, các thiết bị của người dùng sẽ được tự động kết nối với màn hình và sẵn sàng để sử dụng ngay lập tức. > Do đó việc cài đặt trở nên dễ dàng, không gặp khó khăn. Với Ứng dụng Business TV trực quan, bạn luôn được kết nối và sẵn sàng sử dụng ngay lập tức *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết kế nội dung chỉ vớI một chạm Thỏa sức sáng tạo, tùy chỉnh màn hình với hơn 100 mẫu sẵn có từ bố cục thanh chữ L cho đến nội dung được nhúng hiệu ứng chuyển động. Truyền tải thông điệp và quảng cáo một cách sống động và thu hút, nhưng vẫn phù hợp với giá trị của doanh nghiệp. Dễ dàng quản lý nội dung Giao diện cực kỳ đơn giản cho phép chỉnh sửa, xem trước, hoàn thiện và triển khai nội dung - thậm chí trên nhiều màn hình khác nhau - chỉ với một vài thao tác nhanh chóng. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. Tiếp theo TốI ưu thời gian vận hành doanh nghiệp TốI ưu thời gian vận hành doanh nghiệp Thông số kỹ thuật Thông số kỹ thuật Chi tiết Hiển Thị Tên sản phẩm 60Hz E-LED BLU Độ Sáng (Tiêu chuẩn) 250 nit Thời Gian Phản Hồi (G-to-G) 8ms Độ Lóa 2.3% Màu sắc hiển thị 16.7 M Screen Curvature N/A, Phẳng Diagonal Size (Inch) 65\" Diagonal Size (cm) 163.9 cm Screen Resolution 3,840 x 2,160 Tỷ lệ tương phản 4700:1 Góc nhìn (ngang/dọc) 178:178 Gam màu 72% Video Engine Hình ảnh Bộ xử lý Crystal 4K HDR10+ Có Âm thanh Dolby digital plus/ HEAAC Có Loại loa 2CH Bluetooth Audio Có Smart Service Smart TV Type Smart Hệ Điều Hành Tizen™ Trình duyệt Web Có App Casting Có Kết nối thẳng WiFi Có Sound Mirroring Có Kết Nối HDMI 3 USB 1 Ethernet (LAN) Có Cổng Digital Audio Out (Optical) 1 RF In (Terrestrial / Cable input / Satellite Input) 1/1(Common Use for Terrestrial)/0 HDMI A / Return Ch. Support Có eARC Có HDMI Quick Switch Có Wi-Fi Có (WiFi5) Bluetooth (BT) Có (BT4.2) Anynet+ (HDMI-CEC) Có Thiết kế Thiết kế Chamfer Mold Bezel Type 3 Bezel-less Slim Type Slim look Front Color Titan Gray Dạng chân đế Slim Feet Stand Color Titan Gray Pin & Sạc Mức tiêu thụ nguồn (Typical) 116.0 W Mức tiêu thụ nguồn (Chế độ Mở) 195 Mức tiêu thụ nguồn (Chế độ chờ) 0.5 W Kích thước Kích thước (RxCxS) 1449.4 x 830.3 x 59.9 mm Thùng máy (RxCxD) 1606 x 963 x 184 mm Trọng lượng Bộ máy 20.6 kg Thùng máy 28.6 kg Hoạt động Operation Hours 16/7 Rửa tiết kiệm Cảm biến Eco Có Phụ kiện Mini Wall Mount Supported Có Vesa Wall Mount Supported Có Chứng chỉ EMC Class B An toàn 60065, 62368-1 Hệ thống Truyền thanh Kỹ thuật số DVB-T2 Bộ dò đài Analog Có Additional Feature Adaptive Sound Adaptive Sound Instant On Có Business TV App (Android, iOS) Có Chế độ chơi Game Có Panel Button Lock Có Mobile to TV - Mirroring, DLNA Có USB Port Lock Có Remote Access Có Cài đặt Đơn giản No Wired TV On - Samsung WOL Có Kết nối thẳng WiFi Có TV Sound to Mobile Có Chia sẻ âm thanh Có Ứng dung BizTV (Android,iOS) Có Autorun Signage (Tự động khởi chạy ứng dụng) Có Ứng dung cài đặt sẵn Có Bật tắt OTN Có Khoá Menu kết nối di động Có Hỗ Trợ Tìm câu trả lời cho thắc mắc của bạn về sản phẩm Hỗ trợ Sản phẩm Xem Thêm Hướng Dẫn Sử Dụng & Cài Đặt Quick Guide Phiên bản 2102030 0.32 MB 26-06-2021 MULTI LANGUAGE Anh, Việt, ARABIC, PORTUGUESE, Pháp, CHINESE Multi-Language Đóng cửa sổ Popup TẢI XUỐNG Xem Thêm So sánh các sản phẩm So sánh với các sản phẩm tương tự TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV 43 55 65 75 Trước Tiếp theo Samsung Biz TV dòng 75 inch LH75BETHLGKXXV 43 50 55 65 75 Trước Tiếp theo Phụ kiện Đã xem gần đây TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 43556575 Trước Tiếp theo 43556575 Đóng cửa sổ Popup"
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at org.junit.Assert.assertThat(Assert.java:964)
+at org.junit.Assert.assertThat(Assert.java:930)
+at projectss.testcases.ProductDetailTest.verifyExistOfKeywords(ProductDetailTest.java:126)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3241" started-at="2024-07-01T19:27:51 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:54 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-navy-256gb-sm-a556ezkdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Màu sắc hiển thị]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3516" started-at="2024-07-01T19:27:55 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:27:58 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/refrigerators/bespoke-refrigerators/bespoke-2-door-clean-vanilla-340l-orange-f-rb33du18db3k]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Màu sắc hiển thị]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3356" started-at="2024-07-01T19:27:59 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:03 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[13]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-iceblue-256gb-sm-a556elbdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Màu sắc hiển thị]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3448" started-at="2024-07-01T19:28:03 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:07 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/refrigerators/french-door/rf7000cc-french-door-refrigerators-with-bespoke-design-649l-f-rf59u12b12gg]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Màu sắc hiển thị]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3487" started-at="2024-07-01T19:28:08 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:11 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-navy-256gb-sm-a556ezkdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Màu sắc hiển thị]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3619" started-at="2024-07-01T19:28:12 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:15 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[16]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/refrigerators/bespoke-refrigerators/bespoke-2-door-clean-vanilla-340l-orange-f-rb33du18db3k]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Màu sắc hiển thị]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3079" started-at="2024-07-01T19:28:16 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:19 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-iceblue-256gb-sm-a556elbdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Màu sắc hiển thị]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3897" started-at="2024-07-01T19:28:20 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:24 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[18]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/lifestyle-tvs/the-frame/ls03d-43-inch-black-qa43ls03dakxxt/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Màu sắc hiển thị]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="FAIL" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3056" started-at="2024-07-01T19:28:25 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:28 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[19]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/vn/business/business-tvs/uhd-4k-tv/professional-display-bea-h-lh65beahlgkxxv/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Diagonal Size (cm)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[
+Expected: not a string containing "Diagonal Size (cm)"
+     but: was "Đăng kí ngay để nhận thêm nhiều ưu đãiĐăng kí ngay TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Tính Năng Hình Ảnh Thông Số Kỹ Thuật Hỗ Trợ So Sánh Liên hệ TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Trước Tiếp theo Zoom in TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV Quản lý nội dung từ xa với ứng dụng Business TV Thiết kế nội dung hiệu quả với hơn 100 mẫu có sẵn Vận hành bền bỉ 16h/ngày, 7 ngày/tuần Đóng Chọn Kích cỡ màn hình 43 55 65 75 Đóng TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 65 Liên hệ TV dành riêng cho doanh nghiệp *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Sử dụng TV tốI ưu Hỗ trợ giao tiếp hiệu quả với khách hàng và chia sẻ các thông tin về thương hiệu mà không cần đến các bản in ấn giấy thông thường. Đơn giản chạm vào ứng dụng Business TV dễ sử dụng để hiển thị những quảng cáo có liên quan cùng với các chương trình TV có sẵn, tạo nên trải nghiệm nội dung tối ưu nhất. Truyền tải nội dung thu hút Với chế độ bảo hành ấn tượng, màn hình mang đến khả năng vận hành hiệu quả, đáng tin cậy lên tới 16 tiếng/ngày, 7 ngày/tuần. Được thiết kế để hoạt động liên tục 16 tiếng/ngày, 7 ngày/tuần và kèm với chế độ bảo hành ấn tượng để khách hàng hoàn toàn yên tâm. Hoàn toàn đáp ứng phù hợp với các nhu cầu sử dụng khác nhau từ giáo dục cho đến bán lẻ hoặc y tế. *Thông số về giờ hoạt động có thể khác nhau tùy theo quốc gia. Quản lý nội dung vớI thiết bị cá nhân Ứng dụng Business TV (có trên thiết bị Android và iOS) cho phép người dùng quản lý và điều khiển từ xa mọi nội dung một cách dễ dàng với trải nghiệm liền mạch và thuận tiện - tận hưởng hiệu quả vượt trội ngay cả khi bạn đang di chuyển. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết lập nhanh chóng Sau khi tải về ứng dụng Business TV, các thiết bị của người dùng sẽ được tự động kết nối với màn hình và sẵn sàng để sử dụng ngay lập tức. > Do đó việc cài đặt trở nên dễ dàng, không gặp khó khăn. Với Ứng dụng Business TV trực quan, bạn luôn được kết nối và sẵn sàng sử dụng ngay lập tức *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết kế nội dung chỉ vớI một chạm Thỏa sức sáng tạo, tùy chỉnh màn hình với hơn 100 mẫu sẵn có từ bố cục thanh chữ L cho đến nội dung được nhúng hiệu ứng chuyển động. Truyền tải thông điệp và quảng cáo một cách sống động và thu hút, nhưng vẫn phù hợp với giá trị của doanh nghiệp. Dễ dàng quản lý nội dung Giao diện cực kỳ đơn giản cho phép chỉnh sửa, xem trước, hoàn thiện và triển khai nội dung - thậm chí trên nhiều màn hình khác nhau - chỉ với một vài thao tác nhanh chóng. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. Tiếp theo TốI ưu thời gian vận hành doanh nghiệp TốI ưu thời gian vận hành doanh nghiệp Thông số kỹ thuật Thông số kỹ thuật Chi tiết Hiển Thị Tên sản phẩm 60Hz E-LED BLU Độ Sáng (Tiêu chuẩn) 250 nit Thời Gian Phản Hồi (G-to-G) 8ms Độ Lóa 2.3% Màu sắc hiển thị 16.7 M Screen Curvature N/A, Phẳng Diagonal Size (Inch) 65\" Diagonal Size (cm) 163.9 cm Screen Resolution 3,840 x 2,160 Tỷ lệ tương phản 4700:1 Góc nhìn (ngang/dọc) 178:178 Gam màu 72% Video Engine Hình ảnh Bộ xử lý Crystal 4K HDR10+ Có Âm thanh Dolby digital plus/ HEAAC Có Loại loa 2CH Bluetooth Audio Có Smart Service Smart TV Type Smart Hệ Điều Hành Tizen™ Trình duyệt Web Có App Casting Có Kết nối thẳng WiFi Có Sound Mirroring Có Kết Nối HDMI 3 USB 1 Ethernet (LAN) Có Cổng Digital Audio Out (Optical) 1 RF In (Terrestrial / Cable input / Satellite Input) 1/1(Common Use for Terrestrial)/0 HDMI A / Return Ch. Support Có eARC Có HDMI Quick Switch Có Wi-Fi Có (WiFi5) Bluetooth (BT) Có (BT4.2) Anynet+ (HDMI-CEC) Có Thiết kế Thiết kế Chamfer Mold Bezel Type 3 Bezel-less Slim Type Slim look Front Color Titan Gray Dạng chân đế Slim Feet Stand Color Titan Gray Pin & Sạc Mức tiêu thụ nguồn (Typical) 116.0 W Mức tiêu thụ nguồn (Chế độ Mở) 195 Mức tiêu thụ nguồn (Chế độ chờ) 0.5 W Kích thước Kích thước (RxCxS) 1449.4 x 830.3 x 59.9 mm Thùng máy (RxCxD) 1606 x 963 x 184 mm Trọng lượng Bộ máy 20.6 kg Thùng máy 28.6 kg Hoạt động Operation Hours 16/7 Rửa tiết kiệm Cảm biến Eco Có Phụ kiện Mini Wall Mount Supported Có Vesa Wall Mount Supported Có Chứng chỉ EMC Class B An toàn 60065, 62368-1 Hệ thống Truyền thanh Kỹ thuật số DVB-T2 Bộ dò đài Analog Có Additional Feature Adaptive Sound Adaptive Sound Instant On Có Business TV App (Android, iOS) Có Chế độ chơi Game Có Panel Button Lock Có Mobile to TV - Mirroring, DLNA Có USB Port Lock Có Remote Access Có Cài đặt Đơn giản No Wired TV On - Samsung WOL Có Kết nối thẳng WiFi Có TV Sound to Mobile Có Chia sẻ âm thanh Có Ứng dung BizTV (Android,iOS) Có Autorun Signage (Tự động khởi chạy ứng dụng) Có Ứng dung cài đặt sẵn Có Bật tắt OTN Có Khoá Menu kết nối di động Có Hỗ Trợ Tìm câu trả lời cho thắc mắc của bạn về sản phẩm Hỗ trợ Sản phẩm Xem Thêm Hướng Dẫn Sử Dụng & Cài Đặt Quick Guide Phiên bản 2102030 0.32 MB 26-06-2021 MULTI LANGUAGE Anh, Việt, ARABIC, PORTUGUESE, Pháp, CHINESE Multi-Language Đóng cửa sổ Popup TẢI XUỐNG Xem Thêm So sánh các sản phẩm So sánh với các sản phẩm tương tự TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV 43 55 65 75 Trước Tiếp theo Samsung Biz TV dòng 75 inch LH75BETHLGKXXV 43 50 55 65 75 Trước Tiếp theo Phụ kiện Đã xem gần đây TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 43556575 Trước Tiếp theo 43556575 Đóng cửa sổ Popup"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+Expected: not a string containing "Diagonal Size (cm)"
+     but: was "Đăng kí ngay để nhận thêm nhiều ưu đãiĐăng kí ngay TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Tính Năng Hình Ảnh Thông Số Kỹ Thuật Hỗ Trợ So Sánh Liên hệ TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) Trước Tiếp theo Zoom in TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV Quản lý nội dung từ xa với ứng dụng Business TV Thiết kế nội dung hiệu quả với hơn 100 mẫu có sẵn Vận hành bền bỉ 16h/ngày, 7 ngày/tuần Đóng Chọn Kích cỡ màn hình 43 55 65 75 Đóng TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 65 Liên hệ TV dành riêng cho doanh nghiệp *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Sử dụng TV tốI ưu Hỗ trợ giao tiếp hiệu quả với khách hàng và chia sẻ các thông tin về thương hiệu mà không cần đến các bản in ấn giấy thông thường. Đơn giản chạm vào ứng dụng Business TV dễ sử dụng để hiển thị những quảng cáo có liên quan cùng với các chương trình TV có sẵn, tạo nên trải nghiệm nội dung tối ưu nhất. Truyền tải nội dung thu hút Với chế độ bảo hành ấn tượng, màn hình mang đến khả năng vận hành hiệu quả, đáng tin cậy lên tới 16 tiếng/ngày, 7 ngày/tuần. Được thiết kế để hoạt động liên tục 16 tiếng/ngày, 7 ngày/tuần và kèm với chế độ bảo hành ấn tượng để khách hàng hoàn toàn yên tâm. Hoàn toàn đáp ứng phù hợp với các nhu cầu sử dụng khác nhau từ giáo dục cho đến bán lẻ hoặc y tế. *Thông số về giờ hoạt động có thể khác nhau tùy theo quốc gia. Quản lý nội dung vớI thiết bị cá nhân Ứng dụng Business TV (có trên thiết bị Android và iOS) cho phép người dùng quản lý và điều khiển từ xa mọi nội dung một cách dễ dàng với trải nghiệm liền mạch và thuận tiện - tận hưởng hiệu quả vượt trội ngay cả khi bạn đang di chuyển. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết lập nhanh chóng Sau khi tải về ứng dụng Business TV, các thiết bị của người dùng sẽ được tự động kết nối với màn hình và sẵn sàng để sử dụng ngay lập tức. > Do đó việc cài đặt trở nên dễ dàng, không gặp khó khăn. Với Ứng dụng Business TV trực quan, bạn luôn được kết nối và sẵn sàng sử dụng ngay lập tức *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. Thiết kế nội dung chỉ vớI một chạm Thỏa sức sáng tạo, tùy chỉnh màn hình với hơn 100 mẫu sẵn có từ bố cục thanh chữ L cho đến nội dung được nhúng hiệu ứng chuyển động. Truyền tải thông điệp và quảng cáo một cách sống động và thu hút, nhưng vẫn phù hợp với giá trị của doanh nghiệp. Dễ dàng quản lý nội dung Giao diện cực kỳ đơn giản cho phép chỉnh sửa, xem trước, hoàn thiện và triển khai nội dung - thậm chí trên nhiều màn hình khác nhau - chỉ với một vài thao tác nhanh chóng. *Hình ảnh mô phỏng ứng dụng Business TV của Samsung được cung cấp ở đây có thể khác so với trải nghiệm người dùng thực tế do cập nhật ứng dụng. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. TốI ưu thời gian vận hành doanh nghiệp Những tính năng hiện đại giúp bạn tiết kiệm tối đa thời gian xử lý các vấn đề kỹ thuật. Tính năng hẹn giờ bật/tắt cho phép màn hình tự động vận hành trong khung giờ hành chính được cài đặt sẵn. Ngoài ra, mã pin giúp bạn bảo vệ tối ưu những thiết lập màn hình và ngăn chặn gián đoạn hiển thị nội dung ngoài ý muốn. Tiếp theo TốI ưu thời gian vận hành doanh nghiệp TốI ưu thời gian vận hành doanh nghiệp Thông số kỹ thuật Thông số kỹ thuật Chi tiết Hiển Thị Tên sản phẩm 60Hz E-LED BLU Độ Sáng (Tiêu chuẩn) 250 nit Thời Gian Phản Hồi (G-to-G) 8ms Độ Lóa 2.3% Màu sắc hiển thị 16.7 M Screen Curvature N/A, Phẳng Diagonal Size (Inch) 65\" Diagonal Size (cm) 163.9 cm Screen Resolution 3,840 x 2,160 Tỷ lệ tương phản 4700:1 Góc nhìn (ngang/dọc) 178:178 Gam màu 72% Video Engine Hình ảnh Bộ xử lý Crystal 4K HDR10+ Có Âm thanh Dolby digital plus/ HEAAC Có Loại loa 2CH Bluetooth Audio Có Smart Service Smart TV Type Smart Hệ Điều Hành Tizen™ Trình duyệt Web Có App Casting Có Kết nối thẳng WiFi Có Sound Mirroring Có Kết Nối HDMI 3 USB 1 Ethernet (LAN) Có Cổng Digital Audio Out (Optical) 1 RF In (Terrestrial / Cable input / Satellite Input) 1/1(Common Use for Terrestrial)/0 HDMI A / Return Ch. Support Có eARC Có HDMI Quick Switch Có Wi-Fi Có (WiFi5) Bluetooth (BT) Có (BT4.2) Anynet+ (HDMI-CEC) Có Thiết kế Thiết kế Chamfer Mold Bezel Type 3 Bezel-less Slim Type Slim look Front Color Titan Gray Dạng chân đế Slim Feet Stand Color Titan Gray Pin & Sạc Mức tiêu thụ nguồn (Typical) 116.0 W Mức tiêu thụ nguồn (Chế độ Mở) 195 Mức tiêu thụ nguồn (Chế độ chờ) 0.5 W Kích thước Kích thước (RxCxS) 1449.4 x 830.3 x 59.9 mm Thùng máy (RxCxD) 1606 x 963 x 184 mm Trọng lượng Bộ máy 20.6 kg Thùng máy 28.6 kg Hoạt động Operation Hours 16/7 Rửa tiết kiệm Cảm biến Eco Có Phụ kiện Mini Wall Mount Supported Có Vesa Wall Mount Supported Có Chứng chỉ EMC Class B An toàn 60065, 62368-1 Hệ thống Truyền thanh Kỹ thuật số DVB-T2 Bộ dò đài Analog Có Additional Feature Adaptive Sound Adaptive Sound Instant On Có Business TV App (Android, iOS) Có Chế độ chơi Game Có Panel Button Lock Có Mobile to TV - Mirroring, DLNA Có USB Port Lock Có Remote Access Có Cài đặt Đơn giản No Wired TV On - Samsung WOL Có Kết nối thẳng WiFi Có TV Sound to Mobile Có Chia sẻ âm thanh Có Ứng dung BizTV (Android,iOS) Có Autorun Signage (Tự động khởi chạy ứng dụng) Có Ứng dung cài đặt sẵn Có Bật tắt OTN Có Khoá Menu kết nối di động Có Hỗ Trợ Tìm câu trả lời cho thắc mắc của bạn về sản phẩm Hỗ trợ Sản phẩm Xem Thêm Hướng Dẫn Sử Dụng & Cài Đặt Quick Guide Phiên bản 2102030 0.32 MB 26-06-2021 MULTI LANGUAGE Anh, Việt, ARABIC, PORTUGUESE, Pháp, CHINESE Multi-Language Đóng cửa sổ Popup TẢI XUỐNG Xem Thêm So sánh các sản phẩm So sánh với các sản phẩm tương tự TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) LH65BEAHLGKXXV 43 55 65 75 Trước Tiếp theo Samsung Biz TV dòng 75 inch LH75BETHLGKXXV 43 50 55 65 75 Trước Tiếp theo Phụ kiện Đã xem gần đây TV doanh nghiệp Crystal UHD 4K (LH65BEAHLGKXXV) 43556575 Trước Tiếp theo 43556575 Đóng cửa sổ Popup"
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at org.junit.Assert.assertThat(Assert.java:964)
+at org.junit.Assert.assertThat(Assert.java:930)
+at projectss.testcases.ProductDetailTest.verifyExistOfKeywords(ProductDetailTest.java:126)
+at sun.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3210" started-at="2024-07-01T19:28:29 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:32 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-navy-256gb-sm-a556ezkdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Diagonal Size (cm)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3764" started-at="2024-07-01T19:28:33 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:37 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[21]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/refrigerators/bespoke-refrigerators/bespoke-2-door-clean-vanilla-340l-orange-f-rb33du18db3k]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Diagonal Size (cm)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3056" started-at="2024-07-01T19:28:38 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:41 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[22]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-iceblue-256gb-sm-a556elbdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Diagonal Size (cm)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3310" started-at="2024-07-01T19:28:42 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:45 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/refrigerators/french-door/rf7000cc-french-door-refrigerators-with-bespoke-design-649l-f-rf59u12b12gg]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Diagonal Size (cm)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3520" started-at="2024-07-01T19:28:46 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:50 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[24]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-navy-256gb-sm-a556ezkdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Diagonal Size (cm)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3386" started-at="2024-07-01T19:28:51 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:54 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[25]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/refrigerators/bespoke-refrigerators/bespoke-2-door-clean-vanilla-340l-orange-f-rb33du18db3k]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Diagonal Size (cm)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3075" started-at="2024-07-01T19:28:55 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:28:58 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[26]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/smartphones/galaxy-a/galaxy-a55-5g-awesome-iceblue-256gb-sm-a556elbdthl/buy/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Diagonal Size (cm)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="verifyExistOfKeywords(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="verifyExistOfKeywords" duration-ms="3939" started-at="2024-07-01T19:28:59 ICT" data-provider="urlSheetLink" finished-at="2024-07-01T19:29:03 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[27]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Verify text contain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.samsung.com/th/lifestyle-tvs/the-frame/ls03d-43-inch-black-qa43ls03dakxxt/]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[//div[@class='root responsivegrid']]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Diagonal Size (cm)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistOfKeywords -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:projectss.testcases.ProductDetailTest@33c7e1bb]" name="tearDown" is-config="true" duration-ms="3426" started-at="2024-07-01T19:29:04 ICT" finished-at="2024-07-01T19:29:07 ICT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
